@@ -4,8 +4,9 @@ Idee:
 -ricette
 -ebook free pdf download (archivio)
 	-autenticazione perl
-	-xml-> db libri e categorie
+	-xml-> db librli e categorie
 	-xslt
 	-js- dinamica
 
--biblioteca, verifica disponibilità online
+-biblioteca, verifica disponibilitï¿½ online
+-blablablalbal
