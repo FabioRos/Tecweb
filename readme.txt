@@ -1,11 +1,19 @@
 Idee:
 
--palestra:
+-“testata giornalistica musicale”: 
+		come ad esempio il foglio, l'avvenire o l'unità, con gestione dei dati tramite xml.
+		-valutazione degli utenti sugli album
 
+		
+
+
+-palestra:
+	-sondaggio riguardo ai corsi per gli utenti(PERL)
+	-?gestione utenti?
+	
 
 
 -ricette:
-
 
 -ebook free pdf download (archivio)
 	-autenticazione perl
@@ -15,16 +23,15 @@ Idee:
 
 
 
-
-
 -biblioteca, verifica disponibilita’ online
 	-biblioteca di partiture musicali(.pdf) e file di partiture musicali
 	(.sib per Sibelius e .mus per Finale) online,tipo IMSLP 
 	esempio di pagina:  http://imslp.org/wiki/Category:Bach,_Johann_Sebastian
 
-"testata giornalistica" : come ad esempio il foglio, l'avvenire o l'unità, con gestione dei dati tramite xml.
 
--“gestione corsi università”:sito per informatica con divisione in anni->corsi.
+
+-“gestione corsi università”:
+			sito per informatica con divisione in anni->corsi.
 			per ogni anno ho:
 				*-il calendario degli orari
 				*-il calendario degli esami
