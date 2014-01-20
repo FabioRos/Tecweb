@@ -1,9 +1,11 @@
-BREVE INTRODUZIONE A GIT
+ï»¿BREVE INTRODUZIONE A GIT
 				
 Le operazioni di sincronizzazione supportate da Git vanno eseguite tassativamente prima e dopo la sessione di lavoro.
 
 PREREQUISITI: git installato sul pc e un account su github/sourceforge o il sito con repository scelto
-Da github, nella pagina della repository dare il comando “clone repository” per ottenere una copia locale dei file
+Da github, nella pagina della repository dare il comando 
+clone repository
+ per ottenere una copia locale dei file
 
 
 
@@ -20,15 +22,15 @@ git pull: prima di iniziare una nuova sessione di lavoro per ottenere le modific
 	compariranno in rosso i documenti non ancora sincronizzati da locale a remoto
 -usare il comando 
 	git add nomefile:
- per aggiungere i file modificati all’insieme dei file da committare
+ per aggiungere i file modificati all'insieme dei file da committare
 
--git commit -m ‘messaggio’: 
+-git commit -m 'messaggio': 
 	al termine di una sessione di lavoro per confermare le modifiche apportate. 
-	L’operazione di commit prevede l’inserimento di un messaggio il quale deve descrivere il lavoro svolto
-        NB:una volta effettuate le modifiche ad un documento,dare a ‘messaggio’ un nome sensato(che descriva la modifiche apportate)
+	L'operazione di commit prevede l'inserimento di un messaggio il quale deve descrivere il lavoro svolto
+        NB:una volta effettuate le modifiche ad un documento,dare a 'messaggio' un nome sensato(che descriva la modifiche apportate)
 
 -git push: 
-	dopo l’operazione di commit per caricare i file modificati nel repository remoto 
+	dopo l'operazione di commit per caricare i file modificati nel repository remoto 
 
 -git merge: 
 	se durante la sessione di lavoro un altro membro ha modificato dei file per sommare le modifiche e poterle caricare nel repository		
