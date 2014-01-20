@@ -1,0 +1,45 @@
+Target->appassionati di musica
+
+-usiamo XHTML perché definito come standard(HTML5 non è standard e forse non lo sarà mai)
+
+-il sito deve rispondere alle 5W(assi di accessibilità[vedi sito babe])
+
+
+IMPOSTAZIONE DELLA STRUTTURA DEL SITO:
+
+.4 Sezioni:
+	-articoli(news)
+	-sondaggi[Perl,interazione con l’utente—>vedi sito Babe]
+	-interviste	->	gallery inclusa nella pagina
+	-eventi	(dobbiamo scegliere come visualizzarli,vedi soundwall)
+
+
+.barra di ricerca[Search,in alto a sinistra]
+
+
+.Backend:Admin(in questo caso la redazione) deve avere accesso al sito per aggiornare le notizie ed altro
+
+
+SINGOLE SEZIONI:
+
+.news:
+immagine relativa alla news e breve descrizione:poi clickando su read more è possibile visionare(identico a different grooves) tutto l’articolo
+
+.sondaggi:
+
+.interviste:
+
+.eventi:
+
+
+
+//CONSIDERAZIONI SU ARGOMENTI ANCORA DA DISCUTERE O DA METTERE IN DISCUSSIONE:
+
+-facciamo la barra che permette all’utente di tornare indietro agevolmente?
+Home>interviste>gallery
+
+-la gallery la mettiamo nella stessa pagina di interviste o ad un livello più profondo(avremo solo 1 livello per ora,dobbiamo sviluppare le varie sezioni)?
+
+-bisogna iniziare a pensare a colori e a tutte le menate sull’accessibilità
+
+-pensare a un nome che sia descrittivo
