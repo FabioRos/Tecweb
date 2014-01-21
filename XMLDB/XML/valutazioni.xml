@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valutazioni>
+    <valutazione>
+        <punteggio>5</punteggio>
+        <idPost>1</idPost>
+        <email>gianni.ippolito@gmail.com</email>
+    </valutazione>
+    <valutazione>
+        <punteggio>3</punteggio>
+        <idPost>2</idPost>
+        <email>gianni.ippolito@gmail.com</email>
+    </valutazione>
+    <valutazione>
+        <punteggio>4</punteggio>
+        <idPost>3</idPost>
+        <email>gianni.ippolito@gmail.com</email>
+    </valutazione>
+    <valutazione>
+        <punteggio>4</punteggio>
+        <idPost>1</idPost>
+        <email>ippo.potamo@gmail.com</email>
+    </valutazione>
+</valutazioni>

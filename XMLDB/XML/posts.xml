@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<posts>
+    <news>
+        <id>1</id>
+        <titolo>Nuovo Album dei Daft Punk</titolo>
+        <editor>Mario Rossi</editor>
+        <descrizione>
+            Lorem ipsum dei Daft Punk dolor sit amet, consectetur adipiscing elit.
+            Donec fringilla lorem et feugiat blandit. Vivamus et risus sagittis, laoreet leo non, eleifend orci.
+            Quisque hendrerit nec tortor vel ullamcorper. Duis bibendum porta magna, vel tincidunt lacus pellentesque egestas.
+            Duis ultricies nisl ac nibh tincidunt, et varius leo adipiscing.
+            Morbi porta congue molestie. Fusce cursus dolor quis ligula volutpat dignissim.
+            Aliquam vehicula, dolor sit amet congue congue, nisl nisi ultrices lectus, vitae accumsan arcu lectus eu lorem.
+            Curabitur congue lectus quis risus sollicitudin dictum. Suspendisse id elit pulvinar, rutrum enim at, interdum enim.
+            Curabitur tincidunt condimentum neque, in lobortis augue sodales at. Vivamus ut placerat mauris, sed cursus ante.
+            Nam non molestie augue.
+        </descrizione>
+        <dataPub>21/01/2014</dataPub>
+        <oraPub>17.07</oraPub>
+        <fotoPath>../images/DaftPunk.png</fotoPath>
+        <tagsAssocId>1</tagsAssocId>
+    </news>
+    <interviste>
+        <id>2</id>
+        <titolo>Intervista a Laura Pausini</titolo>
+        <descrizione>
+            Vent'anni fa esordiva timidamente sul palco del Festival di Sanremo e ora è una pop-star internazionale con milioni di copie vendute. Eppure Laura Pausini è rimasta quella di sempre: una ragazza semplice, dolce, spontanea e chiacchierona. E di cose da dire ne ha, soprattutto ora che non solo è in procinto di festeggiare il suo ventennale (con la raccolta “20 – Greatest Hits” piena di duetti prestigiosi e il relativo tour), ma è diventata mamma di una splendida bambina di nome Paola che il prossimo 8 febbraio compirà un anno.
+            Stai per festeggiare i tuoi primi 20 anni di carriera. A chi devi dire “grazie”?
+            Prima di tutto ai miei genitori, che mi hanno cresciuta trasmettendomi dei valori forti, che nel tempo non sono mai cambiati. L'educazione che i genitori ci danno può sembrare a volte rigida, ma può farti diventare una persona speciale.
+
+            Poi è stato tuo padre Fabrizio a trasmetterti la passione per la musica, giusto?
+            Si, mio padre suonava nei piano-bar ed era piuttosto conosciuto in Emilia-Romagna. Mi ricordo ancora il giorno del mio ottavo compleanno: sono andata ad ascoltarlo a Bologna, insieme a mia madre e mia sorella. Lui mi aveva preparato una bambola come regalo, ma io volevo solo prendere il suo microfono e cantare. È lì che ho iniziato e non ho mai più smesso. Il mio sogno era quello di cantare part-time nei piano-bar, non di certo quello di diventare una cantante famosa: una volta adolescente mi sono infatti iscritta ad una scuola d'arte con l'intenzione di iscrivermi poi ad architettura. Pensate che avevo persino paura ad uscire dal mio paesello. È sempre stato mio padre a spingermi ad andare oltre: è stato lui a iscrivermi prima a Castrocaro e poi a Sanremo Famosi”.
+
+            Non è quindi un caso se nel video di “Se non te” ci sono i tuoi genitori...
+            Quella che viene raccontata è la loro storia d'amore, che dura da 40 anni. Mia madre, prima di avere me, ha avuto tre aborti e quindi, quando è rimasta incinta di nuovo, è stata costretta a letto per tutta la gravidanza. Proprio in quel momento a mio padre ha avuto la proposta di entrare nei Pooh, ma lui ha rifiutato per stare vicino a lei. E io sono convinta che tutto quello che ho avuto io e il riscatto di questo suo sacrificio.
+
+            “Se non te” però parla anche della tua nuova famiglia...
+            Si, l'ho scritta con il mio compagno, pensando a nostra figlia. Con il lavoro che faccio mi trovo sempre in mezzo a tante persone, ma alla fine rimaniamo solo io, mia figlia Paola e il mio compagno. È come trovarsi sempre a casa, anche se non ci sono delle pareti fisiche. Una cosa dove entra la luce. Questa è la mia nuova "solitudine".
+
+            Come ti ha cambiato la maternità?
+            Ora mi sento più emotiva, serena e sicura di me, ma soprattutto sono felice. Era da tanti anni che desideravo diventare madre e l'ho detto anche con una canzone Celeste, dedicata a tutte le donne che hanno provato le stesse cose che ho provato io. Lo confesso: ad un certo punto mi sono arresa, pensavo che non arrivasse più e ho iniziato a mettermi nell'ottica di farmene una ragione. Poi invece è successo il miracolo.
+
+            E ora come la mettiamo con i tuoi impegni internazionali?
+            Sono già diventata una mamma multitasking e quindi mi sono attrezzata per partire in tour. Però al momento farà solo 20 date, principalmente in Italia, perché non so ancora come reagirà Paola ai vari spostamenti.
+        </descrizione>
+        <dataPub>21/01/2014</dataPub>
+        <oraPub>17.15</oraPub>
+        <fotoCoverPath>../images/DaftPunk.png</fotoCoverPath>
+        <galleryId>1</galleryId>
+        <tagsAssocId>2</tagsAssocId>
+    </interviste>
+    <recensione>
+        <id>3</id>
+        <titolo>Beyoncé scende dal trono del pop e decide di osare</titolo>
+        <descrizione>
+            Bando all’ingenuità: nel 2013 può capitare di svegliarsi una mattina, aprire iTunes e scoprire che nottetempo è comparso il nuovo album di una popstar. Potrebbe forse fare strano l’assenza di cinguettii, teaser e tutta quella roba, buona per riempire i blog, ma andiamo: se ti chiami Beyoncé puoi permetterti di comportarti così perché sai già che non corri alcun rischio, dall’istante in cui il tuo album sarà esposto sugli scaffali virtuali la pubblicità verrà da sé, e a costo zero. Ma se hai la fortuna di poggiare il tuo culetto d’oro sul trono del pop e, oltre a mettere in pratica questa strategia, mi sfoderi un disco che osa, allora hai tutta la mia stima.
+            La tracklist del quinto lavoro in studio di Mrs.Carter è orfana di tracce banalmente destinate alla pista da ballo: non c’è una Single Ladies o una Run The World, ma nemmeno una più raffinata Love On Top. Il pezzo dai contorni più danzerecci è Blow, un electro-funk scritto insieme al trio Timbaland /Justin Timberlake/Pharrell Williams. E non è tutto: fatta eccezione per Heaven, mancano anche le ballad classiche in stile Irreplaceable o If I Were a Boy.
+            L’intero disco segue una precisa scelta minimalista (ultra-dettagliata) e futuristica (grazie all’ampio utilizzo di suoni artificiali), predilige atmosfere rarefatte e arrangiamenti spiazzanti e infila interludi dal sapore concettuale (con tutti i limiti del caso). Così il beat reggaeton di XO si confonde in mezzo a pad e cori, No Angel gioca con lo spazio e dosa interventi di violini sintetici e tastiere anni 80, Partition passa da ritmi hip-hop a linee di basso che appartengono alla deep-house e *** Flawless punta sul contrasto freddo/caldo dato dalla contrapposizione dei suoni quasi 8-bit con la voce della prorompente Texana. I cameo di Drake e Frank Ocean (la crema dell’hip-hop moderno) non colpiscono granché: a svettare sono piuttosto le vibrazioni soul di Pretty Hurts e gli sperimentalismi della splendida Haunted, che aprono come meglio non si potrebbe un disco con due palle così.
+        </descrizione>
+        <dataPub>21/01/2014</dataPub>
+        <oraPub>17.22</oraPub>
+        <fotoPath>../images/Beyonce.jpeg</fotoPath>
+        <tagsAssocId>3</tagsAssocId>
+    </recensione>
+    
+</posts>

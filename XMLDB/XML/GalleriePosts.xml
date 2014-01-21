@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Questo file serve per mettere in relazione le gallerie con i post 
+(di tipo intervista) a cui sono collegati.
+-->
+<galleriePosts>
+    <corispondenza>
+        <idGalleria>1</idGalleria>
+        <idPost>2</idPost>
+    </corispondenza>
+</galleriePosts>

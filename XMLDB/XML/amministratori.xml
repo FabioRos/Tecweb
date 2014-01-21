@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+La Password andrà modificata con un algoritmo di criptaggio, intanto la inserisco in chiaro
+-->
+<amministratori>
+    <admin>
+        <username>PowerRanger</username>
+        <password>DinaLampa</password>
+    </admin>
+</amministratori>
