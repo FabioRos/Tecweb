@@ -15,7 +15,7 @@ esempi di siti del tipo “news musicali”,per categorie:
 	-	http://www.spin.com/
 	-	http://www.differentgrooves.com/
 	-	http://www.soundwall.it/
-
+	-	http://www.onstageweb.com/        copiare la sezione recensioni
 
 
 		
