@@ -13,10 +13,9 @@ Idee:
 esempi di siti del tipo “news musicali”,per categorie:
 		
 	-	http://www.spin.com/
+	-	http://www.differentgrooves.com/
+	-	http://www.soundwall.it/
 
-il migliore esempio che ho trovato(in pratica l’idea é identica a quella del nostro progetto).
-
-perfetta l’idea del menù disposto in questo modo,manca di una barra di ricerca(assolutamente da mettere nel nostro sito).
 
 
 		
