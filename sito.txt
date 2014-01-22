@@ -22,13 +22,16 @@ IMPOSTAZIONE DELLA STRUTTURA DEL SITO:
 
 SINGOLE SEZIONI:
 
-.news:
-immagine relativa alla news e breve descrizione:poi clickando su read more è possibile visionare(identico a different grooves) tutto l’articolo
+.home:
 
-.sondaggi:
+.news:
+immagine relativa alla news e breve descrizione:poi clickando su read more è possibile visionare(identico a different grooves) tutto l’articolo,l’utente per poter votare deve aprire la news in modo da poterla leggere.
+
+.recensioni:
+pagina con le recensioni,l’utente per poter votare deve aprire la recensione in modo da poterla leggere.—>vedi onstageweb
 
 .interviste:
-
+l’utente per poter votare deve aprire l’intervista in modo da poterla leggere.
 .eventi:
 
 
