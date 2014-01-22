@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <valutazioni>
     <valutazione>
-        <punteggio>5</punteggio>
+        <voto>5</voto>
         <idPost>1</idPost>
         <email>gianni.ippolito@gmail.com</email>
     </valutazione>
     <valutazione>
-        <punteggio>3</punteggio>
+        <voto>3</voto>
         <idPost>2</idPost>
         <email>gianni.ippolito@gmail.com</email>
     </valutazione>
     <valutazione>
-        <punteggio>4</punteggio>
+        <voto>4</voto>
         <idPost>3</idPost>
         <email>gianni.ippolito@gmail.com</email>
     </valutazione>
     <valutazione>
-        <punteggio>4</punteggio>
+        <voto>4</voto>
         <idPost>1</idPost>
         <email>ippo.potamo@gmail.com</email>
     </valutazione>

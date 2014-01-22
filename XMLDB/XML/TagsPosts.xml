@@ -4,23 +4,23 @@ Questo file serve per mettere in relazione le gallerie con i post
 (di tipo intervista) a cui sono collegati.
 -->
 <TagsPosts>
-    <corispondenza>
+    <corrispondenza>
         <idTag>1</idTag>
         <idPost>2</idPost>
-    </corispondenza>
+    </corrispondenza>
     
-     <corispondenza>
+     <corrispondenza>
         <idTag>4</idTag>
         <idPost>2</idPost>
-    </corispondenza>
+    </corrispondenza>
     
-     <corispondenza>
+     <corrispondenza>
         <idTag>3</idTag>
         <idPost>2</idPost>
-    </corispondenza>
+    </corrispondenza>
     
-     <corispondenza>
+     <corrispondenza>
         <idTag>2</idTag>
         <idPost>3</idPost>
-    </corispondenza>
+    </corrispondenza>
 </TagsPosts>
