@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editori>
+<editori    xmlns="http://www.musicbreak.com" 
+            xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+            xs:schemaLocation="http://www.musicbreak.com ../XMLS/editori.xsd">
     <editore id="1">Mario Rossi</editore>
     <editore id="2">Fabio Ros</editore>
     <editore id="3">Luca Bonaldo</editore>
