@@ -14,7 +14,7 @@ IMPOSTAZIONE DELLA STRUTTURA DEL SITO:
 	-eventi	(dobbiamo scegliere come visualizzarli,vedi soundwall)
 
 
-.barra di ricerca[Search,in alto a sinistra]
+.barra di ricerca[Search,in alto a destra]
 
 
 .Backend:Admin(in questo caso la redazione) deve avere accesso al sito per aggiornare le notizie ed altro
@@ -41,8 +41,5 @@ l’utente per poter votare deve aprire l’intervista in modo da poterla legger
 -facciamo la barra che permette all’utente di tornare indietro agevolmente?
 Home>interviste>gallery
 
--la gallery la mettiamo nella stessa pagina di interviste o ad un livello più profondo(avremo solo 1 livello per ora,dobbiamo sviluppare le varie sezioni)?
 
 -bisogna iniziare a pensare a colori e a tutte le menate sull’accessibilità
-
--pensare a un nome che sia descrittivo
