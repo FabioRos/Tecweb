@@ -2,10 +2,28 @@
 <editori    xmlns="http://www.musicbreak.com" 
             xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
             xs:schemaLocation="http://www.musicbreak.com ../XMLS/editori.xsd">
-    <editore id="1">Mario Rossi</editore>
-    <editore id="2">Fabio Ros</editore>
-    <editore id="3">Luca Bonaldo</editore>
-    <editore id="4">Antonio Banderas</editore>
-    <editore id="5">Gianni Ottimista</editore>
-    <editore id="6">Alessandro Mangio</editore>
+    <editore id="1">
+        <nome>Mario</nome>
+        <cognome>Rossi</cognome>
+    </editore>
+    <editore id="2">
+        <nome>Fabio</nome>
+        <cognome>Ros</cognome>
+    </editore>
+    <editore id="3">
+        <nome>Luca</nome>
+        <cognome>Bonaldo</cognome>
+    </editore>
+    <editore id="4">
+        <nome>Antonio</nome>
+        <cognome>Banderas</cognome>
+    </editore>
+    <editore id="5">
+        <nome>Gianni</nome>
+        <cognome>Ottimista</cognome>
+    </editore>
+    <editore id="6">
+        <nome>Alessandro</nome>
+        <cognome>Mangio</cognome>
+    </editore>
 </editori>
