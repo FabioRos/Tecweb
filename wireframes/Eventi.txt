@@ -1,0 +1,7 @@
+
+riguardo lo scorrimento delle pagine(vedi in fondo alla pagina),abbiamo 2 possibilità:1-relativo a un giorno selezionato dal calendario,quindi potrebbero essere pagine vuote se quel giorno non ho un evento.2-relativo al numero di eventi che stanno nella pagina,quindi quando seleziono un giorno lo mette in testa alla pagina,vedo gli eventi che mi stanno nella pagina(tipo max 3) e poi gli eventi del giorno precedente,scorro le pagine per vedere eventi successivi o precedenti(vedi www.soundwall->calendario->agenda)
+
+
+direi di tenere la 2a opzione,è la più strutturata e completa.
+
+Per il calendario:è da mettere assolutamente,non implementarlo come fanno su soundwall(non è pratico) ma in maniera diversa,se un dato giorno c’è un evento->coloro quel quadrato nel calendario,poi sarà l’utente che se è interessato va a cliccare sul dato giorno e gli appariranno gli eventi sulla sx della pagina.se non c’è nulla il quadrato è vuoto.
