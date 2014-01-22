@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gallerie>
+    <galleria id="1">
+        <foto>
+            <titolo>Volto Pausini</titolo>
+            <srcPath>../images/Pausini1.jpeg</srcPath>
+        </foto>
+        <foto>
+            <titolo>Volto Pausini</titolo>
+            <srcPath>../images/Pausini2.jpeg</srcPath>
+        </foto>
+        <foto>
+            <titolo>Volto Pausini</titolo>
+            <srcPath>../images/Pausini3.jpeg</srcPath>
+        </foto>
+        <foto>
+            <titolo>Volto Pausini</titolo>
+            <srcPath>../images/Pausini4.jpeg</srcPath>
+        </foto>
+    </galleria>
+</gallerie>
