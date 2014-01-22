@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <posts>
     <news>
-        <id>1</id>
         <titolo>Nuovo Album dei Daft Punk</titolo>
         <editor>Mario Rossi</editor>
         <descrizione>
@@ -21,7 +20,6 @@
         <tagsAssocId>1</tagsAssocId>
     </news>
     <interviste>
-        <id>2</id>
         <titolo>Intervista a Laura Pausini</titolo>
         <descrizione>
             Vent'anni fa esordiva timidamente sul palco del Festival di Sanremo e ora è una pop-star internazionale con milioni di copie vendute. Eppure Laura Pausini è rimasta quella di sempre: una ragazza semplice, dolce, spontanea e chiacchierona. E di cose da dire ne ha, soprattutto ora che non solo è in procinto di festeggiare il suo ventennale (con la raccolta “20 – Greatest Hits” piena di duetti prestigiosi e il relativo tour), ma è diventata mamma di una splendida bambina di nome Paola che il prossimo 8 febbraio compirà un anno.
@@ -50,7 +48,6 @@
         <tagsAssocId>2</tagsAssocId>
     </interviste>
     <recensione>
-        <id>3</id>
         <titolo>Beyoncé scende dal trono del pop e decide di osare</titolo>
         <descrizione>
             Bando all’ingenuità: nel 2013 può capitare di svegliarsi una mattina, aprire iTunes e scoprire che nottetempo è comparso il nuovo album di una popstar. Potrebbe forse fare strano l’assenza di cinguettii, teaser e tutta quella roba, buona per riempire i blog, ma andiamo: se ti chiami Beyoncé puoi permetterti di comportarti così perché sai già che non corri alcun rischio, dall’istante in cui il tuo album sarà esposto sugli scaffali virtuali la pubblicità verrà da sé, e a costo zero. Ma se hai la fortuna di poggiare il tuo culetto d’oro sul trono del pop e, oltre a mettere in pratica questa strategia, mi sfoderi un disco che osa, allora hai tutta la mia stima.
