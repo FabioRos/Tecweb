@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gallerie xmlns="http://www.musicbreak.com" 
             xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
-            xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS editori.xsd">
+            xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS gallerie.xsd">
     <galleria id="1">
         <foto>
             <titolo>Volto Pausini</titolo>
