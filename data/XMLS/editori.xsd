@@ -5,7 +5,12 @@
     xmlns = "http://www.musicbreak.com" 
     elementFormDefault = "qualified"
 >
-    <xsd:element name = "editori" type="TEditori"/>
+    <xsd:element name = "editori" type="TEditori">
+        <xsd:unique name="unique-id">
+            <xsd:selector xpath="editore"/>
+            <xsd:field xpath="@id"/>
+        </xsd:unique>
+    </xsd:element>
 	
     <xsd:complexType name = "TEditori">
         <xsd:sequence>
@@ -27,9 +32,4 @@
             <xsd:pattern value="[A-Za-z]+" />
         </xsd:restriction>
     </xsd:simpleType>
-    
-    <xsd:unique name="unique-id">
-        <xsd:selector xpath="editore"/>
-        <xsd:field xpath="@id"/>
-    </xsd:unique>
 </xsd:schema>
