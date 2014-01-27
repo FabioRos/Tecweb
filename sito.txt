@@ -1,4 +1,4 @@
-Target->appassionati di musica
+﻿Target->appassionati di musica
 
 -usiamo XHTML perché definito come standard(HTML5 non è standard e forse non lo sarà mai)
 
@@ -38,8 +38,14 @@ l’utente per poter votare deve aprire l’intervista in modo da poterla legger
 
 //CONSIDERAZIONI SU ARGOMENTI ANCORA DA DISCUTERE O DA METTERE IN DISCUSSIONE:
 
--facciamo la barra che permette all’utente di tornare indietro agevolmente?
+-facciamo la barra (breadchrumb) che permette all’utente di tornare indietro agevolmente?
 Home>interviste>gallery
 
 
 -bisogna iniziare a pensare a colori e a tutte le menate sull’accessibilità
+
+
+//INFORMAZIONI TECNICHE
+
+-Per la parte XML Schema abbiamo utilizzato il modello "Tende alla Veneziana" in cui ogni elemento è nominale e possiede  
+ tipo che se non è base verrà specificato in seguito.
