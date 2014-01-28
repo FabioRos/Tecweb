@@ -6,8 +6,9 @@
     elementFormDefault = "qualified"
 >
     <xsd:element name="valutazioni" type="TValutazioni" >
+    
         <xsd:unique name="valutazioni_univoche">
-            <xsd:selector xpath="valutazione"/>
+            <xsd:selector xpath=".//valutazione"/>
             <xsd:field xpath="email"/>
             <xsd:field xpath="idPost"/>
         </xsd:unique>
@@ -41,8 +42,6 @@
         </xsd:restriction>
     </xsd:simpleType>
       
-        
-        
     <xsd:complexType name="TCorrispondenza">
         <xsd:sequence>
             <xsd:element name="idGalleria" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1" />

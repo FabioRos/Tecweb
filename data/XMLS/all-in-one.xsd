@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!--
+Creo un unico file xml perché ho la necesssità di mantenere vincoli di integrità
+referenziale tra le varie strutture
+-->
+
+<xsd:schema 
+    xmlns:xsd = "http://www.w3.org/2001/XMLSchema" 
+    targetNamespace = "http://www.musicbreak.com" 
+    xmlns = "http://www.musicbreak.com" 
+    elementFormDefault = "qualified"
+>
+    
+    <xsd:element name="root" type="Troot"/>
+    
+    
+        
+</xsd:schema>
