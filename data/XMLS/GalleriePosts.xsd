@@ -6,14 +6,11 @@
     elementFormDefault = "qualified"
 >
     <xsd:element name="galleriePosts" type="TGalleriePosts">
-        <xsd:unique name="unique-idGalleria">
-            <xsd:selector xpath="corrispondenza"/>
-            <xsd:field xpath="idGalleria"/>
-        </xsd:unique>
-        <xsd:unique name="unique-idPost">
-            <xsd:selector xpath="corrispondenza"/>
-            <xsd:field xpath="idPost"/>
-        </xsd:unique>
+         <xsd:unique name="corrispondenze_univoche">
+        <xsd:selector xpath="corrispondenza"/>
+        <xsd:field xpath="idGalleria"/>
+        <xsd:field xpath="idPost"/>
+    </xsd:unique>
     </xsd:element>
 	 
     <xsd:complexType name="TGalleriePosts">
@@ -22,13 +19,12 @@
         </xsd:sequence>
     </xsd:complexType>
         
-        
-        
     <xsd:complexType name="TCorrispondenza">
         <xsd:sequence>
             <xsd:element name="idGalleria" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1" />
             <xsd:element name="idPost" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1" />
         </xsd:sequence>
     </xsd:complexType>
+    
  
 </xsd:schema>
