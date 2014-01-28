@@ -6,11 +6,11 @@
     elementFormDefault = "qualified"
 >
     <xsd:element name="galleriePosts" type="TGalleriePosts">
-         <xsd:unique name="corrispondenze_univoche">
-        <xsd:selector xpath="corrispondenza"/>
-        <xsd:field xpath="idGalleria"/>
-        <xsd:field xpath="idPost"/>
-    </xsd:unique>
+        <xsd:unique name="corrispondenze_univoche">
+            <xsd:selector xpath="corrispondenza"/>
+            <xsd:field xpath="idGalleria"/>
+            <xsd:field xpath="idPost"/>
+        </xsd:unique>
     </xsd:element>
 	 
     <xsd:complexType name="TGalleriePosts">
