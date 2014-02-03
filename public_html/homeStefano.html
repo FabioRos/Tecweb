@@ -8,11 +8,10 @@
 		<meta name="description" content="Il portale di news, articoli, recensioni ed eventi dedicato alla musica"/>
 		<meta name="keywords" content="musica, news, news musicali, notizie, album"/>
 		<meta name="robots" content="index, follow"/>
-        <meta name="language" content="italian it"/>
+    <meta name="language" content="italian it"/>
         <link rel="icon" type="image/x-icon" href="./img/fav.ico"/>
         <link rel="stylesheet" type="text/css" media="handheld, screen" href="./css/global.css"/>
         <link rel="stylesheet" type="text/css" media="print" href="./css/print.css"/>
-        <link rel="stylesheet" type="text/css" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)" href="./css/mobile.css"/>
         <link rel="stylesheet" type="text/css" media="speech" href="./css/aural.css"/> <!--ottimizzo per i ciechi-->
 	</head>
 	<body>
@@ -24,8 +23,9 @@
                 	<h1>Music Break</h1>
                 </span>
                 <span class="cerca">
-                     <input type="search" alt="barra di ricerca"></input>
+                     <input type="search" alt="barra di ricerca" placeholder="cerca"></input>
                      <input type="submit" alt="inserire una ricerca" value="Cerca"></input>
+                     <input type="hidden" value="HomeStefano.html" name="sitesearch"></input>
                 </span>
             </header>
             <nav>
@@ -100,8 +100,9 @@
             </section>
             <footer>
                     <p>
-                    <img src="./img/logo.png" alt="Logo del sito"/>&copy; 2014 Music Break All Right Reserved.
+                    &copy; 2014 Music Break All Right Reserved.
                     <a href="info.html">Chi siamo</a>
+                    <a href="http://it.wikipedia.org/wiki/Copyright">Condizioni d'uso</a>
                     <a href="contact.html">Contatti</a>
                     <a href="rss">Feed RSS</a></p>
             </footer>
