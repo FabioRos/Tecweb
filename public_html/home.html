@@ -18,11 +18,11 @@
             <div id="header">
               <div id="title">
                 <span id="logo" class="notAural"> <!--Alberto: Secondo me questo span potrebbe stare fuori dal div title -->
-                    <img src="./img/logo.png" alt="Logo del sito Music Break"/>
+                    <img src="./img/logo.png" alt="Logo del sito Music Break"/><!--Stefano: l'avevo inserito per permettere all'utente che usa lo screen reader di saltare direttamente la parte del logo,in modo da fargli risparmiare tempo,invece non può/non è consigliabile saltare il titolo del sito.ma è solo una "prova",nel senso che dobbiamo decidere a tavolino come organizzare il discorso "facilita la lettura" per gli screen reader(infatti non l'ho applicato ad altri tag/id/classi per ora).penso che sarà una cosa parecchio importante anche perchè legata all'accessibilità-->
                 </span>
                   <h1><span xml:lang="eng">Music Break</span></h1>
               </div>
-              <div id="search"> <!--Fabio proponeva di togliere il submit tuttavia gli utenti che usano solo il mouse non ci arrivano a premere enter, quindi per me potrebbe anche restare-->
+              <div id="search"> <!--Fabio proponeva di togliere il submit tuttavia gli utenti che usano solo il mouse non ci arrivano a premere enter, quindi per me potrebbe anche restare--><!--Stefano:secondo me è più comodo con submit e poi rende più accessibile la barra di ricerca-->
                   <input type="text" value="" name="q"></input>
                   <input type="submit" alt="inserire una ricerca" value="Cerca"></input>
                   <input type="hidden" value="Home.html" name="sitesearch"></input>
@@ -71,7 +71,7 @@
                   <a class="taglink" rel="tag" href="Home.html/tag/classica/">classica <span>(2)</span></a>
             </div>
         </div>
-        <div id="sidebar"> <!--Alberto: per ora mi prendo la libertà di considerarlo fuori dal content -->
+        <div id="sidebar"> <!--Alberto: per ora mi prendo la libertà di considerarlo fuori dal content --><!--Stefano:domani chiedo alla gaggi per esserne sicuro,comunque credo che abbia ragione fabio/alberto,ossia sia la sidebar sia gli articoli fanno parte del content-->
             <h2><span xml:lang="eng">TOP News</span></h2>
             <ol>
                 <li><a href="news1.html">news1</a></li>
