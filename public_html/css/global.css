@@ -1,0 +1,47 @@
+*{
+	padding: 0em;
+	border: 0em;
+}
+
+body{
+	background-color: #F5F5F5;
+}
+
+#logo img{
+	float: left;
+	height: 200px;
+	width:  200px;
+}
+#header{
+	float: center;
+}
+#search{
+	float: right;
+}
+#nav{
+	clear: both;
+	
+}
+#nav ul{
+	list-style-type: none;
+	list-style-position: inherit;
+	/*text-align: center;*/
+}
+#nav li{
+	display: inline;
+}
+
+#contents{
+	width: 80%;
+	float: left;
+	background-color: #FBFBFB;
+}
+
+#sidebar{
+	width: 20%;
+	float: right;
+}
+
+#footer{
+	clear: both;
+}
