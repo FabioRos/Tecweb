@@ -9,17 +9,19 @@
     <meta name="keywords" content="musica, news, news musicali, notizie, album"/>
     <meta name="keywords" content="music, magazine, news"/>
     <meta name="robots" content="all" />
-    <link rel="icon" href="./img/favicon.ico" type="image/icon" />
-    <link rel="stylesheet" type="text/css" media="handheld, screen" href="./css/global.css"/>
+    <link rel="icon" href="./img/fav.ico" type="image/icon" />
+    <link rel="stylesheet" type="text/css" media="handheld, screen" href="./css/screen.css"/>
     <link rel="stylesheet" type="text/css" media="print" href="./css/print.css"/>
     <link rel="stylesheet" type="text/css" media="speech" href="./css/aural.css"/>
     <title>Music Break</title>
   </head>
 	<body>
     <div id="header">
+      <a class="help" href="#nav">salta intestazione</a>
       <div id="title">
         <span id="logo" class="notAural"><img src="./img/logo.png" alt="Logo del sito Music Break"/></span>
         <h1><span xml:lang="eng">Music Break</span></h1>
+        <h2>Il portale di notizie dedicato alla musica</h2>
       </div>
       <div id="search">
         <input type="text" value="" name="query" tabindex="5"></input>
@@ -28,7 +30,7 @@
       </div>
     </div>
     <div id="nav">
-      <a class="navhelp" href="#contents">salta menù</a>
+      <a class="help" href="#contents">salta menù</a>
       <ul>
         <li id="current_nav"><span xml:lang="eng">Home</span></li>
         <li><a href="news.html" tabindex="1"><span xml:lang="eng">News</span></a></li>
@@ -38,15 +40,15 @@
       </ul> 
     </div>
     <div id="contents">
-      <a class="navhelp" href="#sidebar">salta contenuto</a>
+      <a class="help" href="#sidebar">salta contenuto</a>
       <div class="article">
         <h2>
           <a href="Home.html/Moogfest" tabindex="16">
             Moogfest:il programma e non solo.Preparatevi a farvi stupire!
           </a>
         </h2>
-        <h3>di Stefano Munari 04/02/14</h3>
-        <img src="./img/moogfest.png" alt="foto:manifesto del moogfestival" />
+        <span>di Stefano Munari 04/02/14</span>
+        <img src="./img/moogfest.png"  alt="foto:manifesto del moogfestival 2014" />
         <p> 
           Il Moogfest, festival nato 10 anni or sono per celebrare il pioniere che è stato Bob Moog, e che viene organizzato ad Asherville nel North Carolina tra il 23 ed il 27 di Aprile, ha finalmente svelato il suo programma, che come sempre si dividerà fra giorno e notte.
         </p>
@@ -56,26 +58,26 @@
       </div>
       <div class="article">
         <h2><a href="Home.html/Musica%20Commerciale" tabindex="17">Musica Commerciale.. Cosa vuole dirci Jake?</a></h2>
-        <h3>di Valerio Burlin 01/02/14</h3>
-        <img src="./img/jake.jpg" alt="foto:album musica commerciale"/>
+        <span>di Valerio Burlin 01/02/14</span>
+        <img src="./img/jake.jpg"  alt="foto:copertina dell'album 'musica commerciale',con immagine di Jake La Furia truccato da clown"/>
         <p>Conosco artisticamente Jake dai primi anni del 2000. La scena italiana era tutt'altra cosa rispetto ad oggi,  in giro c'era poca gente o più probabilmente molta meno gente riusciva e estendere il suo bacino d'utenza fuori dai confini delle rispettive città.</p>
         <a class="continua" href="Home.html/Musica%20Commerciale">continua →</a>
         <div class="tag_title">Tag Articolo:</div>
-        <a class="taglink" rel="tag" href="./tag/Rap/">festival <span>(1)</span></a>
+        <a class="taglink" rel="tag" href="./tag/rap/">rap <span>(1)</span></a>
       </div>
       <div class="article">
         <h2><a href="Home.html/Accusa%20Pharrell" tabindex="18">Alex Kapranos accusa di plagio Pharrell Williams</a></h2>
-        <h3>di Fabio Ros 28/01/14</h3>
-        <img src="./img/pharrell.jpg" alt="foto:immagine di pharrel williams"/>
+        <span>di Fabio Ros 28/01/14</span>
+       <img src="./img/pharrell.jpg"  alt="foto:immagine di Pharrel Williams in vestaglia che si finge schoccato"/>
         <p>«Hey Pharrell - mi piacciono le tue canzoni. Se vuoi un riff in prestito, basta chiedere...». La frecciata a quello che per i Grammy è il produttore dell'anno, Pharrell Williams, porta la firma di Alex...</p>
-        <a class="continua" title="Accusa Pharrell Williams" href="Home.html/Accusa%20Pharrell">continua →</a>
+        <a class="continua"  href="Home.html/Accusa%20Pharrell">continua →</a>
         <div class="tag_title">Tag Articolo:</div>
         <a class="taglink" rel="tag" href="./tag/pop/">pop <span>(10)</span></a>
       </div>
       <div class="article">
         <h2><a href="Home.html/I%20numeri%20di%20J.S.Bach" tabindex="19">Il ruolo dei numeri nella musica di Bach</a></h2>
-        <h3>di Alberto Andeliero 28/01/14</h3>
-        <img src="./img/JSB.jpg" alt="foto:ritratto di JS Bach" />
+        <span>di Alberto Andeliero 28/01/14</span>
+        <img src="./img/JSB.jpg"  alt="foto:ritratto di JS Bach con in mano una sua partitura" />
         <p>La musica nel medioevo apparteneva al Quadrivium (letteralmente quattro vie) insieme all’aritmetica, alla geometria  ed all’astronomia che disciplinavano l’ambito matematico.Sant’Agostino, nel suo De Doctrina Christiana, scrive: «Ignorare o sottovalutare il significato mistico dei numeri significa precludersi la comprensione di un’infinità di nozioni».</p>
         <a class="continua" href="Home.html/I%20numeri%20di%20J.S.Bach">continua →</a>
         <div class="tag_title">Tag Articolo:</div>
@@ -83,7 +85,7 @@
       </div>
     </div>
     <div id="sidebar">
-      <a class="navhelp" href="#footer">salta sidebar</a>
+      <a class="help" href="#footer">salta sidebar</a>
       <h2><span xml:lang="eng">TOP News</span></h2>
         <ol>
           <li><a href="news1.html" tabindex="7">news1</a></li>
@@ -104,6 +106,7 @@
       </ol>
     </div>
     <div id="footer">
+      <a class="help" href="#header">salta testo a fine pagina</a>
       <p>&copy; 2014 Music Break All Right Reserved. | 
         <a href="info.html" tabindex="20"> Chi siamo</a> | 
         <a href="http://it.wikipedia.org/wiki/Copyright" tabindex="21">Condizioni d'uso</a> | 
