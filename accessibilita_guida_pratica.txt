@@ -1,0 +1,117 @@
+Completa separazione tra Comportamento, Presentazione e Struttura.
+
+
+COMPORTAMENTO:
+
+	-Accessibilità garantita attraverso linee guida del WCAG.
+
+	-Dare uno strumento di ricerca per trovare elementi del sito.
+
+	-Offrire ancore nella stessa pagina per facilitare la navigazione in pagine grandi. ("torna su").
+
+	-Non infrangere convenzioni interne o esterne.
+-Evitare pop-up, fastidiosi.
+	
+-Non dare indicazioni visive. ("premi il pulsante in alto a destra").
+	
+-Testare sempre il sito con tutti i maggiori browser, screen reader ed INS.  (??INS??)
+	
+-Dare le informazioni con un numero limitato di click.
+
+	-Non obbligare utente e reinserire i campi dei form dopo messaggi di errore.
+	
+-Ogni messaggio di errore deve essere corredato da "che errore è" e da "Come fare a risolvere".
+	.prevenire ogni tipo di errore, se possibile
+	
+-Non mettere link circolari (che puntano alla stessa pagina).
+
+
+
+
+
+STRUTTURA
+	
+-Utilizzo standard web W3C.
+ .non utilizzare tag obsoleti o deprecati
+ .utilizzare markup pulito e corretto
+ .
+	 chiudere tutti i tag aperti nell'ordine giusto
+	.utilizzare gli attributi "alt" su ogni elemento utile
+	.utilizzare markup semantico
+.
+	 <a>…</a>[spazio]<a>…</a>
+	.tabelle accessibili
+	.rimuovo media non testuale per vedere se struttura e contenuto regge
+
+-usare titoli univoci che vanno dal particolare al generale
+
+-Struttura utilizzando elementi di blocco, come div, o di linea,
+
+	  come span, ed utilizzare tabelle solo per elencare dati tabellari.
+
+	evitare la “divite”(cioè non mettere div dove non sono necessari,sfruttare anche gli altri elementi in modo da rendere il codice comprensibile)
+
+	-in generale non voglio che l’utente debba usare la freccia <- back per tornare indietro nella navigazione(utilizzare breadcrumb)
+
+	-Usare Access Key per i comandi rapidi alle funzioni principali.
+
+	-usare tabindex
+	
+-Ogni link deve avere un'ancora diversa per evitare link che portano alla stessa pagina.
+ 		.ancore con nomi significativi
+		.eseguire i 2 test relativi ai link:	1-stampare la pagina web in bianco e nero e chiedere ad un utente di evidenziare i link(deve riuscire a riconoscerli)
+							2-test a occhi socchiusi(guardando la pagina a occhi socchiusi devono essere riconoscibili i link,indipendentemente dai colori)
+		.MAI SOTTOLINEARE ELEMENTI CHE NON SIANO LINK
+		
+		.posso usare link non sottolineati se quando l’utente ci passa sopra con il mouse diventano sottolineati(attributo hover in css)
+
+-Esplicitare acronimi di abbreviazioni e sigle per screen reader e motori ricerca.
+	
+-Tenere sempre presente il "Dove sono", “Di cosa si tratta”, ”Da dove sono venuto" e "Dove posso andare" == header, content, breadcrumb, navigation bar
+
+- utilizzare label per element del form, in modo da facilitate gli screen reader
+	
+-Dividere form in fieldset.
+-usare tabindex per spostarmi all’interno della form
+-Struttura corretta tabella:
+	.summary
+	.thead
+	.tfooter
+	.tbody
+	.scope
+	.id
+
+
+
+PRESENTAZIONE
+	
+-Dichiarazione corretta lingua documento.
+	.dichiarare lingua corretta per parole non appartenenti alla lingua dichiarate per il documento(questo non è possibile all’interno
+	di una parte testuale segnata in questo modo “…testo…”)
+
+.garantire una visualizzazione fluida del contenuto(responsive design)
+
+	 modificare la struttura a seconda delle capacità del dispositivo che si utilizza:
+			% si usa per le immagini e per definire il font-size generale(solitamente 76%)
+			(% lo userei per i box(margin,border…) )
+			em si usa per il testo,i caratteri,pulsanti … permette un ridimensionamento corretto
+
+-Controllare i colori utilizzati per i contrasti(vedi siti per i test,possibilmente websafe in modo che vengano visualizzati su tutti i dispositivi).
+
+-usare font accessibili,evitare font elaborati
+
+-evitare menù a tendina(detti anche a discesa),NON SONO ACCESSIBILI per utenti con disabilità
+
+-per immagini:mai mandare al server immagini di dimensione > 300kb;best practice=prima di inserire l’immagine nel sito la scalo secondo la dimensione giusta e poi la inserisco nella pagina.
+	
+-Usare classi CSS che definiscono il contenuto dell'oggetto e non il comportamento.
+	
+-CSS diversi per ogni tipo di dispositivo(usare media query per particolari tipi di device)
+
+	.per la stampa: con solo testo e tabelle, no link, no menu e no sfondi(la barra di navigazione spesso si omette)
+
+LIMITI STANDARD DI INCAZZATURA DELL’UTENTE:
+
+	-max  dai 5 agli 8 click per trovare l’informazione che cerca
+	-max tempo di attesa 400 millisec perché si carichi la pagina
+	-evitare eccesso di link e sovraccarico cognitivo,linguaggio semplice
