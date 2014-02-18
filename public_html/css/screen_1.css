@@ -1,11 +1,12 @@
+/* Impostazioni di stile generali */
 *{
 	margin: 0;
 	padding: 0;
 }
-
 body{
 	background-color: #999966;
 }
+
 
 .help{
 	position:absolute;
@@ -13,58 +14,162 @@ body{
 	overflow:hidden;
 }
 
+/* Dimensionamento e posizionamento logo del sito */
 #logo img{
 	float: left;
-	height: 40%;
-	width:  40%;
+	height: 15%;
+	width:  15%;
 }
 
+/* Impostazioni stile dell'header */
 #header{
-	font-family: "Courier New", Courier, monospace
-	text-align: center;
+	font-family: Georgia, serif;
 	color: #FFFF00;
 }
+#header h1
+{
+	font-size: 5em;
+	font-weight: bold;
+	font-variant: small-caps;
+	padding-left: 20%;
+}
+#header h2
+{
+	padding-top: 5%;
+	padding-left: 20%;
+	font-style: italic;
+}
 
-#search{
+/* Impostaioni barra search con transizione */
+#search
+{
 	float: right;
 }
-#nav{
-	clear: both;
+#text_field
+{
+	padding: 2% 2%;
+	font-size: 1.2em;
+	border-radius: 2em;
+	-moz-border-radius: 2em; 
+	-webkit-border-radius: 2em;
+	background-color: #666633;
+	color: #FFFFFF;
+}
+#text_field:active
+{
 	
 }
-#nav ul{
+
+/* Impostazioni menù di navigazione */
+#nav
+{
+	clear: both;
+	padding: 1.0em 0;
+}
+#nav ul
+{
 	list-style-type: none;
-	list-style-position: inherit;
 	text-align: center;
 }
-#nav li{
-	display: inline;
+#nav li
+{
+	display: inline-block;
+	width: 19%;
+	line-height: 150%;
+	font-size: 1.5em;
+	border-right-style: solid;
+	border-width: 1px;
+	border-color: #FFFF00;
 }
 
-#contents{
-	clear: both;
-	width: 80%;
+/* Impostazioni visualizzazione contenuti */
+#contents
+{
 	float: left;
-	background-color: #6699FF;
+	width: 75%;
 }
-.article{
-	float: right;
+#contents h1
+{
+	border-style: ridge;
+	border-radius: 2em;
+	-moz-border-radius: 2em; 
+	-webkit-border-radius: 2em;
+	width: 13%;
+	margin-left: 42%;
+	font-size: 1.0em;
+	text-align: center;
 }
-
-.article img{
+.article
+{
+	height: 40%;
+	width: 40%;
 	float: left;
-	height: 18em;
-	width: 18em;
+	border-style: solid;
+	border-width: 1px;
+	padding: 1%;
+	margin: 1% 4% 2% 3%;
 }
-
-#sidebar{
-	width: 10%;
+.article span
+{
 	float: right;
-	padding: 0% 5% 0%;
-	background-color: #6699FF;
-
+	font-size: 0.8em;
+	font-style: italic;
+}
+.article p
+{
+	clear: left;
+}
+.article img
+{
+	float: left;
+	height: 15em;
+	width: 15em;
+	padding: 1% 0;
+}
+.tag_title
+{
+	font-weight: bold;
 }
 
-#footer{
+/* Impostazioni di stile della sidebar laterale */
+#sidebar
+{
+	width: 15%;
+	float: right;
+	padding: 10% 7% 0 2%;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-width: 1px;
+	border-color: #FFFF00;
+}
+#sidebar h1
+{
+	font-size: 1.5em;
+	text-align: center;
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-color: #FFFF00;
+}
+#sidebar ol 
+{
+	padding: 5% 0 40% 4%;
+}
+#sidebar li
+{
+	padding-bottom: 5%;
+}
+#sidebar a
+{
+	font-style: italic;
+}
+
+/* Impostazioni stile del piede */
+#footer
+{
 	clear: both;
+	padding: 1%;
+	text-align: center;
+	border-top-style: solid;
+	border-width: 1px;
+	border-color: #FFFF00;
 }
