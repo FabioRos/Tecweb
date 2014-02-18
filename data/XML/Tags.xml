@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tags xmlns="http://www.musicbreak.com" 
       xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
-      xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS tags.xsd">
+      xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS Tags.xsd">
     <tag id="1">Pop</tag>
     <tag id="2">Dance</tag>
     <tag id="3">Rock</tag>
