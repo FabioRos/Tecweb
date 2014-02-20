@@ -4,7 +4,7 @@ La Password andrà modificata con un algoritmo di criptaggio, intanto la inseris
 -->
 <amministratori xmlns="http://www.musicbreak.com" 
             xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
-            xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS amministratori.xsd">
+            xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS Amministratori.xsd">
     <admin>
         <username>PowerRanger</username>
         <password>DinaLampa</password>
