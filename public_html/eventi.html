@@ -23,25 +23,25 @@
                 <h1><span xml:lang="eng">Music Break</span></h1>
             </div>
             <div id="search">
-                <input type="text" id="text_field" value="" name="query" tabindex="5"></input>
-                <input type="submit" alt="inserire una ricerca" value="Cerca" tabindex="6"></input>
+                <input type="text" id="text_field" value="" name="query" tabindex="1"></input>
+                <input type="submit" alt="inserire una ricerca" value="Cerca" tabindex="3"></input>
                 <input type="hidden" value="Home.html" name="sitesearch"></input>
             </div>
         </div>
         <div id="nav">
             <a class="navhelp" href="#contents">salta menù</a>
             <ul>
-                <li id="current_nav"><span xml:lang="eng">Home</span></li>
-                <li><a href="news.html" tabindex="1"><span xml:lang="eng">News</span></a></li>
-                <li><a href="interviste.html" tabindex="2">Interviste</a></li>
-                <li><a href="recensioni.html" tabindex="3">Recensioni</a></li>
-                <li><a href="eventi.html" tabindex="4">Eventi</a></li>
+                <li><a href="home.html" tabindex="5"><span xml:lang="eng">Home</span></a></li>
+                <li><a href="news.html" tabindex="8"><span xml:lang="eng">News</span></a></li>
+                <li><a href="interviste.html" tabindex="13">Interviste</a></li>
+                <li><a href="recensioni.html" tabindex="21">Recensioni</a></li>
+                <li id="current_nav">Eventi</li>
             </ul> 
         </div>
         <div id="contents">
             <ul class="eventi">
                 <li class="evento">
-                    <h2 title="Independence party"><a href="#" tabindex="5">Independence party</a></h2>
+                    <h2 title="Independence party"><a href="#" tabindex="55">Independence party</a></h2>
 					<div class="tags">
 						<ul>
 							<li>tag1</li>
@@ -87,7 +87,7 @@
                 </li>
 
                 <li class="evento">                       
-                    <h2 title="Fluo party"><a href="#" tabindex="6">Fluo party</a></h2>
+                    <h2 title="Fluo party"><a href="#" tabindex="70">Fluo party</a></h2>
 					<div class="tags">
 						<ul>
 							<li>tag4</li>
@@ -124,7 +124,7 @@
                 </li>
 
                 <li class="evento">
-                    <h2 title="Canoa party"><a href="#" tabindex="7">Canoa party</a></h2>
+                    <h2 title="Canoa party"><a href="#" tabindex="85">Canoa party</a></h2>
 					<div class="tags">
 						<ul>
 							<li>tag7</li>
@@ -164,7 +164,7 @@
                 </li>
 
                 <li class="evento">
-                    <h2 title="Sixty party"><a href="#" tabindex="8">Sixty party</a></h2>
+                    <h2 title="Sixty party"><a href="#" tabindex="100">Sixty party</a></h2>
 					<div class="tags">
 						<ul>
 							<li>tag10</li>
@@ -211,40 +211,20 @@
 
             </ul>
 
-            <div class="nav_pagine">
-                <a href="#">&lt;&lt;</a>    <!-- Non ho messo classi perche nella rima e nell'ultima pagin nasondo i pulsanti ijnutili da css -->
-                <a href="#">&lt;</a>
+            <div class="nav_pagine">  <!-- perchè usare 2 frecce per ogni scorrimento,non gli facciamo scorrere 1 pagina alla volta e quindi 1 freccia per andare a sx e 1 per andare a dx?PS:comunque ci vanno i tabindex e quindi aggiungo(Stefano)-->
+                <a href="#" tabindex="150">&lt;&lt;</a>    <!-- Non ho messo classi perche nella rima e nell'ultima pagin nasondo i pulsanti ijnutili da css -->
+                <a href="#" tabindex="155">&lt;</a>
                 <span>1</span>
-                <a href="#">&gt;</a>
-                <a href="#">&gt;&gt;</a>
+                <a href="#" tabindex="160">&gt;</a>
+                <a href="#" tabindex="165">&gt;&gt;</a>
             </div>
-        </div>
-        <div id="sidebar">
-            <h2><span xml:lang="eng">TOP News</span></h2>
-            <ol>
-                <li><a href="news1.html" tabindex="9">news1</a></li>
-                <li><a href="news2.html" tabindex="10">news2</a></li>
-                <li><a href="news3.html" tabindex="11">news3</a></li>
-            </ol>
-            <h2><span xml:lang="eng">TOP</span> Interviste</h2>
-            <ol>
-                <li><a href="interv1.html" tabindex="12">intervista1</a></li>
-                <li><a href="interv2.html" tabindex="13">intervista2</a></li>
-                <li><a href="interv3.html" tabindex="14">intervista3</a></li>
-            </ol>
-            <h2><span xml:lang="eng">TOP</span> Recensioni</h2>
-            <ol>
-                <li><a href="rec1.html" tabindex="15">recensione1</a></li>
-                <li><a href="rec2.html" tabindex="16">recensione2</a></li>
-                <li><a href="rec3.html" tabindex="17">recensione3</a></li>
-            </ol>
         </div>
         <div id="footer">
             <p>&copy; 2014 Music Break All Right Reserved. | 
-                <a href="info.html" tabindex="18"> Chi siamo</a> | 
-                <a href="http://it.wikipedia.org/wiki/Copyright" tabindex="19">Condizioni d'uso</a> | 
-                <a href="contact.html" tabindex="20"> Contatti</a> | 
-                <a href="rss" tabindex="21"> Feed RSS</a></p>
+                <a href="info.html" tabindex="920"> Chi siamo</a> | 
+                <a href="condizioni.html" tabindex="930">Condizioni d'uso</a> | 
+                <a href="contact.html" tabindex="940"> Contatti</a> | 
+                <a href="rss" tabindex="950"> Feed RSS</a></p>
         </div>
     </body>
 </html>
