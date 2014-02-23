@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<posts xmlns="http://www.musicbreak.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS Posts.xsd">
+<posts> <!--xmlns="http://www.musicbreak.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.musicbreak.com/data/XMLS Posts.xsd">-->
 	<post id=1>
 		<titolo>TITOLO</titolo>
 		<idAutore>IDAUTORE</idAutore>

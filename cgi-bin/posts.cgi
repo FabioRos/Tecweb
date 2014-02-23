@@ -1,4 +1,6 @@
 #!/usr/bin/perl -w
+
+
 use strict;
 use XML::LibXSLT;
 use XML::LibXML;
@@ -10,8 +12,9 @@ my %in= ( $key => $value );
 print ("Content-type: text/html\n\n");
 
 my $xslt = XML::LibXSLT->new();
-my $source = XML::LibXML->load_xml(location => "../data/posts.xml");
-my $style_doc = XML::LibXML->load_xml(location=>"../data/posts.xsl",no_cdata=>1);
-my $stylesheet = $xslt->parse_stylesheet($style_doc);
-my $results = $stylesheet->transform($source, %in);
-print $stylesheet->output_as_bytes($results);
+my $source = XML::LibXML->load_xml(location => "//Posts.xml");
+#my $style_doc = XML::LibXML->load_xml(location=>"/data/XSLT/Posts.xsl",no_cdata=>1);
+#my $stylesheet = $xslt->parse_stylesheet($style_doc);
+#my $results = $stylesheet->transform($source, %in);
+#print $stylesheet->output_as_bytes($results);
+print ("<h1>PROVA!!!</h1>")
