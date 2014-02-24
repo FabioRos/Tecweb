@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Questo file serve per mettere in relazione le gallerie con i post 
+(di tipo intervista) a cui sono collegati.
+-->
+<root xmlns="http://www.musicbreak.com" 
+      xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+      xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS all-in-one.xsd">
+    
+    
+    <!-- sezione tags -->
+    <tags>
+        <tag id="1">Pop</tag>
+        <tag id="2">Dance</tag>
+        <tag id="3">Rock</tag>
+        <tag id="4">Reaggae</tag>
+        <tag id="5">Classica</tag>
+        <tag id="6">Rap/Hip hop</tag>
+        <tag id="7">Digital Audio</tag>
+    </tags>
+
+    <!-- GALLERIE -->
+    
+    <gallerie>
+        <galleria id="1">
+            <foto>
+                <titolo>Volto Pausini</titolo>
+                <srcPath>../images/Pausini1.jpeg</srcPath>
+            </foto>
+            <foto>
+                <titolo>Volto Pausini</titolo>
+                <srcPath>../images/Pausini2.jpeg</srcPath>
+            </foto>
+            <foto>
+                <titolo>Volto Pausini</titolo>
+                <srcPath>../images/Pausini3.jpeg</srcPath>
+            </foto>
+            <foto>
+                <titolo>Volto Pausini</titolo>
+                <srcPath>../images/Pausini4.jpeg</srcPath>
+            </foto>
+        </galleria>
+    </gallerie>
+    <!-- EDITORI -->
+    <editori>
+        <editore id="1">
+            <nome>Mario</nome>
+            <cognome>Rossi</cognome>
+        </editore>
+        <editore id="2">
+            <nome>Fabio</nome>
+            <cognome>Ros</cognome>
+        </editore>
+        <editore id="3">
+            <nome>Luca</nome>
+            <cognome>Bonaldo</cognome>
+        </editore>
+        <editore id="4">
+            <nome>Antonio</nome>
+            <cognome>Banderas</cognome>
+        </editore>
+        <editore id="5">
+            <nome>Gianni</nome>
+            <cognome>Ottimista</cognome>
+        </editore>
+        <editore id="6">
+            <nome>Alessandro</nome>
+            <cognome>Mangio</cognome>
+        </editore>
+    </editori>
+
+    <!-- AMMINISTRATORI -->
+    
+    <amministratori>
+        <admin>
+            <username>PowerRanger</username>
+            <password>DinaLampa</password>
+        </admin>
+    </amministratori>
+    
+</root>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<posts> <!--xmlns="http://www.musicbreak.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.musicbreak.com/data/XMLS Posts.xsd">-->
+	<post id=1>
+		<titolo>TITOLO</titolo>
+		<idAutore>IDAUTORE</idAutore>
+		<data>DATA</data>
+		<testo>qui ci và del testo</testo>
+	</post>
+	<post id=2>
+		<titolo>TITOLO</titolo>
+		<idAutore>IDAUTORE</idAutore>
+		<data>DATA</data>
+		<testo>qui ci và del testo</testo>
+	</post>
+	<post id=3>
+		<titolo>TITOLO</titolo>
+		<idAutore>IDAUTORE</idAutore>
+		<data>DATA</data>
+		<testo>qui ci và del testo</testo>
+	</post>
+</posts>
