@@ -19,6 +19,31 @@ Questo file serve per mettere in relazione le gallerie con i post
         <tag id="7">Digital Audio</tag>
     </tags>
 
+    <!-- TagPosts -->
+
+    <TagsPosts>
+        <corrispondenzaTag>
+            <idTag>1</idTag>
+            <idPost>2</idPost>
+        </corrispondenzaTag>
+    
+        <corrispondenzaTag>
+            <idTag>4</idTag>
+            <idPost>2</idPost>
+        </corrispondenzaTag>
+    
+        <corrispondenzaTag>
+            <idTag>3</idTag>
+            <idPost>2</idPost>
+        </corrispondenzaTag>
+    
+        <corrispondenzaTag>
+            <idTag>2</idTag>
+            <idPost>3</idPost>
+        </corrispondenzaTag>
+    </TagsPosts>
+
+
     <!-- GALLERIE -->
     
     <gallerie>
@@ -41,6 +66,16 @@ Questo file serve per mettere in relazione le gallerie con i post
             </foto>
         </galleria>
     </gallerie>
+    
+    <!-- GALLERIE-POSTS -->
+    
+    <galleriePosts>
+        <corrispondenza>
+            <idGalleria>1</idGalleria>
+            <idPost>2</idPost>
+        </corrispondenza>
+    </galleriePosts>
+    
     <!-- EDITORI -->
     <editori>
         <editore id="1">
@@ -78,4 +113,8 @@ Questo file serve per mettere in relazione le gallerie con i post
         </admin>
     </amministratori>
     
+    <!-- VALUTAZIONI -->
+
+
+      
 </root>

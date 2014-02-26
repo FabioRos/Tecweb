@@ -3,6 +3,9 @@
 <!--
 Creo un unico file xml perché ho la necesssità di mantenere vincoli di integrità
 referenziale tra le varie strutture
+
+Ora assumiamo la corretteza per costruzione da script perl, questo per alleggerire 
+il sistema ed evitare inutili rallentamenti.
 -->
 
 <xsd:schema 
@@ -18,10 +21,12 @@ referenziale tra le varie strutture
         <xsd:sequence>
            
             <xsd:element name="tags" type="Ttags" maxOccurs="1"/>
-            <xsd:element name="gallerie" type="TGallerie" />
-            <xsd:element name = "editori" type="TEditori" />
-            <xsd:element name = "amministratori" type="TAmministratori"/>
-                
+            <xsd:element name="TagsPosts" type="TTagsPosts" maxOccurs="1"/>
+            <xsd:element name="gallerie" type="TGallerie" maxOccurs="1"/>
+            <xsd:element name="galleriePosts" type="TGalleriePosts" maxOccurs="1"/>
+            <xsd:element name = "editori" type="TEditori" maxOccurs="1"/>
+            <xsd:element name = "amministratori" type="TAmministratori" maxOccurs="1"/>
+             <xsd:element name="valutazioni" type="TValutazioni" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
     
@@ -47,6 +52,24 @@ referenziale tra le varie strutture
     
     <!-- Tags Definition END -->
     
+    <!-- TagsPosts BEGIN-->
+    
+
+    <xsd:complexType name="TTagsPosts">
+        <xsd:sequence>
+            <xsd:element name="corrispondenzaTag" type="TCorrispondenzaTag" maxOccurs = "unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+              
+    <xsd:complexType name="TCorrispondenzaTag">
+        <xsd:sequence>
+            <xsd:element name="idTag" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="idPost" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <!-- TagsPosts END -->
+    
     
     <!-- Gallerie Definition BEGIN -->
     
@@ -71,6 +94,24 @@ referenziale tra le varie strutture
     </xsd:complexType>
     
     <!-- Gallerie Definition END -->
+    
+    
+    <!-- GALLERIEPOSTS -->
+	 
+    <xsd:complexType name="TGalleriePosts">
+        <xsd:sequence>
+            <xsd:element name="corrispondenza" type="TCorrispondenza" maxOccurs = "unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+        
+    <xsd:complexType name="TCorrispondenza">
+        <xsd:sequence>
+            <xsd:element name="idGalleria" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="idPost" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <!-- GALLERIEPOSTS END -->
     
     <!-- Editori Definition BEGIN -->
 
@@ -99,7 +140,7 @@ referenziale tra le varie strutture
     
     <!-- Amministratori Definition BEGIN -->
     
-     <xsd:complexType name = "TAmministratori">
+    <xsd:complexType name = "TAmministratori">
         <xsd:sequence>
             <xsd:element name="admin" type = "TAdmin" maxOccurs = "unbounded"/>
         </xsd:sequence>
@@ -129,6 +170,13 @@ referenziale tra le varie strutture
     </xsd:simpleType>
     
     <!-- Aministratori Definition END -->
+    
+    
+    <!-- valutazioni BEGIN -->
+
+    
+    <!-- valutazioni END -->
+   
         
     
         
