@@ -22,13 +22,6 @@ a:visited
 }
 
 
-#title
-{
-	display:inline-block;
-	width:80%;
-}
-
-
 /* Dimensionamento e posizionamento logo del sito */
 #logo img{
 	float: left;
@@ -44,6 +37,11 @@ a:visited
 	font-family: Georgia, serif;
 	color: #FFFFFF;
 	padding-bottom: 1%;
+}
+#title
+{
+	display:inline-block;
+	width:75%;
 }
 #header h1
 {
@@ -64,6 +62,7 @@ a:visited
 #search
 {
 	display: inline-block;
+	position: relative;
 }
 #text_field
 {
@@ -116,6 +115,7 @@ a:visited
 }
 #nav ul li a, #nav ul li p{
 	color: white;
+	display: block;
 }
 #nav ul li:hover
 {
@@ -124,15 +124,19 @@ a:visited
 
 
 /* Impostazioni visualizzazione contenuti */
-#contents
+#contents, #contents_home
 {
 	float: left;
+}
+#contents_home
+{
 	width: 80%;
 }
-#contents h1
+#contents h1, #contents_home h1
 {
 	font-size: 1.0em;
 	text-align: center;
+	padding-top: 1%;
 }
 .article
 {
