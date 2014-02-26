@@ -1,0 +1,56 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema" targetNamespace = "http://www.musicbreak.com" xmlns = "http://www.musicbreak.com" elementFormDefault = "qualified">
+
+<xsd:element name="posts" type="TPosts" />
+
+<xsd:complexType name="TPosts">
+    <xsd:sequence>
+        <xsd:element name="eventi" type="TEventi" maxOccurs = "1" />
+        <xsd:element name="recensioni" type="TRecensioni" maxOccurs = "1" />
+        <xsd:element name="interviste" type="TEventi" maxOccurs = "1" />
+        <xsd:element name="news" type="TNews" maxOccurs = "1" />
+    </xsd:sequence>
+</xsd:complexType>
+
+<!-- Tcommon contiene gli elementi comuni -->
+<xsd:complexType name="Tcommon">
+    <xsd:sequence>
+        <xsd:element name="titolo" type="xsd:string" />
+        <xsd:element name="foto" type="xsd:string" />
+        <xsd:element name="excerpt" type="TExcerpt" />
+        <xsd:element name="descrizione" type="TDescrizione" />
+        <xsd:element name="autore" type="TAutore" />
+        <xsd:element name="data" type="TData" />
+    </xsd:sequence>
+</xsd:complexType>
+
+
+<xsd:complexType name="TEventi">
+    <xsd:sequence>
+        <xsd:element name="evento" type="TEvento" maxOccurs="unbounded" />
+    </xsd:sequence>
+</xsd:complexType>
+
+
+
+<xsd:complexType name="TEvento">
+  <xsd:complexContent>
+    <xsd:extension base="Tcommon">
+      <xsd:sequence>
+        <xsd:element name="dataEvento" type="TData"/>
+        <xsd:element name="NumGiorni" type="xsd:positiveInteger" minOccurs="0"/>
+        <xsd:element name="luogo" type="xsd:string"/>
+        <xsd:element name="oraInizio" type="xsd:string"/>
+        <xsd:element name="oraFine" type="xsd:string"/>
+        <xsd:element name="indirizzo" type="xsd:string"/>
+        <xsd:element name="prezzo" type="xsd:string"/>
+        <xsd:element name="email" type="xsd:string"/>
+        <xsd:element name="telefono" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:extension>
+  </xsd:complexContent>
+  <xsd:attribute name="id" type="xsd:string" use="required" />
+</xsd:complexType>
+
+
+</xsd:schema>
