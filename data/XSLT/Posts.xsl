@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/">
-		<html>
-	<!--<head>
+		<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+	   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="author" content="Fabio Ros, Valerio Burlin, Stefano Munari, Alberto Andeliero"/>
     <meta name="language" content="italian it"/>
@@ -11,17 +11,17 @@
     <meta name="keywords" content="musica, news, news musicali, notizie, album"/>
     <meta name="keywords" content="music, magazine, news"/>
     <meta name="robots" content="all" />
-    <link rel="icon" href="/img/fav.ico" type="image/icon" />
-    <link rel="stylesheet" type="text/css" media="handheld, screen" href="/css/screen_1.css"/>
-    <link rel="stylesheet" type="text/css" media="print" href="/css/print.css"/>
-    <link rel="stylesheet" type="text/css" media="speech" href="/css/aural.css"/>
+    <link rel="icon" href="../img/fav.ico" type="image/icon" />
+    <link rel="stylesheet" type="text/css" media="handheld, screen" href="../css/screen.css"/>
+    <link rel="stylesheet" type="text/css" media="print" href="../css/print.css"/>
+    <link rel="stylesheet" type="text/css" media="speech" href="../css/aural.css"/>
     <title>Home - Music Break</title>
-  </head>-->
+  </head>
 	<body>
     <div id="header">
       <a class="help" href="#nav">salta intestazione</a>
       <div id="title">
-        <span id="logo" class="notAural"><img src="./img/logo.png" alt="Logo del sito Music Break"/></span>
+        <span id="logo" class="notAural"><img src="../img/logo.png" alt="Logo del sito Music Break"/></span>
         <h1><span xml:lang="eng">Music Break</span></h1>
         <h2>Il portale di notizie dedicato alla musica</h2>
       </div>
@@ -53,7 +53,7 @@
     
     <div id="footer">
       <a class="help" href="#header">salta testo a fine pagina</a>
-      <p>&copy; 2014 Music Break All Right Reserved. | 
+      <p>copy; 2014 Music Break All Right Reserved. | 
         <a href="info.html" tabindex="920"> Chi siamo</a> | 
         <a href="condizioni.html" tabindex="930">Condizioni d'uso</a> | 
         <a href="contact.html" tabindex="940"> Contatti</a> | 
@@ -62,5 +62,5 @@
     </div>
 	</body>
 </html>
-	<xsl:template>
+	</xsl:template>
 </xsl:stylesheet>

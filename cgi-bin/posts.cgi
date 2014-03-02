@@ -12,9 +12,8 @@ my %in= ( $key => $value );
 print ("Content-type: text/html\n\n");
 
 my $xslt = XML::LibXSLT->new();
-my $source = XML::LibXML->load_xml(location => "../data/Posts.xml");
-#my $style_doc = XML::LibXML->load_xml(location=>"/data/XSLT/Posts.xsl",no_cdata=>1);
-#my $stylesheet = $xslt->parse_stylesheet($style_doc);
-#my $results = $stylesheet->transform($source, %in);
-#print $stylesheet->output_as_bytes($results);
-print ("<h1>PROVA!!!</h1>")
+my $source = XML::LibXML->load_xml(location => "../data/XML/Posts.xml");
+my $style_doc = XML::LibXML->load_xml(location=>"../data/XSLT/Posts.xsl",no_cdata=>1);
+my $stylesheet = $xslt->parse_stylesheet($style_doc);
+my $results = $stylesheet->transform($source, %in);
+print $stylesheet->output_as_bytes($results);
