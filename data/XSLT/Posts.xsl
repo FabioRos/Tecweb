@@ -34,30 +34,28 @@
     <div id="nav">
       <a class="help" href="#contents">salta menù</a>
       <ul>
-        <li id="current_nav"><span xml:lang="eng">Home</span></li>
-        <li><a href="news.html" tabindex="8"><span xml:lang="eng">News</span></a></li>
-        <li><a href="interviste.html" tabindex="13">Interviste</a></li>
-        <li><a href="recensioni.html" tabindex="21">Recensioni</a></li>
-        <li><a href="eventi.html" tabindex="34">Eventi</a></li>
+        <li><a href="../home.html"><span xml:lang="eng">Home</span></a></li>
+        <li><a href="../news.html"><span xml:lang="eng">News</span></a></li>
+        <li><a href="../interviste.html">Interviste</a></li>
+        <li><a href="../recensioni.html">Recensioni</a></li>
+        <li><a href="../eventi.html">Eventi</a></li>
       </ul> 
     </div>
     <div id="contents">
-      <h1><span xml:lang="eng">PROVA</span></h1>
       <a class="help" href="#sidebar">salta contenuto</a>
-      
-      
-      
-      
-      
+      <h1>Articolo</h1>
+      <div id="mainpost">
+        
+      </div>
     </div>
     
     <div id="footer">
       <a class="help" href="#header">salta testo a fine pagina</a>
       <p>copy; 2014 Music Break All Right Reserved. | 
-        <a href="info.html" tabindex="920"> Chi siamo</a> | 
-        <a href="condizioni.html" tabindex="930">Condizioni d'uso</a> | 
-        <a href="contact.html" tabindex="940"> Contatti</a> | 
-        <a href="rss" tabindex="950"> Feed RSS</a>
+        <a href="../info.html"> Chi siamo</a> | 
+        <a href="../condizioni.html">Condizioni d'uso</a> | 
+        <a href="../contact.html"> Contatti</a> | 
+        <a href="../rss"> Feed RSS</a>
       </p>
     </div>
 	</body>
