@@ -12,7 +12,7 @@ my %in= ( $key => $value );
 print ("Content-type: text/html\n\n");
 
 my $xslt = XML::LibXSLT->new();
-my $source = XML::LibXML->load_xml(location => "//Posts.xml");
+my $source = XML::LibXML->load_xml(location => "../data/Posts.xml");
 #my $style_doc = XML::LibXML->load_xml(location=>"/data/XSLT/Posts.xsl",no_cdata=>1);
 #my $stylesheet = $xslt->parse_stylesheet($style_doc);
 #my $results = $stylesheet->transform($source, %in);
