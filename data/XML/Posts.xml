@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<posts xmlns="http://www.musicbreak.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.musicbreak.com/data/XMLS Posts.xsd">
+<posts><!-- xmlns="http://www.musicbreak.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.musicbreak.com/data/XMLS Posts.xsd">-->
 	<post id="1">
 		<titolo>Beyoncé si è arrabbiata con un fan durante un concerto</titolo>
-		<idAutore>5</idAutore>
+		<idAutore>1</idAutore>
 		<data>18 luglio 2013</data>
 		<testo>Beyoncé si è arrabbiata con un fan durante il suo recente concerto al Gwinnet Center di Duluth, Atlanta. Ma cosa è successo? La Diva pop-soul stava cantando la sua hit ‘Irreplaceable‘, porgendo di volta in volta il microfono alla folla per far cantare loro il famoso pezzo della canzone “to te left, to the left“. Solo che ad un certo punto il microfono è arrivato a un fan che stava riprendendo la performance con il suo cellulare. E qui è scattata l’ira di Queen Bey. “Vedi, non riesci nemmeno a cantare perchè sei troppo impegnato a riprendere” – ha detto la moglie di Jay-Z al fan. “Sono davanti a te baby, devi cogliere l’attimo baby! Metti giù questa dannata fotocamera!“.</testo>
 	</post>

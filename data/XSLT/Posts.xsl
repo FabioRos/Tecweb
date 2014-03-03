@@ -42,23 +42,25 @@
       </ul> 
     </div>
     <div id="contents">
+      <h1>Post</h1>
       <a class="help" href="#sidebar">salta contenuto</a>
-      <h1>Articolo</h1>
-      <div id="mainpost">
-        
-      </div>
+      <xsl:for-each select="posts/post[@id=$post]">
+        <h1><xsl:value-of select="titolo"/></h1>
+        <p>Scritto il <xsl:value-of select="data"/> da <xsl:value-of select="idAutore"/></p>
+        <p><xsl:value-of select="testo"/></p>
+      </xsl:for-each>
     </div>
     
-    <div id="footer">
+    <div id="footer" tabindex="">
       <a class="help" href="#header">salta testo a fine pagina</a>
-      <p>copy; 2014 Music Break All Right Reserved. | 
-        <a href="../info.html"> Chi siamo</a> | 
-        <a href="../condizioni.html">Condizioni d'uso</a> | 
-        <a href="../contact.html"> Contatti</a> | 
-        <a href="../rss"> Feed RSS</a>
+      <p> 2014 Music Break All Right Reserved. | 
+        <a href="info.html"> Chi siamo</a> | 
+        <a href="http://it.wikipedia.org/wiki/Copyright">Condizioni d'uso</a> | 
+        <a href="contact.html"> Contatti</a> | 
+        <a href="rss"> Feed RSS</a>
       </p>
     </div>
-	</body>
+  </body>
 </html>
 	</xsl:template>
 </xsl:stylesheet>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editori    xmlns="http://www.musicbreak.com" 
+<editori><!--    xmlns="http://www.musicbreak.com" 
             xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
-            xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS Editori.xsd">
+            xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS Editori.xsd">-->
     <editore id="1">
         <nome>Mario</nome>
         <cognome>Rossi</cognome>
