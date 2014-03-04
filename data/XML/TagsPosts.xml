@@ -3,9 +3,9 @@
 Questo file serve per mettere in relazione le gallerie con i post 
 (di tipo intervista) a cui sono collegati.
 -->
-<TagsPosts xmlns="http://www.musicbreak.com" 
+<TagsPosts><!-- xmlns="http://www.musicbreak.com" 
            xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
-           xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS TagsPosts.xsd">
+           xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS TagsPosts.xsd">-->
     <corrispondenza>
         <idTag>1</idTag>
         <idPost>2</idPost>
@@ -13,7 +13,7 @@ Questo file serve per mettere in relazione le gallerie con i post
     
     <corrispondenza>
         <idTag>4</idTag>
-        <idPost>2</idPost>
+        <idPost>1</idPost>
     </corrispondenza>
     
     <corrispondenza>

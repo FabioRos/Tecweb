@@ -46,8 +46,9 @@
       <a class="help" href="#sidebar">salta contenuto</a>
       <xsl:for-each select="posts/post[@id=$post]">
         <h1><xsl:value-of select="titolo"/></h1>
-        <p>Scritto il <xsl:value-of select="data"/> da <xsl:value-of select="idAutore"/></p>
+        <p>Scritto il <xsl:value-of select="data"/> da <xsl:value-of select="editore/nome"/>&#160;<xsl:value-of select="editore/cognome"/></p>
         <p><xsl:value-of select="testo"/></p>
+        <p>Tags: <xsl:for-each select="tags/tag">&#160;<xsl:value-of select="text()"/></xsl:for-each> </p>
       </xsl:for-each>
     </div>
     
