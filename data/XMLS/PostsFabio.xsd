@@ -12,7 +12,12 @@
         </xsd:sequence>
     </xsd:complexType>
 
-    <!-- Tcommon contiene gli elementi comuni -->
+    <!--
+    *******************************************************************************
+    ***********************      Tipo Comune      *********************************
+    *******************************************************************************
+    *******************************************************************************
+    -->
     <xsd:complexType name="Tcommon">
         <xsd:sequence>
             <xsd:element name="titolo" type="xsd:string" />
@@ -197,11 +202,6 @@
             <xsd:pattern value="n[1-9][0-9]*" />
         </xsd:restriction>
     </xsd:simpleType>
-
-
-
-
-
 
 
 </xsd:schema>
