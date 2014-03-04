@@ -8,16 +8,17 @@
         <evento id="e1">
             <titolo>Sixty party</titolo>
             <foto>../../public_html/img/eventi/sixtyparty.jpg</foto>
-            <excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
             <descrizione>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
             </descrizione>
-            <data>04 Agosto 2014</data>
+			<autore>Fabio Ros</autore>
+            <data>2014-02-04</data>
             
-            <dataEvento>04 Agosto 2014</dataEvento>
+            <dataEvento>2014-04-08</dataEvento>
             <luogo>Roma</luogo>
-            <oraInizio>22.00</oraInizio>
-            <oraFine>02.00</oraFine>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
             <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
             <prezzo>€11.00</prezzo>
             <email>info@sixtyparty.com</email>
@@ -26,7 +27,8 @@
     </eventi>
     
     <!-- RECENSIONI -->
-    <recensioni>
+
+	<recensioni>
         <recensione id="r1">
             <titolo>Bonobo : Late Night Tales</titolo>
             <foto>../../public_html/img/recensioni/sixtyparty.jpg</foto>
@@ -35,11 +37,11 @@
                 Come un’amore a distanza che, coltivato a lungo e bramato all’inverosimile, finalmente sfocia nel tanto agognato incontro definitivo, la trentatreesima uscita della collana LateNightTales rappresenta la congiunzione perfetta tra due entità fatte praticamente l’una per l’altra e che, sommandosi, scrivono un finale annunciato sin da quando Simon Green ha iniziato ad ottenere il successo che gli spetta.Come un’amore a distanza che, coltivato a lungo e bramato all’inverosimile, finalmente sfocia nel tanto agognato incontro definitivo, la trentatreesima uscita della collana LateNightTales rappresenta la congiunzione perfetta tra due entità fatte praticamente l’una per l’altra e che, sommandosi, scrivono un finale annunciato sin da quando Simon Green ha iniziato ad ottenere il successo che gli spetta.Come un’amore a distanza che, coltivato a lungo e bramato all’inverosimile, finalmente sfocia nel tanto agognato incontro definitivo, la trentatreesima uscita della collana LateNightTales rappresenta la congiunzione perfetta tra due entità fatte praticamente l’una per l’altra e che, sommandosi, scrivono un finale annunciato sin da quando Simon Green ha iniziato ad ottenere il successo che gli spetta.
             </descrizione>
             <autore>Fabio Ros</autore>
-            <data>04 Dicembre 2013</data>
+            <data>2013-12-04</data>
         </recensione>
         
     </recensioni>
-    
+	
     <!-- INTERVISTE -->
     <interviste>
         <intervista id="i1">
@@ -49,13 +51,14 @@
             <descrizione>
                 Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.
             </descrizione>
-            <data>04 Dicembre 2013</data>
-            <autore>Fabio Ros</autore>
+			<autore>Fabio Ros</autore>
+            <data>2013-12-04</data>
+			<intervistato>Noemi</intervistato>
         </intervista>
     </interviste>
-    
+	
     <!-- NEWS -->
-        
+ 
     <news>
         <item id="n1">
             <titolo>Richard Benson uno Svitato!</titolo>
@@ -65,10 +68,8 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
             </descrizione>
-            <data>20 Gennaio 2014</data>
             <autore>Alberto Andeliero</autore>
+            <data>2014-01-20</data>
         </item>
-    </news>
-   
-   
+    </news>   
 </posts>
