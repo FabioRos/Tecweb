@@ -3,9 +3,9 @@
 Questo file serve per mettere in relazione le gallerie con i post 
 (di tipo intervista) a cui sono collegati.
 -->
-<root><!-- xmlns="http://www.musicbreak.com" 
+<root xmlns="http://www.musicbreak.com" 
       xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
-      xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS all-in-one.xsd">-->
+      xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS all-in-one.xsd">
     
     
     <!-- sezione tags -->
@@ -41,15 +41,6 @@ Questo file serve per mettere in relazione le gallerie con i post
             </foto>
         </galleria>
     </gallerie>
-    
-    <!-- GALLERIE-POSTS -->
-    
-    <galleriePosts>
-        <corrispondenza>
-            <idGalleria>1</idGalleria>
-            <idPost>2</idPost>
-        </corrispondenza>
-    </galleriePosts>
     
     <!-- EDITORI -->
     <editori>
@@ -115,6 +106,7 @@ Questo file serve per mettere in relazione le gallerie con i post
             </descrizione>
             <autore>Fabio Ros</autore>
             <data>2014-02-04</data>
+			<tag>1</tag>
             
             <dataEvento>2014-04-08</dataEvento>
             <luogo>Roma</luogo>
@@ -125,6 +117,9 @@ Questo file serve per mettere in relazione le gallerie con i post
             <email>info@sixtyparty.com</email>
             <telefono>0039 333445566</telefono>
         </evento>
+		
+		
+		
     </eventi>
     <!-- RECENSIONI -->
     <recensioni>
@@ -137,6 +132,7 @@ Questo file serve per mettere in relazione le gallerie con i post
             </descrizione>
             <autore>Fabio Ros</autore>
             <data>2013-12-04</data>
+			<tag>2</tag>
         </recensione>
         
     </recensioni>
@@ -152,7 +148,10 @@ Questo file serve per mettere in relazione le gallerie con i post
             </descrizione>
             <autore>Fabio Ros</autore>
             <data>2013-12-04</data>
+			<tag>1</tag>
+			<tag>2</tag>		
             <intervistato>Noemi</intervistato>
+			<galleria>1</galleria>
         </intervista>
     </interviste>
     
@@ -169,6 +168,7 @@ Questo file serve per mettere in relazione le gallerie con i post
             </descrizione>
             <autore>Alberto Andeliero</autore>
             <data>2014-01-20</data>
+			<tag>1</tag>
         </item>
     </news>   
     </posts>

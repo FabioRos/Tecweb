@@ -1,166 +1,8 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
+<xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema" targetNamespace = "http://www.musicbreak.com" xmlns = "http://www.musicbreak.com" elementFormDefault = "qualified">
 
-<!--
-Creo un unico file xml perché ho la necesssità di mantenere vincoli di integrità
-referenziale tra le varie strutture
+    <xsd:element name="posts" type="TPosts" />
 
-Ora assumiamo la corretteza per costruzione da script perl, questo per alleggerire 
-il sistema ed evitare inutili rallentamenti.
--->
-
-<xsd:schema 
-    xmlns:xsd = "http://www.w3.org/2001/XMLSchema" 
-    targetNamespace = "http://www.musicbreak.com" 
-    xmlns = "http://www.musicbreak.com" 
-    elementFormDefault = "qualified"
->
-    
-    <xsd:element name="root" type="Troot"/>
-    
-    <xsd:complexType name="Troot">
-        <xsd:sequence>
-            <xsd:element name="tags" type="Ttags" maxOccurs="1"/>
-            <xsd:element name="gallerie" type="TGallerie" maxOccurs="1"/>
-            <xsd:element name="editori" type="TEditori" maxOccurs="1"/>
-            <xsd:element name="valutazioni" type="TValutazioni" maxOccurs="1"/>
-            <xsd:element name="posts" type="TPosts" />
-        </xsd:sequence>
-    </xsd:complexType>
-    
-    
-    <!-- Tags Definition BEGIN -->
-    
-     
-	
-    <xsd:complexType name="Ttags">
-        <xsd:sequence>
-            <xsd:element name="tag" type="Ttag" maxOccurs = "unbounded" />
-        </xsd:sequence>
-    </xsd:complexType>
-        
-    <xsd:complexType name="Ttag">
-        <xsd:simpleContent>
-            <xsd:extension base="xsd:string">
-                <xsd:attribute name="id" type="xsd:positiveInteger" />
-            </xsd:extension>
-        </xsd:simpleContent>
-    </xsd:complexType>
-     
-    <!-- Gallerie Definition BEGIN -->
-    
-    <xsd:complexType name="TGallerie">
-        <xsd:sequence>
-            <xsd:element name="galleria" type="TGalleria" maxOccurs = "unbounded" />
-        </xsd:sequence>
-    </xsd:complexType>
-        
-    <xsd:complexType name="TGalleria">
-        <xsd:sequence>
-            <xsd:element name="foto" type="TFoto" minOccurs="1" maxOccurs="unbounded" />
-        </xsd:sequence>
-        <xsd:attribute name="id" type="xsd:positiveInteger" />
-    </xsd:complexType>
- 
-    <xsd:complexType name="TFoto">
-        <xsd:sequence>
-            <xsd:element name="titolo" type="xsd:string" maxOccurs="1" />
-            <xsd:element name="srcPath" type="xsd:string" maxOccurs="1" />
-        </xsd:sequence>
-    </xsd:complexType>
-    
-    <!-- Gallerie Definition END -->
-    
-    <!-- Editori Definition BEGIN -->
-
-    <xsd:complexType name = "TEditori">
-        <xsd:sequence>
-            <xsd:element name="editore" type = "TEditore" maxOccurs = "unbounded"/>
-        </xsd:sequence>
-    </xsd:complexType>
-        
-    <xsd:complexType name="TEditore">
-        <xsd:sequence>
-            <xsd:element name="nome" type="TNomeCognome"/>
-            <xsd:element name="cognome" type="TNomeCognome"/>
-        </xsd:sequence>
-        <xsd:attribute name="id" type="xsd:positiveInteger" />
-    </xsd:complexType>
-        
-    <xsd:simpleType name="TNomeCognome">
-        <xsd:restriction base="xsd:string">
-            <xsd:whiteSpace value="collapse"/>
-            <xsd:pattern value="[A-Za-z]+" />
-        </xsd:restriction>
-    </xsd:simpleType>
-
-    <!-- Editori Definition END -->
-    
-    <!-- Amministratori Definition BEGIN -->
-    
-    <xsd:complexType name = "TAmministratori">
-        <xsd:sequence>
-            <xsd:element name="admin" type = "TAdmin" maxOccurs = "unbounded"/>
-        </xsd:sequence>
-    </xsd:complexType>
-        
-    <xsd:complexType name="TAdmin">
-        <xsd:sequence>
-            <xsd:element name="username" type="TUsername"/>
-            <xsd:element name="password" type="TPassword"/>
-        </xsd:sequence>
-    </xsd:complexType>
-        
-          
-    <xsd:simpleType name="TUsername">
-        <xsd:restriction base="xsd:string">
-            <xsd:whiteSpace value="collapse"/>
-            <xsd:pattern value="[A-Za-z0-9_]{5}[A-Za-z0-9_]*" />
-        </xsd:restriction>
-    </xsd:simpleType>
-        
-        
-    <xsd:simpleType name="TPassword">
-        <xsd:restriction base="xsd:string">
-            <xsd:whiteSpace value="collapse"/>
-            <xsd:pattern value="[A-Za-z0-9_]{8}[A-Za-z0-9_]*" />
-        </xsd:restriction>
-    </xsd:simpleType>
-    
-    <!-- Aministratori Definition END -->
-    
-    
-    <!-- valutazioni BEGIN -->
-
-    <xsd:complexType name="TValutazioni">
-        <xsd:sequence>
-            <xsd:element name="valutazione" type="TValutazione" maxOccurs = "unbounded" />
-        </xsd:sequence>
-    </xsd:complexType>
-        
-    <xsd:complexType name="TValutazione">
-        <xsd:sequence>
-            <xsd:element name="voto" type="Tvoto" maxOccurs = "1" />
-            <xsd:element name="idPost" type="xsd:positiveInteger" maxOccurs = "1" />
-            <xsd:element name="email" type="TEmail" maxOccurs = "1" />
-        </xsd:sequence>
-    </xsd:complexType>
-        
-    <xsd:simpleType name="Tvoto">
-        <xsd:restriction base="xsd:positiveInteger">
-            <xsd:minInclusive value="1"/>
-            <xsd:maxInclusive value="5"/>
-        </xsd:restriction>
-    </xsd:simpleType>
-    
-    <xsd:simpleType name="TEmail">
-        <xsd:restriction base="xsd:string">
-            <xsd:pattern value="(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})"/>
-        </xsd:restriction>
-    </xsd:simpleType>
-    
-    <!-- valutazioni END -->
-   
-   
     <xsd:complexType name="TPosts">
         <xsd:sequence>
             <xsd:element name="eventi" type="TEventi" maxOccurs = "1" />
@@ -184,7 +26,6 @@ il sistema ed evitare inutili rallentamenti.
             <xsd:element name="descrizione" type="Ttesto" />
             <xsd:element name="autore" type="xsd:string" />
             <xsd:element name="data" type="xsd:date" />
-            <xsd:element name="tag" type="xsd:positiveInteger" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>
     </xsd:complexType>
 
@@ -321,10 +162,7 @@ il sistema ed evitare inutili rallentamenti.
     <xsd:complexType name="Tintervista">
         <xsd:complexContent>
             <xsd:extension base="Tcommon">
-                <xsd:sequence>
-                    <xsd:element name="intervistato" type="xsd:string" />
-                    <xsd:element name="galleria" type="xsd:positiveInteger" />
-                </xsd:sequence>
+                <xsd:sequence><xsd:element name="intervistato" type="xsd:string" /></xsd:sequence>
                 <xsd:attribute name="id" type="TidIntervista" use="required" />
             </xsd:extension>
         </xsd:complexContent>
@@ -365,8 +203,5 @@ il sistema ed evitare inutili rallentamenti.
         </xsd:restriction>
     </xsd:simpleType>
 
-   
-        
-    
-        
+
 </xsd:schema>
