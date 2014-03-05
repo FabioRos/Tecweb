@@ -180,9 +180,10 @@ il sistema ed evitare inutili rallentamenti.
         <xsd:sequence>
             <xsd:element name="titolo" type="xsd:string" />
             <xsd:element name="foto" type="Tfoto" />
+            <xsd:element name="altfoto" type="xsd:string" />
             <xsd:element name="excerpt" type="Ttesto" />
             <xsd:element name="descrizione" type="Ttesto" />
-            <xsd:element name="autore" type="xsd:string" />
+            <xsd:element name="idautore" type="xsd:positiveInteger" />
             <xsd:element name="data" type="xsd:date" />
             <xsd:element name="tag" type="xsd:positiveInteger" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>

@@ -100,11 +100,12 @@ Questo file serve per mettere in relazione le gallerie con i post
         <evento id="e1">
             <titolo>Sixty party</titolo>
             <foto>../../public_html/img/eventi/sixtyparty.jpg</foto>
+            <altfoto>descrizione della foto</altfoto>
             <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
             <descrizione>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
             </descrizione>
-            <autore>Fabio Ros</autore>
+            <idautore>1</idautore>
             <data>2014-02-04</data>
 			<tag>1</tag>
             
@@ -126,11 +127,12 @@ Questo file serve per mettere in relazione le gallerie con i post
         <recensione id="r1">
             <titolo>Bonobo : Late Night Tales</titolo>
             <foto>../../public_html/img/recensioni/sixtyparty.jpg</foto>
+            <altfoto>descrizione della foto</altfoto>
             <excerpt> Come un’amore a distanza che, coltivato a lungo e bramato all’inverosimile, finalmente sfocia nel tanto agognato incontro definitivo, la trentatreesima uscita della collana LateNightTales rappresenta la congiunzione perfetta tra due entità fatte praticamente l’una per l’altra e che, sommandosi, scrivono un finale annunciato sin da quando Simon Green ha iniziato ad ottenere il successo che gli spetta.</excerpt>            
             <descrizione>
                 Come un’amore a distanza che, coltivato a lungo e bramato all’inverosimile, finalmente sfocia nel tanto agognato incontro definitivo, la trentatreesima uscita della collana LateNightTales rappresenta la congiunzione perfetta tra due entità fatte praticamente l’una per l’altra e che, sommandosi, scrivono un finale annunciato sin da quando Simon Green ha iniziato ad ottenere il successo che gli spetta.Come un’amore a distanza che, coltivato a lungo e bramato all’inverosimile, finalmente sfocia nel tanto agognato incontro definitivo, la trentatreesima uscita della collana LateNightTales rappresenta la congiunzione perfetta tra due entità fatte praticamente l’una per l’altra e che, sommandosi, scrivono un finale annunciato sin da quando Simon Green ha iniziato ad ottenere il successo che gli spetta.Come un’amore a distanza che, coltivato a lungo e bramato all’inverosimile, finalmente sfocia nel tanto agognato incontro definitivo, la trentatreesima uscita della collana LateNightTales rappresenta la congiunzione perfetta tra due entità fatte praticamente l’una per l’altra e che, sommandosi, scrivono un finale annunciato sin da quando Simon Green ha iniziato ad ottenere il successo che gli spetta.
             </descrizione>
-            <autore>Fabio Ros</autore>
+            <idautore>2</idautore>
             <data>2013-12-04</data>
 			<tag>2</tag>
         </recensione>
@@ -142,11 +144,12 @@ Questo file serve per mettere in relazione le gallerie con i post
         <intervista id="i1">
             <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
             <foto>../../public_html/img/interviste/noemi.jpg</foto>
+            <altfoto>descrizione della foto</altfoto>
             <excerpt>Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.</excerpt>
             <descrizione>
                 Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.
             </descrizione>
-            <autore>Fabio Ros</autore>
+            <idautore>3</idautore>
             <data>2013-12-04</data>
 			<tag>1</tag>
 			<tag>2</tag>		
@@ -161,12 +164,13 @@ Questo file serve per mettere in relazione le gallerie con i post
         <item id="n1">
             <titolo>Richard Benson uno Svitato!</titolo>
             <foto>../../public_html/img/news/richardbenson.jpg</foto>
+            <altfoto>descrizione della foto</altfoto>
             <excerpt>Per tastare il polso alla giovane scena rock ravennate abbiamo fatto una chiacchierata con due componenti del quartetto ravennate Actionmen, Matteo Pozzi e Diego Pasini, rispettivamente chitarra/voce e basso di una band completata da Ram Das Libero Foschi (chitarra e voce) e Mattia “Pinna” De Paoli (batteria).Per chi non li conoscesse, gli Actionmen sono un gruppo che suona principalmente pezzi punk-rock e sono conosciuti anche all'estero. Il loro debutto – l'album The Game (2005) pubblicato da Unicorn Records – gli ha dato l'opportunità di emergere e farsi conoscere da un pubblico eterogeneo.</excerpt>
             <descrizione>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
             </descrizione>
-            <autore>Alberto Andeliero</autore>
+            <idautore>4</idautore>
             <data>2014-01-20</data>
 			<tag>1</tag>
         </item>
