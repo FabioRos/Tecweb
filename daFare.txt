@@ -1,0 +1,8 @@
+modifiche da fare:
+	add alt field to img
+	add <tag>[idtag]</tag>	for each post
+	add <gallery>[idGallery]</gallery> -->for each interview
+	
+	reasset all-in-one.xsd
+	use amministratori.xsd
+	
