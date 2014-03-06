@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="home.xsl"?>
+<home>
+<post>
+	<titolo>Alex Kapranos accusa di plagio Pharrell Williams</titolo>
+	<data>28/01/14</data>
+	<editore>
+		<nome>Fabio</nome>
+		<cognome>Ros</cognome>
+	</editore>
+	<foto>
+		<src>./img/pharrell.jpg</src>
+		<alt>foto:immagine di Pharrel Williams in vestaglia che si finge schoccato</alt>
+	</foto>
+	<descr>
+		«Hey Pharrell - mi piacciono le tue canzoni. Se vuoi un riff in prestito, basta chiedere...». La frecciata a quello che per i Grammy è il produttore dell'anno, Pharrell Williams, porta la firma di Alex...
+	</descr>
+	<link>cgi-bin/posts.cgi?post=1</link>
+	<tag>
+		<link>cgi-bin/searchtags.cgi?idtag=5</link>
+		<name>pop</name>
+	</tag>
+</post>
+<post>
+	<titolo>Moogfest:il programma e non solo. Preparatevi a farvi stupire!</titolo>
+	<data>04/02/14</data>
+	<editore>
+		<nome>Fabio</nome>
+		<cognome>Ros</cognome>
+	</editore>
+	<foto>
+		<src>./img/moogfest.png</src>
+		<alt>foto:manifesto del moogfestival 2014</alt>
+	</foto>
+	<descr>
+		Il Moogfest, festival nato 10 anni or sono per celebrare il pioniere che è stato Bob Moog, e che viene organizzato ad Asherville nel North Carolina tra il 23 ed il 27 di Aprile, ha finalmente svelato il suo programma...
+	</descr>
+	<link>cgi-bin/posts.cgi?post=1</link>
+	<tag>
+		<link>cgi-bin/searchtags.cgi?idtag=3</link>
+		<name>Rock</name>
+	</tag>
+	<tag>
+		<link>cgi-bin/searchtags.cgi?idtag=3</link>
+		<name>Rock</name>
+	</tag>
+</post>
+<post>
+	<titolo>Musica Commerciale.. Cosa vuole dirci Jake?</titolo>
+	<data>01/02/14</data>
+	<editore>
+		<nome>Fabio</nome>
+		<cognome>Ros</cognome>
+	</editore>
+	<foto>
+		<src>./img/jake.jpg</src>
+		<alt>foto:copertina dell'album 'musica commerciale',con immagine di Jake La Furia truccato da clown</alt>
+	</foto>
+	<descr>
+		Conosco artisticamente Jake dai primi anni del 2000. La scena italiana era tutt'altra cosa rispetto ad oggi,  in giro c'era poca gente o più probabilmente molta meno gente riusciva e estendere il suo bacino d'utenza fuori dai confini delle rispettive città.</descr>
+	<link>cgi-bin/posts.cgi?post=1
+	</link>
+	<tag>
+		<link>cgi-bin/searchtags.cgi?idtag=3</link>
+		<name>Rock</name>
+	</tag>
+</post>
+<post>
+	<titolo>Il ruolo dei numeri nella musica di Bach</titolo>
+	<data>28/01/14</data>
+	<editore>
+		<nome>Fabio</nome>
+		<cognome>Ros</cognome>
+	</editore>
+	<foto>
+		<src>./img/JSB.jpg</src>
+		<alt>foto:ritratto di JS Bach con in mano una sua partitura"</alt>
+	</foto>
+	<descr>
+		La musica nel medioevo apparteneva al Quadrivium (letteralmente quattro vie) insieme all’aritmetica, alla geometria  ed all’astronomia che disciplinavano l’ambito matematico...
+	</descr>
+	<link>cgi-bin/posts.cgi?post=1</link>
+	<tag>
+		<link>cgi-bin/searchtags.cgi?idtag=5</link>
+		<name>Classica</name>
+	</tag>
+	<tag>
+		<link>cgi-bin/searchtags.cgi?idtag=8</link>
+		<name>Storia</name>
+	</tag>
+</post>
+<sidebar>
+	<topnews>
+		<news>
+			<link>cgi-bin/posts.cgi?post=n345</link>
+			<title>news1</title>
+		</news>
+		<news>
+			<link>cgi-bin/posts.cgi?post=n345</link>
+			<title>news2</title>
+		</news>
+		<news>
+			<link>cgi-bin/posts.cgi?post=n345</link>
+			<title>news13</title>
+		</news>
+	</topnews>
+	<topinterv>
+		<interv>
+			<link>cgi-bin/posts.cgi?post=n345</link>
+			<title>intervista 1</title>
+		</interv>
+		<interv>
+			<link>cgi-bin/posts.cgi?post=n345</link>
+			<title>intervista 2</title>
+		</interv>
+		<interv>
+			<link>cgi-bin/posts.cgi?post=n345</link>
+			<title>intervista 13</title>
+		</interv>
+	</topinterv>
+	<toprec>
+		<rec>
+			<link>cgi-bin/posts.cgi?post=n345</link>
+			<title> recensione 1</title>
+		</rec>
+		<rec>
+			<link>cgi-bin/posts.cgi?post=n345</link>
+			<title> recensione 2</title>
+		</rec>
+		<rec>
+			<link>cgi-bin/posts.cgi?post=n345</link>
+			<title> recensione 13</title>
+		</rec>
+	</toprec>
+</sidebar>
+</home>
