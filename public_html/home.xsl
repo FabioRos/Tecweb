@@ -44,10 +44,10 @@
       <a class="help" href="#contents">salta menù</a>
       <ul>
         <li id="current_nav"><p xml:lang="eng">Home</p></li>
-        <li><a href="news.xml"><span xml:lang="eng">News</span></a></li>
-        <li><a href="interviste.xml">Interviste</a></li>
-        <li><a href="recensioni.xml">Recensioni</a></li>
-        <li><a href="eventi.xml">Eventi</a></li>
+        <li><a href="cgi-bin/show.cgi?type=n"><span xml:lang="eng">News</span></a></li>
+        <li><a href="cgi-bin/show.cgi?type=i">Interviste</a></li>
+        <li><a href="cgi-bin/show.cgi?type=r">Recensioni</a></li>
+        <li><a href="cgi-bin/show.cgi?type=e">Eventi</a></li>
       </ul> 
     </div>
     <div id="contents_home">
@@ -78,7 +78,6 @@
     			</xsl:for-each>
     		</div>
     	</xsl:for-each>
-    
     </div>
     <div id="sidebar">
       <a class="help" href="#footer">salta sidebar</a>
