@@ -19,16 +19,9 @@
     <body>
         <div id="header">
               <div id="title">
-                <span id="logo" class="notAural">
-                    <img src="./img/logo.png" alt="Logo del sito Music Break"/>
-                </span>
+                <span id="logo" class="notAural"><img src="./img/tazza-di-caffè.jpg" alt="Logo del sito Music Break"/></span>
                 <h1><span xml:lang="eng">Music Break</span></h1>
                 <h2>Il portale di notizie dedicato alla musica</h2>
-              </div>
-              <div id="search">
-                  <input type="text" id="text_field" value="" name="query" tabindex="1"></input>
-                  <input type="submit" alt="inserire una ricerca" value="Cerca" tabindex="3"></input>
-                  <input type="hidden" value="Home.html" name="sitesearch"></input>
               </div>
         </div>
         <div id="nav">
@@ -39,7 +32,12 @@
                 <li><a href="interviste.html" tabindex="13">Interviste</a></li>
                 <li><a href="recensioni.html" tabindex="21">Recensioni</a></li>
                 <li><a href="eventi.html" tabindex="34">Eventi</a></li>
-            </ul> 
+            </ul>
+            <div id="search">
+                  <input type="text" id="text_field" value="" name="query" tabindex="1"></input>
+                  <input type="submit" alt="inserire una ricerca" value="Cerca" tabindex="3"></input>
+                  <input type="hidden" value="Home.html" name="sitesearch"></input>
+            </div> 
         </div>
         <div id="contents">
             <h1><span xml:lang="eng">NEWS</span></h1>
@@ -86,7 +84,7 @@
                 <div class="tag_title">Tag Articolo:</div>
                 <a class="taglink" rel="tag" href="news.html/tag/Actionmen/">Actionmen <span>(810)</span></a>
             </div>
-            <div class="nav_pagine">
+            <div id="nav_pagine">
                 <a href="#" tabindex="150">&lt;&lt;</a>
                 <a href="#" tabindex="155">&lt;</a>
                 <span>1</span>
