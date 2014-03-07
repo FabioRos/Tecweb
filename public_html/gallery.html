@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="Fabio Ros, Valerio Burlin, Stefano Munari, Alberto Andeliero"/>
+    <meta name="language" content="italian it"/>
+    <meta name="rating" content="safe for kids" />
+    <meta name="description" content="Il portale di news, articoli, recensioni ed eventi dedicato alla musica"/>
+    <meta name="keywords" content="musica, news, news musicali, notizie, album"/>
+    <meta name="keywords" content="music, magazine, news"/>
+    <meta name="robots" content="all" />
+    <title>test galleria javascript</title>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:601px)" href="./css/gallery.css" />
+<script>
+
+var index=1;
+var last,last0;
+var li= document.getElementsByClassName("slide");// .length inizia a contare da 1
+
+function next() {
+ document.getElementById("img"+index).setAttribute("class", "hidden");
+ document.getElementById("img0"+index).setAttribute("class","");
+    if( index == li.length)
+        index=1;
+    else
+        index++;
+    last=document.getElementById("img"+index);
+    last0=document.getElementById("img0"+index);
+    last.setAttribute("class", "active");
+    last0.setAttribute("class","activenav");
+    return true;
+}
+
+function previous() {
+ document.getElementById("img"+index).setAttribute("class", "hidden");
+ document.getElementById("img0"+index).setAttribute("class","");
+    if(index == 1)
+        index= li.length;
+    else
+        index--;
+   last=document.getElementById("img"+index);
+   last0=document.getElementById("img0"+index);
+   last.setAttribute("class", "active");
+   last0.setAttribute("class","activenav");
+    return true;
+}
+function change(i){
+    document.getElementById("img"+index).setAttribute("class","hidden");
+    document.getElementById("img0"+index).setAttribute("class","");
+    index= i;
+    last=document.getElementById("img"+index);
+    last0=document.getElementById("img0"+index);
+    last.setAttribute("class","active");
+    last0.setAttribute("class","activenav");
+    return true;
+}
+</script>
+</head>
+<body>
+    <div id="gallery" >
+        <ul>
+            <li id="img1" class="active"><img class="slide"  src="./img/noemi0.jpg" alt="" /></li>
+            <li id="img2" class="hidden"><img class="slide" src="./img/noemi1.jpg" alt="" /></li>
+            <li id="img3" class="hidden"><img  class="slide" src="./img/noemi2.jpg" alt="" /></li>
+            <li id="img4" class="hidden"><img  class="slide" src="./img/noemi3.jpg" alt="" /></li>
+            <li id="img5" class="hidden"><img  class="slide" src="./img/noemi4.jpg" alt="" /></li>
+            <li id="img6" class="hidden"><img  class="slide" src="./img/noemi6.jpg" alt="" /></li>
+            <li id="img7" class="hidden"><img  class="slide" src="./img/noemi7.jpg" alt="" /></li>
+            <li id="img8" class="hidden"><img  class="slide" src="./img/noemi8.jpg" alt="" /></li>
+            <li id="img9" class="hidden"><img  class="slide" src="./img/noemi9.jpg" alt="" /></li></ul>
+<div id="prev"><button class="galleryButton" title="Precedente" onclick="previous();" type="button">Precedente</button></div>
+<div id="next"><button class="galleryButton" title="Prossima" onclick="next();" type="button">Prossima</button></div>
+</div>
+<ol id="controlnav" >
+    <li id="img01" class="activenav"><img  class="tnail"  src="./img/noemi0.jpg" alt="" onclick="change(1)"/></li>
+    <li id="img02" class=""><img class="tnail" src="./img/noemi1.jpg" alt="" onclick="change(2)"/></li>
+    <li id="img03" class="" ><img class="tnail" src="./img/noemi2.jpg" alt="" onclick="change(3)"/></li>
+    <li id="img04" class="" ><img class="tnail" src="./img/noemi3.jpg" alt="" onclick="change(4)"/></li>
+    <li id="img05" class="" ><img class="tnail" src="./img/noemi4.jpg" alt="" onclick="change(5)"/></li>
+    <li id="img06" class=""><img class="tnail" src="./img/noemi6.jpg" alt="" onclick="change(6)"/></li>
+    <li id="img07" class=""><img class="tnail" src="./img/noemi7.jpg" alt="" onclick="change(7)"/></li>
+    <li id="img08" class=""><img class="tnail" src="./img/noemi8.jpg" alt="" onclick="change(8)"/></li>
+    <li id="img09" class=""><img class="tnail" src="./img/noemi9.jpg" alt="" onclick="change(9)"/></li>
+</ol>
+</body>
+</html>
