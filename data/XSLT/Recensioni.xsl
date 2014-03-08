@@ -22,7 +22,7 @@
     			<link rel="stylesheet" type="text/css" media="handheld, screen" href="../public_html/css/screen.css"/>
     			<link rel="stylesheet" type="text/css" media="print" href="../public_html/css/print.css"/>
     			<link rel="stylesheet" type="text/css" media="speech" href="../public_html/css/aural.css"/>
-    			<title>Interviste - <xsl:value-of select="titolo"/></title>
+    			<title>Recensione - <xsl:value-of select="titolo"/></title>
   			</head>
 			<body>
     			<div id="header">
@@ -49,10 +49,16 @@
       				</div> 
     			</div>
     			<div id="contents">
-      				<h1><span xml:lang="eng">Intervista</span></h1>
+      				<h1><span xml:lang="eng">Evento</span></h1>
       				<a class="help" href="#sidebar">salta contenuto</a>
       				<h1><xsl:value-of select="titolo"/></h1>
       				<h2>Scritto da <xsl:value-of select="editore/nome"/>&#160;<xsl:value-of select="editore/cognome"/> il <xsl:value-of select="data"/></h2>
+              <h3><xsl:for-each select="tag">&#160;
+              <xsl:element name="a">
+                <xsl:attribute name="href">cgi-bin/searchtags.cgi?idtag=<xsl:copy-of select="@id/text()" /></xsl:attribute><!--modificare-->
+                <xsl:value-of select="node()"/>
+              </xsl:element>
+              </xsl:for-each></h3>
       				<xsl:element name="img">
       					<xsl:attribute name='src'><xsl:copy-of select="foto/src/node()" /></xsl:attribute>
       					<xsl:attribute name='alt'><xsl:copy-of select="foto/alt/node()" /></xsl:attribute>
@@ -60,18 +66,6 @@
       				<h3>Soggetto dell'intervista: <xsl:value-of select="intervistato"/></h3>
       				<h4><xsl:value-of select="excerpt"/></h4>
       				<p><xsl:value-of select="descrizione"/></p>
-      				<xsl:for-each select="tag">&#160;
-    					<xsl:element name="a">
-    						<xsl:attribute name="href">cgi-bin/searchtags.cgi?idtag=<xsl:copy-of select="@id/text()" /></xsl:attribute><!--modificare-->
-    						<xsl:value-of select="node()"/>
-    					</xsl:element>
-    				</xsl:for-each>
-    				<xsl:for-each select="galleria/foto">
-    					<xsl:element name="img">
-    						<xsl:attribute name="src"><xsl:copy-of select="srcPath/node()" /></xsl:attribute>
-    						<xsl:attribute name="alt"><xsl:copy-of select="titolo/node()" /></xsl:attribute>
-    					</xsl:element>
-    				</xsl:for-each>
     			</div>
     			<div id="footer">
       				<a class="help" href="#header">salta testo a fine pagina</a>

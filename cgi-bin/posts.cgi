@@ -62,10 +62,15 @@ foreach my $ptrtag ($ptridtags->get_nodelist){
 	$ptrtag->replaceNode($tagname);
 }
 
+if ("$posttype" eq 'i'){
+	my $ptridgallery = $ptrpost->findnodes("galleria")->get_node(1);
+	my $idgallery = $ptridgallery->textContent;
+	my $ptrgallery = $source->findnodes("/root/gallerie/galleria[\@id='$idgallery']")->get_node(1);
+	$ptridgallery->replaceNode($ptrgallery);
+}
 
-print ("Content-type: text/html\n\n");
-
-
+#stampo la pagina
+print $page->header({-type=>'text/html', -charset=>'UTF-8'});
 my $style_doc =XML::LibXML->load_xml(location=>$style_path);
 my $stylesheet = $xslt->parse_stylesheet($style_doc);
 my $results = $stylesheet->transform($ptrpost, %in);
