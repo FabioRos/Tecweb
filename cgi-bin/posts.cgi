@@ -5,39 +5,44 @@ use strict;
 use warnings;
 use XML::LibXSLT;
 use XML::LibXML;
-use Lib::ErrorHandler;
+use CGI;
 
-my $DBpath = "../data/XML/all-in-one.xml";
-
-my $query_string = $ENV{'QUERY_STRING'};
-my($post, $idPost) = split( /=/, $query_string , 2);
-my %in= ( $post => $idPost );
-
-
-
+my $page = CGI->new();
 my $parser = XML::LibXML->new();
+my $xslt = XML::LibXSLT->new();
+
+my $DBpath = "../data/XML/DBsite.xml";
+
+my $idPost = $page->param('post');
+my %in= ( 'post' => $idPost );
+
+
+
+
 
 my $source = XML::LibXML->load_xml(location => $DBpath);
 
+my $vincolo;
+my $style_path;
 my $posttype = substr($idPost, 0, 1);
-if ($posttype=="e") {
-	my $style_path="../data/XSLT/Eventi.xsl";
-	my $vicolo = "eventi/evento";
-}else if ($posttype == "r") {
-	my $style_path="../data/XSLT/Recensioni.xsl";
-	my $vicolo = "recensioni/recensione";
-}else if ($posttype == "i"){
-	my $style_path="../data/XSLT/Interviste.xsl";
-	my $vicolo = "interviste/intervista";
-}else if ($posttype == "n"){
-	my $style_path="../data/XSLT/News.xsl";
-	my $vicolo = "news/item";
+if ("$posttype" eq 'e') {
+	$style_path="../data/XSLT/Eventi.xsl";
+	$vincolo = "eventi/evento";
+}elsif ("$posttype" eq 'r') {
+	$style_path="../data/XSLT/Recensioni.xsl";
+	$vincolo = "recensioni/recensione";
+}elsif ("$posttype" eq 'i'){
+	$style_path="../data/XSLT/Interviste.xsl";
+	$vincolo = "interviste/intervista";
+}elsif ("$posttype" eq 'n'){
+	$style_path="../data/XSLT/News.xsl";
+	$vincolo = "news/item";
 }
 
 
 #individuo il post
 my $ptrpost = $source->findnodes("/root/posts/".$vincolo."[\@id='$idPost']")->get_node(1);
-$ptrpost->setNodeName("post");
+$ptrpost->setNodeName('post');
 
 
 #individio l'auto del post
@@ -51,31 +56,17 @@ $ptridautor->replaceNode($ptrautor);
 my $tags = $source->findnodes("/root/tags")->get_node(1);
 my $ptridtags = $ptrpost->findnodes("tag");
 
-for (my $var = 1; $var < ptridtags.size()+1; $var++){
-	my $ptrtag = $ptridtags->get_node($var);
+foreach my $ptrtag ($ptridtags->get_nodelist){
 	my $valtag = $ptrtag->textContent;
 	my $tagname = $tags->findnodes("tag[\@id=$valtag]")->get_node(1);
 	$ptrtag->replaceNode($tagname);
 }
 
 
-#estrapolo il path dell'immagine principale e inserisco il codice html
-my $ptrimg = $ptrpost->findnodes("foto")->get_node(1);
-my $imgpath = $ptrimg->textContent;
-my $descrizione = $ptrpost->findnodes("altfoto")->get_node(1)->textContent;
-my $imgtagtext = "<img src=\"$imgpath\" alt=\"$descrizione\"/>";#aggiungere alt dal tag altfoto
-my $imgtag = $parser->parse_balanced_chunk("<foto>$imgtagtext</foto>");
-$ptrimg->replaceNode($imgtag);
-
-
-
 print ("Content-type: text/html\n\n");
-#scrivo l'header della pagina
 
 
-#trasformazione di stile solo per il body
 my $style_doc =XML::LibXML->load_xml(location=>$style_path);
-my $xslt = XML::LibXSLT->new();
 my $stylesheet = $xslt->parse_stylesheet($style_doc);
-my $results = $stylesheet->transform($ptrpost, %in)||die("la trasformazione non è andata a termine");
+my $results = $stylesheet->transform($ptrpost, %in);
 print $stylesheet->output_as_bytes($results);
