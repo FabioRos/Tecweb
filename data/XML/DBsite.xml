@@ -24,20 +24,20 @@ Questo file serve per mettere in relazione le gallerie con i post
     <gallerie>
         <galleria id="1">
             <foto>
-                <titolo>Volto Pausini</titolo>
-                <srcPath>../images/Pausini1.jpeg</srcPath>
+                <titolo>noemiuno</titolo>
+                <srcPath>../data/images/Pausini1.jpg</srcPath>
             </foto>
             <foto>
-                <titolo>Volto Pausini</titolo>
-                <srcPath>../images/Pausini2.jpeg</srcPath>
+                <titolo>noemidue</titolo>
+                <srcPath>../data/images/Pausini2.jpg</srcPath>
             </foto>
             <foto>
-                <titolo>Volto Pausini</titolo>
-                <srcPath>../images/Pausini3.jpeg</srcPath>
+                <titolo>noemitre</titolo>
+                <srcPath>../data/images/Pausini3.jpg</srcPath>
             </foto>
             <foto>
-                <titolo>Volto Pausini</titolo>
-                <srcPath>../images/Pausini4.jpeg</srcPath>
+                <titolo>noemiquattro</titolo>
+                <srcPath>../data/images/Pausini4.jpg</srcPath>
             </foto>
         </galleria>
     </gallerie>
@@ -148,7 +148,7 @@ Questo file serve per mettere in relazione le gallerie con i post
         <intervista id="i1">
             <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
             <foto>
-                <src>../../public_html/img/interviste/noemi.jpg</src>
+                <src>../public_html/img/noemi2.jpg</src>
                 <alt>descrizione della foto</alt>
             </foto>
             <excerpt>Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.</excerpt>
