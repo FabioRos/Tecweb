@@ -163,6 +163,63 @@ Questo file serve per mettere in relazione le gallerie con i post
 			<galleria>1</galleria>
         </intervista>
     </interviste>
+    <interviste>
+        <intervista id="i2">
+            <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
+            <foto>
+                <src>../public_html/img/noemi2.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.</excerpt>
+            <descrizione>
+                Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.
+            </descrizione>
+            <idautore>3</idautore>
+            <data>2013-12-04</data>
+            <tag>1</tag>
+            <tag>2</tag>        
+            <intervistato>Noemi</intervistato>
+            <galleria>1</galleria>
+        </intervista>
+    </interviste>
+    <interviste>
+        <intervista id="i3">
+            <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
+            <foto>
+                <src>../public_html/img/noemi2.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.</excerpt>
+            <descrizione>
+                Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.
+            </descrizione>
+            <idautore>3</idautore>
+            <data>2013-12-04</data>
+            <tag>1</tag>
+            <tag>2</tag>        
+            <intervistato>Noemi</intervistato>
+            <galleria>1</galleria>
+        </intervista>
+    </interviste>
+    <interviste>
+        <intervista id="i4">
+            <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
+            <foto>
+                <src>../public_html/img/noemi2.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.</excerpt>
+            <descrizione>
+                Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.
+            </descrizione>
+            <idautore>3</idautore>
+            <data>2013-12-04</data>
+            <tag>1</tag>
+            <tag>2</tag>        
+            <intervistato>Noemi</intervistato>
+            <galleria>1</galleria>
+        </intervista>
+    </interviste>
     
     <!-- NEWS -->
  

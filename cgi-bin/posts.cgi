@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use XML::LibXSLT;
 use XML::LibXML;
-use CGI/:standard/;
+use CGI qw/:standard/;
 
 my $page = CGI->new();
 my $parser = XML::LibXML->new();
@@ -45,7 +45,7 @@ my $ptrpost = $source->findnodes("/root/posts/".$vincolo."[\@id='$idPost']")->ge
 $ptrpost->setNodeName('post');
 
 
-#individio l'auto del post
+#individio l'autore del post
 my $ptridautor = $ptrpost->findnodes("idautore")->get_node(1);
 my $idautor = $ptridautor->textContent;
 my $ptrautor = $source->findnodes("/root/editori/editore[\@id='$idautor']")->get_node(1);
@@ -62,6 +62,7 @@ foreach my $ptrtag ($ptridtags->get_nodelist){
 	$ptrtag->replaceNode($tagname);
 }
 
+#aggiungo la galleria ad una eventuale intervista
 if ("$posttype" eq 'i'){
 	my $ptridgallery = $ptrpost->findnodes("galleria")->get_node(1);
 	my $idgallery = $ptridgallery->textContent;
