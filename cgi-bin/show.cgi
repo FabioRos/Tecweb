@@ -5,29 +5,29 @@ use strict;
 use warnings;
 use XML::LibXSLT;
 use XML::LibXML;
-use Lib::ErrorHandler;
+use CGI;
 
-#nella query troviamo per esmpio ..cgi-bin/show.cgi?type=e&pag=1
-
-my $query_string = $ENV{'QUERY_STRING'};
-my @pairs = split( /&/, $query_string , 2);
-my ($nome , $type) = @pairs[0];
-my ($pagina , $pag) = @pairs[1];
-
-
+my $page = CGI->new();
 my $parser = XML::LibXML->new();
-my $DBpath = "../data/XML/all-in-one.xml";
+my $xslt = XML::LibXSLT->new();
+
+my $DBpath = "../data/XML/DBsite.xml";
+
+my $type = $page->param('type');
+my $pag = $page->param('pag');
+
+
 my $source = XML::LibXML->load_xml(location => $DBpath);
 
 
 my $posttype = substr($type, 0, 1);
 if ($posttype=="e") {
 	my $vicolo = "eventi/evento";
-}else if ($posttype == "r") {
+}elsif ($posttype == "r") {
 	my $vicolo = "recensioni/recensione";
-}else if ($posttype == "i"){
+}elsif ($posttype == "i"){
 	my $vicolo = "interviste/intervista";
-}else if ($posttype == "n"){
+}elsif ($posttype == "n"){
 	my $vicolo = "news/item";
 }
 my $ptrposts = $source->findnodes("/root/posts/".$vincolo);

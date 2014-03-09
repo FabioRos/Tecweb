@@ -55,7 +55,7 @@
       				<h2>Scritto da <xsl:value-of select="editore/nome"/>&#160;<xsl:value-of select="editore/cognome"/> il <xsl:value-of select="data"/></h2>
               <h3><xsl:for-each select="tag">&#160;
               <xsl:element name="a">
-                <xsl:attribute name="href">cgi-bin/searchtags.cgi?idtag=<xsl:copy-of select="@id/text()" /></xsl:attribute><!--modificare-->
+                <xsl:attribute name="href">cgi-bin/searchtags.cgi?idtag=<xsl:copy-of select="string(@id)" /></xsl:attribute><!--modificare-->
                 <xsl:value-of select="node()"/>
               </xsl:element>
               </xsl:for-each></h3>

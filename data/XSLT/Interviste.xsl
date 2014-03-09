@@ -62,7 +62,7 @@
       				<p><xsl:value-of select="descrizione"/></p>
       				<xsl:for-each select="tag">&#160;
     					<xsl:element name="a">
-    						<xsl:attribute name="href">cgi-bin/searchtags.cgi?idtag=<xsl:copy-of select="@id/text()" /></xsl:attribute><!--modificare-->
+    						<xsl:attribute name="href">cgi-bin/searchtags.cgi?idtag=<xsl:copy-of select="string(@id)" /></xsl:attribute><!--modificare-->
     						<xsl:value-of select="node()"/>
     					</xsl:element>
     				</xsl:for-each>
