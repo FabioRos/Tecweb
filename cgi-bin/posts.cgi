@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use XML::LibXSLT;
 use XML::LibXML;
-use CGI;
+use CGI/:standard/;
 
 my $page = CGI->new();
 my $parser = XML::LibXML->new();
