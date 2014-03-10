@@ -36,22 +36,41 @@ if ($posttype eq "e") {
 	$vincolo = "news/item";
 }
 
-#estraggo 4 post a seconda della pagina
+
+
+
+my $dom = XML::LibXML::Document->new( "1.0", "UTF-8");
 my $ptrposts = $source->findnodes("/root/posts/".$vincolo);
 my $radice = $parser->parse_balanced_chunk("<posts></posts>");
+my $ptrradice = $radice->findnodes("posts")->get_node(1);
+$dom->setDocumentElement($ptrradice);
+my $ptrdompost =$dom->findnodes("/posts")->get_node(1);
+
+#estraggo 4 post a seconda della pagina
 for (my $var = $ptrposts->size()-(4*$pag); $var>$ptrposts->size()-(4*$pag)-4; $var--) {#nel caso che voglia vedere 4 articoli in una pagina
 	my $ptrpost = $ptrposts->get_node($var);
-	
+	$ptrpost->setNodeName('post');
+	$ptrdompost->addChild($ptrpost);
+}
 
-	#individio l'autore del post
-	my $ptridautor = $ptrpost->findnodes('idautore')->get_node(1);
+
+#individio l'autore del post
+my $posts = $dom->findnodes("/posts/post");
+foreach my $post ($posts->get_nodelist){
+	my $ptridautor = $post->findnodes('idautore')->get_node(1);
 	my $idautor = $ptridautor->textContent;
 	my $ptrautor = $source->findnodes("/root/editori/editore[\@id='$idautor']")->get_node(1);
 	$ptridautor->replaceNode($ptrautor);
 
-	$ptrpost->setNodeName('post');
-	$radice->addChild($ptrpost);
+	#my $ptridtags = $post->findnodes('tag');
+	#foreach my $ptridtag ($ptridtags->get_nodelist){
+	#	my $idtag = $ptridtag->textContent;
+	#	my $ptrtag = $source->findnodes("/root/tags/tag[\@id='$idtag']")->get_node(1);
+	#	$ptridtag->replaceNode($ptrtag);
+	#}
 }
+
+
 
 
 
@@ -59,5 +78,5 @@ for (my $var = $ptrposts->size()-(4*$pag); $var>$ptrposts->size()-(4*$pag)-4; $v
 print $page->header({-type=>'text/html', -charset=>'UTF-8'});
 my $style_doc =XML::LibXML->load_xml(location=>$style_path);
 my $stylesheet = $xslt->parse_stylesheet($style_doc);
-my $results = $stylesheet->transform($radice);
-print $stylesheet->output_as_bytes($radice);
+my $results = $stylesheet->transform($dom);
+print $stylesheet->output_as_bytes($dom);

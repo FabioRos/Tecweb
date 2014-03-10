@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-	<xsl:template match="post">
+	<xsl:template match="/">
 		<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
     		<head>
         		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -27,11 +27,11 @@
         		<div id="nav">
             		<a class="help" href="#contents">salta menù</a>
             		<ul>
-                		<li><a href="home.html" tabindex="5"><span xml:lang="eng">Home</span></a></li>
-                		<li id="current_nav"><p xml:lang="eng">News</p></li>
-                		<li><a href="interviste.html" tabindex="13">Interviste</a></li>
-                		<li><a href="recensioni.html" tabindex="21">Recensioni</a></li>
-                		<li><a href="eventi.html" tabindex="34">Eventi</a></li>
+                		<li><a href="home.xml" tabindex="5"><span xml:lang="eng">Home</span></a></li>
+                		<li><a href="show.cgi?type=n"><p xml:lang="eng">News</p></a></li>
+                		<li><a href="show.cgi?type=i">Interviste</a></li>
+                		<li><a href="show.cgi?type=r">Recensioni</a></li>
+                		<li><a href="show.cgi?type=e">Eventi</a></li>
             		</ul>
             		<div id="search">
                   		<input type="text" id="text_field" value="" name="query" tabindex="1"></input>
@@ -40,28 +40,35 @@
             		</div> 
         		</div>
         		<div id="contents">
-            		<h1><span xml:lang="eng">NEWS</span></h1>
-            		<a class="help" href="#sidebar">salta contenuto</a>
-            		<div class="article">
-                		<h2><a href="news.html/Trio%20Pauer%20Fuoco%20a%20Carmignano" tabindex="55">B  Trio Pauer: Fuoco a Carmignano!</a></h2>
-                		<span class="author">di Alberto Andeliero 20/01/2014</span>
-                		<img src="./img/triopauer.jpg" />
+                    <h1><span xml:lang="eng">NEWS</span></h1>
+                    <a class="help" href="#sidebar">salta contenuto</a>
+                    <xsl:for-each select="posts/post">
+            		  <div class="article">
+                        <h2><xsl:element name="a">
+                            <xsl:attribute name="href">posts.cgi?post=<xsl:copy-of select="string(@id)" /></xsl:attribute>
+                            <xsl:value-of select="titolo"/>
+                        </xsl:element></h2>
+                		<span class="author">
+                            di <xsl:value-of select="editore/nome"/>&#160;
+                            <xsl:value-of select="editore/cognome"/>&#160;
+                            <xsl:value-of select="data"/>
+                        </span>
+                		<xsl:element name="img">
+                            <xsl:attribute name='src'><xsl:copy-of select="foto/src/node()" /></xsl:attribute>
+                            <xsl:attribute name='alt'><xsl:copy-of select="foto/alt/node()" /></xsl:attribute>
+                        </xsl:element>
                 		<p>
-                			In occasione della "fuoriuscita" del nuovo singolo "fuoco a carmignano!", i trio pauer hanno concesso un'intervista per Music Break in esclusiva.
+                			<xsl:value-of select="excerpt"/>
                 		</p>
-                		<a class="continua" href="news.html/Trio%20Pauer%20Fuoco%20a%20Carmignano">continua →</a>
+                        <xsl:element name="a">
+                            <xsl:attributes name="class">continua</xsl:attributes>
+                            <xsl:attribute name="href">posts.cgi?post=<xsl:copy-of select="string(@id)" /></xsl:attribute>
+                            continua →
+                        </xsl:element>
                 		<div class="tag_title">Tag Articolo:</div>
-                		<a class="taglink" rel="tag" href="./tag/BTrioPauer/">B  Trio Pauer<span>(9)</span></a>
-            		</div>
-            		<div class="article">
-                		<h2><a href="news.html/Slash%20intervista%20esclusiva" tabindex="85">Slash: «Adesso sono una persona tranquilla e bevo solo acqua». Intervista esclusiva</a></h2>
-                		<span class="author">di Alberto Andeliero 20/01/2014</span>
-                		<img src="./img/slash.jpg" />
-                		<p>In occasione della tournée italiana per il nuovo album da solista Apocalyptic Love, ci siamo fatti raccontare dal chitarrista la sua nuova vita, senza eccessi ma con la stessa voglia di suonare...</p>
-                		<a class="continua" href="news.html/Slash%20intervista%20esclusiva">continua →</a>
-                		<div class="tag_title">Tag Articolo:</div>
-                		<a class="taglink" rel="tag" href="./tag/Slash/">Slash <span>(666)</span></a>
-            		</div>
+                		<a class="taglink" rel="tag" href="./tag/BTrioPauer/">B  Trio Pauer</a>
+            		  </div>
+                    </xsl:for-each>
             		<div id="nav_pagine">
                 		<a href="#" tabindex="150"></a>
                 		<a href="#" tabindex="155"></a>
@@ -73,10 +80,10 @@
  				<div id="footer">
       				<a class="help" href="#header">salta testo a fine pagina</a>
       				<p>copy; 2014 Music Break All Right Reserved. | 
-        			<a href="info.html" tabindex="920"> Chi siamo</a> | 
-        			<a href="condizioni.html" tabindex="930">Condizioni d'uso</a> | 
-        			<a href="contact.html" tabindex="940"> Contatti</a> | 
-        			<a href="rss" tabindex="950"> Feed RSS</a>
+        			<a href="info.html"> Chi siamo</a> | 
+        			<a href="condizioni.html">Condizioni d'uso</a> | 
+        			<a href="contact.html"> Contatti</a> | 
+        			<a href="rss"> Feed RSS</a>
       				</p>
     			</div>   
     		</body>
