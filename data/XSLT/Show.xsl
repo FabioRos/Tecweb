@@ -61,7 +61,7 @@
                 			<xsl:value-of select="excerpt"/>
                 		</p>
                         <xsl:element name="a">
-                            <xsl:attributes name="class">continua</xsl:attributes>
+                            <xsl:attribute name="class">continua</xsl:attribute>
                             <xsl:attribute name="href">posts.cgi?post=<xsl:copy-of select="string(@id)" /></xsl:attribute>
                             continua →
                         </xsl:element>
