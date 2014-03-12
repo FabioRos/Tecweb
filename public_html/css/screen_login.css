@@ -294,8 +294,10 @@ a:visited
 }
 
 
+/*__________________________________Fabio_____________________________________*/
 
-.login_box
+
+.common_box
 {
     margin: 5% auto;
     width: 60%;
@@ -308,12 +310,13 @@ a:visited
 }
 
 
-.login_box label{
+.common_box label{
     font-size: 1.8em;
     font-weight: bold;
+    display: block;
 }
 
-.login_box input[type="text"], .login_box input[type="password"]
+.common_box input[type="text"], .common_box input[type="password"], .common_box input[type="file"], .common_box textarea
 {
     margin: 3% auto;
     display: block;
@@ -325,7 +328,11 @@ a:visited
     width: 50%;
 }
 
-.login_box input[type="submit"]{
+.common_box input[type="file"]{
+    font-size: 1.3em;
+}
+
+.common_box input[type="submit"]{
     margin: 10% auto;
     line-height: 1em;
     font-size: 1.5em;
@@ -335,8 +342,24 @@ a:visited
 
 }
 
-.login_box fieldset{
+.common_box p, .common_box a{
+    font-size: 1.8em;
+    font-weight: bold;
+    display:block;
+    text-decoration: none;
+    margin: 2% auto;
+}
+
+.common_box fieldset{
     border:0;
+}
+
+.common_box a{
+    color: #00F;
+}
+
+.common_box a:hover{
+    text-decoration: underline;
 }
 
 
