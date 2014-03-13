@@ -39,7 +39,7 @@
 
 
         <div class="common_box">
-            <form action="InsNews.cgi" method='post'>
+            <form action="inspost.cgi" method='post'>
                 <fieldset>
                     <label for="titoloNews">Titolo </label>
                     <input type="text" name="titolo" id="titoloNews"/>
@@ -53,6 +53,7 @@
                     <textarea name="descrizione" id="descrizione" rows="10"></textarea>
                     <label for="tags">Elenco di tag, separati da virgola</label>
                     <textarea name="tags" id="tags" rows="2"></textarea>
+                    <input type="hidden" name="tipo" id="tipo" value="n" />
 
                     <input type="submit" value="Inserisci News" />
 
