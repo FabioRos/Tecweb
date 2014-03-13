@@ -2,13 +2,40 @@
 
 use strict;
 use warnings;
+use XML::LibXSLT;
+use XML::LibXML;
 use CGI qw/:standard/;
-use GCI::Session;
+use CGI::Session;
+use CGI::Carp qw(fatalsToBrowser);
 
 my $page = CGI->new();
-my $session = GCI::Session->load() or die $!;
+my $rdr;
+my $session = CGI::Session->load();
 my $SID = $session->id();
 $session->close();
 $session->delete();
 $session->flush();
-$page->redirect("../public_html/admin.cgi?err=logout%20eseguito%20con%20successo");
+$rdr ="admin.cgi?err=logout%20eseguito%20con%20successo";
+
+
+print $page->header({-type=>'text/html', -charset=>'UTF-8'});
+print $page->start_html(
+	-title => "Logout - Music Break",
+	-head => meta({-http_equiv => 'refresh',-content=> "0;url=$rdr"}),
+	-dtd => ['-//W3C//DTD XHTML 1.0 Strict//EN','http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'],
+	-lang => 'it',
+	-meta => {
+		'author' => 'Fabio Ros, Valerio Burlin, Stefano Munari, Alberto Andeliero',
+		'language' => 'italian it',
+		'rating' => 'safe for kids',
+		'keywords' => 'login, area riservata',
+		'robots' => 'noindex,nofollow'
+	},
+	-style => [
+	{'media' => 'print','src' => '../css/print.css'},
+	{'media' => 'speech','src' => '../css/aural.css'},
+	{'media' => 'handheld, screen','src' => '../css/screen_login.css'}
+	]
+	);
+
+print $page->end_html;

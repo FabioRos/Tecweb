@@ -42,7 +42,6 @@ print $page->div(
 print $page->div(
 	{-class => 'login_box'},
 	$page->h1('Pagina di <span xml:lang="eng">login</span>'),
-	$page->h1("$errmsg"),
 	$page->a({-class => 'help' , -href => '#sidebar'},'salta il contenuto')
 	);
 print $page->div(
@@ -52,6 +51,7 @@ print $page->div(
 			-action => 'login.cgi',
 		),
 	$page->fieldset(
+			$page->p("$errmsg"),
 			$page->label({-for => 'username'}, '<span xml:lang="en">Username: </span>'),
 			$page->input({-type => 'text', -name => 'username' , -id => 'username'}),
 			$page->label({-for => 'password'}, '<span xml:lang="en">Password: </span>'),
