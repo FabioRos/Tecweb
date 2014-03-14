@@ -23,19 +23,7 @@ print $page->start_html(
 	-title => "Logout - Music Break",
 	-head => meta({-http_equiv => 'refresh',-content=> "0;url=$rdr"}),
 	-dtd => ['-//W3C//DTD XHTML 1.0 Strict//EN','http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'],
-	-lang => 'it',
-	-meta => {
-		'author' => 'Fabio Ros, Valerio Burlin, Stefano Munari, Alberto Andeliero',
-		'language' => 'italian it',
-		'rating' => 'safe for kids',
-		'keywords' => 'login, area riservata',
-		'robots' => 'noindex,nofollow'
-	},
-	-style => [
-	{'media' => 'print','src' => '../css/print.css'},
-	{'media' => 'speech','src' => '../css/aural.css'},
-	{'media' => 'handheld, screen','src' => '../css/screen_login.css'}
-	]
+	-lang => 'it'
 	);
 
 print $page->end_html;
