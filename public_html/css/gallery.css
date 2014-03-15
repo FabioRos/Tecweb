@@ -84,6 +84,8 @@ padding-left: 3%;
 .tnail {
 	float: left;
 	width: 10%;
+	max-height: 80px;
+	overflow:hidden;
 	padding: .3em .3em;
 	padding-top: 0;
 	cursor: pointer;
