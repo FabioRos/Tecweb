@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="author" content="Fabio Ros, Valerio Burlin, Stefano Munari, Alberto Andeliero"/>
+        <meta name="language" content="italian it"/>
+        <meta name="rating" content="safe for kids" />
+        <meta name="description" content="Il portale di news, articoli, recensioni ed eventi dedicato alla musica"/><meta name="keywords" content="musica, news, news musicali, notizie, album"/>
+        <meta name="keywords" content="music, magazine, news"/>
+        <meta name="robots" content="noindex,nofollow" />
+        <link rel="icon" href="./img/favicon.ico" type="image/icon" />
+        <link rel="stylesheet" type="text/css" media="handheld, screen" href="./css/screen_login.css"/>
+        <link rel="stylesheet" type="text/css" media="print" href="./css/print.css"/>
+        <link rel="stylesheet" type="text/css" media="speech" href="./css/aural.css"/>
+        <title>Music Break</title>
+    </head>
+    <body>
+        <div id="header">
+            <div id="title">
+                <span id="logo" class="notAural"><img src="./img/tazza-di-caffe.jpg" alt="Logo del sito Music Break"/></span>
+                <h1><span xml:lang="en">Music Break</span></h1>
+                <h2>Il portale di notizie dedicato alla musica</h2>
+            </div>
+        </div>
+        <div id="nav">
+            <a class="help" href="#contents">salta menù</a>
+            <ul>
+                <li><a href="admin_news.html"><span xml:lang="en">News</span></a></li>
+                <li><a href="admin_interviste.html">Interviste</a></li>
+                <li><a href="admin_recensioni.html">Recensioni</a></li>
+                <li><p id="current_nav">Eventi</p></li>
+                <li><a href="logout.cgi" >Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="common_box" id="titolo">
+            <h1>Gestione Eventi</h1>
+        </div>
+
+
+        <div class="common_box">
+            <form action="inspost.cgi" method='post'>
+                <fieldset>
+                    <label for="titoloEvento">Titolo </label>
+                    <input type="text" name="titoloEvento" id="titolo"/>
+                    <label for="src">Immagine </label>
+                    <input type="file" name="src" id="src"/>
+                    <label for="alt">Alternativa testuale all'immagine </label>
+                    <textarea name="alt" id="alt" rows="4"></textarea>
+                    <label for="excerpt">Breve didascalia (max 50 parole) </label>
+                    <textarea name="excerpt" id="excerpt" rows="3"></textarea>
+                    <label for="descrizione">Descrizione Completa </label>
+                    <textarea name="descrizione" id="descrizione" rows="10"></textarea>
+                    <label for="tags">Elenco di tag, separati da virgola</label>
+                    <textarea name="tags" id="tags" rows="2"></textarea>
+                    <label for="dataEvento">Data Evento </label>
+                    <input type="text" id="dataEvento" name="dataEvento" />
+                    <label for="numGiorni">Numero di giorni </label>
+                    <input type="text" id="numGiorni" name="numGiorni" value="1" />
+                    <label for="luogo">Luogo </label>
+                    <input type="text" id="luogo" name="luogo" />
+                    <label for="oraInizio">Ora di inizio</label>
+                    <input type="text" id="oraInizio" name="oraInizio" />
+                     <label for="oraFine">Ora di fine</label>
+                    <input type="text" id="oraFine" name="oraFine" />
+                    <label for="indirizzo">Indirizzo </label>
+                    <input type="text" id="indirizzo" name="indirizzo" />
+                    <label for="prezzo">Prezzo </label>
+                    <input type="text" id="prezzo" name="prezzo" />
+                    <label for="email"> Email </label>
+                    <input type="text" id="email" name="email" />
+                    <label for="telefono">Numero di telefono </label>
+                    <input type="text" id="telefono" name="telefono" />
+                    <input type="hidden" name="tipo" id="tipo" value="e" />
+
+                    
+                    
+                    
+
+                    <input type="submit" value="Inserisci Intervista" />
+
+                </fieldset>
+            </form>
+        </div>
+
+
+
+        <div id="footer">
+            <p>&copy; 2014 Music Break All Right Reserved.</p>
+        </div>
+    </body>
+</html>
