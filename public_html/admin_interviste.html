@@ -12,6 +12,7 @@
         <link rel="stylesheet" type="text/css" media="handheld, screen" href="./css/screen_login.css"/>
         <link rel="stylesheet" type="text/css" media="print" href="./css/print.css"/>
         <link rel="stylesheet" type="text/css" media="speech" href="./css/aural.css"/>
+        <script type="text/javascript" src="./javascript/backend.js"></script>
         <title>Music Break</title>
     </head>
     <body>
@@ -33,7 +34,7 @@
             </ul>
         </div>
 
-        <div class="common_box" id="titolo">
+        <div class="common_box">
             <h1>Gestione Interviste</h1>
         </div>
 
@@ -42,19 +43,19 @@
             <form action="inspost.cgi" method='post'>
                 <fieldset>
                     <label for="titoloIntervista">Titolo </label>
-                    <input type="text" name="titoloIntervista" id="titolo"/>
+                    <input type="text" name="titoloIntervista" id="titolo" value="Inserire un titolo..." onclick="Wbar('titolo');" onblur="defbar('titolo');" />
                     <label for="src">Immagine </label>
                     <input type="file" name="src" id="src"/>
                     <label for="alt">Alternativa testuale all'immagine </label>
-                    <textarea name="alt" id="alt" rows="4"></textarea>
+                    <textarea name="alt" id="alt" rows="4" value="Inserire una descrizione testuale dell'immagine..." onclick="Wbar('alt');" onblur="defbar('alt');">Inserire una descrizione testuale dell'immagine...</textarea>
                     <label for="excerpt">Breve didascalia (max 50 parole) </label>
-                    <textarea name="excerpt" id="excerpt" rows="3"></textarea>
+                    <textarea name="excerpt" id="excerpt" rows="3" value="Inserire una breve didascalia testuale..." onclick="Wbar('excerpt');" onblur="defbar('excerpt');" >Inserire una breve didascalia testuale...</textarea>
                     <label for="descrizione">Descrizione Completa </label>
-                    <textarea name="descrizione" id="descrizione" rows="10"></textarea>
+                    <textarea name="descrizione" id="descrizione" rows="10" value="Inserire il testo completo dell'articolo..." onclick="Wbar('descrizione');" onblur="defbar('descrizione');">Inserire il testo completo dell'articolo...</textarea>
                     <label for="tags">Elenco di tag, separati da virgola</label>
-                    <textarea name="tags" id="tags" rows="2"></textarea>
+                    <textarea name="tags" id="tags" rows="2" value="Inserire dei tags separandoli con una virgola..." onclick="Wbar('tags');" onblur="defbar('tags');">Inserire dei tags separandoli con una virgola...</textarea>
                     <label for="intervistato">Intervistato </label>
-                    <input type="text" name="intervistato" id="intervistato"/>
+                    <input type="text" name="intervistato" id="intervistato" value="Inserire il nome dell'artista..." onclick="Wbar('intervistato');" onblur="defbar('intervistato');"/>
                     <p>Foto Per Gallery </p>
                     <input type="file" name="fgallery1" id="fgallery1"/>
                     <input type="file" name="fgallery2" id="fgallery2"/>
