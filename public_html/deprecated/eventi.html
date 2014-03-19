@@ -1,136 +1,111 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta name="author" content="Fabio Ros, Valerio Burlin, Stefano Munari, Alberto Andeliero"/>
-        <meta name="language" content="italian it"/>
-        <meta name="rating" content="safe for kids" />
-        <meta name="description" content="Il portale di news, articoli, recensioni ed eventi dedicato alla musica"/><meta name="keywords" content="musica, news, news musicali, notizie, album"/>
-        <meta name="keywords" content="music, magazine, news"/>
-        <meta name="robots" content="all" />
-        <link rel="icon" href="./img/favicon.ico" type="image/icon" />
-        <link rel="stylesheet" type="text/css" media="handheld, screen" href="./css/screen_login.css"/>
-        <link rel="stylesheet" type="text/css" media="print" href="./css/print.css"/>
-        <link rel="stylesheet" type="text/css" media="speech" href="./css/aural.css"/>
-        <title>Music Break</title>
-    </head>
-    <body>
-        <div id="header">
-            <div id="title">
-                <span id="logo" class="notAural"><img src="./img/tazza-di-caffe.jpg" alt="Logo del sito Music Break"/></span>
-                <h1><span xml:lang="eng">Music Break</span></h1>
-                <h2>Il portale di notizie dedicato alla musica</h2>
-            </div>
-        </div>
-        <div id="nav">
-            <a class="help" href="#contents">salta menù</a>
-            <ul>
-                <li><a href="home.html" tabindex="5"><span xml:lang="eng">Home</span></a></li>
-                <li><a href="news.html" tabindex="8"><span xml:lang="eng">News</span></a></li>
-                <li><a href="interviste.html" tabindex="13">Interviste</a></li>
-                <li><a href="recensioni.html" tabindex="21">Recensioni</a></li>
-                <li id="current_nav"><p>Eventi</p></li>
-            </ul>
-            <div id="search">
-                <input type="text" id="text_field" value="" name="query" tabindex="1"></input>
-                <input type="submit" alt="inserire una ricerca" value="Cerca" tabindex="3"></input>
-                <input type="hidden" value="Home.html" name="sitesearch"></input>
-            </div> 
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="Fabio Ros, Valerio Burlin, Stefano Munari, Alberto Andeliero"/>
+    <meta name="language" content="italian it"/>
+    <meta name="rating" content="safe for kids" />
+    <meta name="description" content="Il portale di news, articoli, recensioni ed eventi dedicato alla musica"/><meta name="keywords" content="musica, news, news musicali, notizie, album"/>
+    <meta name="keywords" content="music, magazine, news"/>
+    <meta name="robots" content="all" />
+    <link rel="icon" href="./img/favicon.ico" type="image/icon" />
+    <link rel="stylesheet" type="text/css" media="handheld, screen" href="./css/screen.css"/>
+    <link rel="stylesheet" type="text/css" media="print" href="./css/print.css"/>
+    <link rel="stylesheet" type="text/css" media="speech" href="./css/aural.css"/>
+    <title>Eventi - Music Break</title>
+  </head>
+  <body>
+    <div id="header">
+      <a class="help" href="#nav">salta intestazione</a>
+      <div id="title"><span id="logo" class="notAural"><img src="./img/tazza-di-caffe.jpg" alt="Tazza di caffè fumante in cui viene immersa  una pausa di semiminima"/></span>
+        <h1><span xml:lang="eng">Music Break</span></h1>
+        <h2>Il portale di notizie dedicato alla musica</h2>
+      </div>
+    </div>
+      <div id="nav">
+        <a class="help" href="#contents">salta menù</a>
+        <ul>
+          <li><a href="home.html" tabindex="5"><span xml:lang="eng">Home</span></a></li>
+          <li><a href="news.html" tabindex="8"><span xml:lang="eng">News</span></a></li>
+          <li><a href="interviste.html" tabindex="13">Interviste</a></li>
+          <li><a href="recensioni.html" tabindex="21">Recensioni</a></li>
+          <li id="current_nav"><p>Eventi</p></li>
+        </ul>
+        <div id="search">
+          <input type="text" id="text_field" value="" name="query" tabindex="1"></input>
+          <input type="submit" id="button" alt="inserire una ricerca" value="Cerca" tabindex="3"></input>
+          <input type="hidden" value="Home.html" name="sitesearch"></input>
+        </div> 
         </div>
         <div id="contents">
-            <ul class="eventi">
-                <li class="evento">
-                    <h2 title="Independence party"><a href="#" tabindex="55">Independence party</a></h2>
-					<div class="tags">
-						<ul>
-                                                    <li><a href="#">tag1</a></li>
-							<li><a href="#">tag2</a></li>
-							<li><a href="#">tag3</a></li>
-						</ul>
-					</div>
-                    <div class="Intestazione">
-                        <span class="giorno">04</span>
-                        <span class="mese">Luglio</span>
-                        <span class="anno">2014</span>
-                        <span class="luogo">Roma Tiburtina</span>
-                    </div>
+          <ul class="eventi">
+            <li class="evento">
+              <h2 title="Independence party"><a href="#" tabindex="55">Independence party</a></h2>
+		      <div class="tags">
+			    <ul>
+				   <li>tag1</li>
+				   <li>tag2</li>
+				   <li>tag3</li>
+				</ul>
+			  </div>
+              <div class="Intestazione">
+                <span class="giorno">04</span>
+                <span class="mese">Luglio</span>
+                <span class="anno">2014</span>
+                <span class="luogo">Roma</span>
+              </div>
 
-                    <div class="dettagli">
-                        <img class="thumbnail" src="img/eventi/independenceParty.jpg" alt=""/>
-                        <p class="description"> 
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Sed nec purus tempor, semper elit sit amet, congue massa.
-                            Nullam luctus sit amet nibh eget dapibus. Nullam massa magna,
-                            vestibulum vel bibendum sodales, facilisis sed dui. 
-                            Duis suscipit velit vestibulum diam eleifend pretium.
-                            Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing.
-                            Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus
-                            tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac,
-                            aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat
-                            egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut.
-                            Donec accumsan viverra tortor, et gravida felis dictum non.
-                            Pellentesque habitant morbi tristique senectus et netus et malesuada
-                            fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at,
-                            lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet 
-                            facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus 
-                            at vitae odio.
-                        </p>
-                        <p class="info">
-                            <span class="luogo_specifico">via IV Novembre, 4 00100 Roma</span>
-                            <span class="costo_biglietto">€23.00</span>
-                            <span class="email">info@independenceparty.com</span>
-                            <span class="telefono">0039 333445566</span>
-                        </p>
+              <div class="dettagli">
+                <img class="thumbnail" src="img/eventi/independenceParty.jpg" alt=""/>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa.
+                    Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non.        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at,       lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.</p>
+                <p class="info">
+                  <span class="luogo_specifico">via IV Novembre, 4 00100 Roma</span>
+                  <span class="costo_biglietto">€23.00</span>
+                  <span class="email">info@independenceparty.com</span>
+                  <span class="telefono">0039 333445566</span>
+                </p>
+              </div>
+            </li>
 
-                    </div>
-                </li>
+            <li class="evento">                       
+              <h2 title="Fluo party"><a href="#" tabindex="70">Fluo party</a></h2>
+			  <div class="tags">
+			    <ul>
+				  <li>tag4</li>
+				  <li>tag5</li>
+				  <li>tag6</li>
+				</ul>
+			  </div>
+              <div class="Intestazione">
+                  <span class="giorno">11</span>
+                  <span class="mese">Luglio</span>
+                  <span class="anno">2014</span>
+                  <span class="luogo">Roma</span>
+              </div>
 
-                <li class="evento">                       
-                    <h2 title="Fluo party"><a href="#" tabindex="70">Fluo party</a></h2>
-					<div class="tags">
-						<ul>
-							<li><a href="#">tag4</a></li>
-							<li><a href="#">tag5</a></li>
-							<li><a href="#">tag6</a></li>
-							</ul>
-					</div>
-                    <div class="Intestazione">
-                        <span class="giorno">11</span>
-                        <span class="mese">Luglio</span>
-                        <span class="anno">2014</span>
-                        <span class="luogo">Roma</span>
-                    </div>
+              <div class="dettagli">
+                  <img class="thumbnail" src="img/eventi/fluoParty.jpg" alt=""/>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat nunc nibh, sit amet pharetra nunc lobortis ut.
+                    Maecenas cursus placerat magna, et venenatis dolor. Nulla facilisi. Maecenas nec facilisis tortor, vel iaculis enim. Nullam ornare mollis sem eget aliquet. Sed vitae rutrum dolor, eget faucibus massa. Suspendisse pretium tellus dolor, non tristique ante pretium et. Mauris condimentum mi in auctor consequat.</p>
+                  <p class="info">
+                    <span class="luogo_specifico">via IV Novembre, 4 00100 Roma</span>
+                    <span class="costo_biglietto">€33.00</span>
+                    <span class="email">info@fluoparty.com</span>
+                    <span class="telefono">0039 333445566</span>
+                  </p>
+              </div>
+            </li>
 
-                    <div class="dettagli">
-                        <img class="thumbnail" src="img/eventi/fluoParty.jpg" alt=""/>
-                        <p class="description"> 
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Phasellus volutpat nunc nibh, sit amet pharetra nunc lobortis ut.
-                            Maecenas cursus placerat magna, et venenatis dolor. Nulla facilisi. 
-                            Maecenas nec facilisis tortor, vel iaculis enim. 
-                            Nullam ornare mollis sem eget aliquet. Sed vitae rutrum dolor,
-                            eget faucibus massa. Suspendisse pretium tellus dolor, non tristique ante pretium et.
-                            Mauris condimentum mi in auctor consequat.
-                        </p>
-                        <p class="info">
-                            <span class="luogo_specifico">via IV Novembre, 4 00100 Roma</span>
-                            <span class="costo_biglietto">€33.00</span>
-                            <span class="email">info@fluoparty.com</span>
-                            <span class="telefono">0039 333445566</span>
-                        </p>
-
-                    </div>
-                </li>
-
-                <li class="evento">
-                    <h2 title="Canoa party"><a href="#" tabindex="85">Canoa party</a></h2>
-					<div class="tags">
-						<ul>
-							<li><a href="#">tag7</a></li>
-							<li><a href="#">tag8</a></li>
-							<li><a href="#">tag9</a>
-							</ul>
-					</div>
+            <li class="evento">
+              <h2 title="Canoa party"><a href="#" tabindex="85">Canoa party</a></h2>
+		      <div class="tags">
+			        <ul>
+					  <li>tag7</li>
+					  <li>tag8</li>
+					  <li>tag9</li>
+					</ul>
+			  </div>
                     <div class="Intestazione">
                         <span class="giorno">21</span>
                         <span class="mese">Luglio</span>
@@ -139,7 +114,7 @@
                     </div>
 
                     <div class="dettagli">
-                        <img class="thumbnail" src="img/eventi/canoaparty.jpg" alt=""/>
+                        <img class="thumbnail" src="img/eventi/canoaParty.jpg" alt=""/>
                         <p class="description"> 
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Pellentesque molestie semper nulla nec auctor. 
@@ -166,9 +141,9 @@
                     <h2 title="Sixty party"><a href="#" tabindex="100">Sixty party</a></h2>
 					<div class="tags">
 						<ul>
-							<li><a href="fanculo">tag10</a></li>
-							<li><a href="#">tag11</a></li>
-							<li><a href="#">tag12</a></li>
+							<li>tag10</li>
+							<li>tag11</li>
+							<li>tag12</li>
 							</ul>
 					</div>
                     <div class="Intestazione">
