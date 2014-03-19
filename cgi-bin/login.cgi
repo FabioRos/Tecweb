@@ -6,7 +6,8 @@ use XML::LibXSLT;
 use XML::LibXML;
 use CGI qw/:standard/;
 use CGI::Session;
-use CGI::Carp qw(fatalsToBrowser);
+use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
+use CFUN;
 
 my $page = CGI->new();
 my $parser = XML::LibXML->new();

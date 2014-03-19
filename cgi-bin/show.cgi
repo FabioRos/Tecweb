@@ -1,116 +1,14 @@
 #!/usr/bin/perl -w
 
-
 use strict;
 use warnings;
 use XML::LibXSLT;
 use XML::LibXML;
 use CGI qw/:standard/;
+use CGI::Session;
+use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
+use CFUN;
 
-sub fetags{
-	my $ptrtags = $_[0]->findnodes("tag");
-	my $page = $_[1];
-	my $aux = $page->div({-class => 'tag_title'}, 'Tag Articolo:');
-	foreach my $tag ($ptrtags->get_nodelist){	
-		$aux = $aux . $page->a(
-			{
-				-class =>'taglink',
-				-tag => 'tag',
-				-href => "searchtags.cgi?idtag=".$tag->findnodes("\@id")->get_node(1)->textContent
-				},
-				$tag->findnodes("node()")->get_node(1)->textContent
-			);
-		}
-	return $aux;
-}
-
-sub feposts{
-	my $ptrpos = $_[0]->findnodes("/posts/post");
-	my $page = $_[1];
-	my $aux;
-	foreach my $post ($ptrpos->get_nodelist){
-		$aux = $aux . $page->div(
-				{-class => 'article'},
-				$page->h2( $page->a({-href => "posts.cgi?post=".$post->findnodes("\@id")->get_node(1)->textContent},$post->findnodes("titolo")->get_node(1)->textContent)),
-				$page->span(
-					{-class => 'author'}, 
-					"di ".$post->findnodes("editore/nome")->get_node(1)->textContent." ".$post->findnodes("editore/cognome")->get_node(1)->textContent." ".$post->findnodes("data")->get_node(1)->textContent
-					),
-				$page->img(
-					{-src => $post->findnodes("foto/src/node()")->get_node(1)->textContent, 
-					-alt => $post->findnodes("foto/alt/node()")->get_node(1)->textContent}),
-				$page->p($post->findnodes("excerpt")->get_node(1)->textContent),
-				$page->a(
-					{-class => 'continua' , -href => "posts.cgi?post=".$post->findnodes("\@id")->get_node(1)->textContent},
-					"continua →"
-					),
-				fetags($post,$page)
-			);
-	}
-	return $aux;
-}
-
-sub fenav{
-	my $type = $_[0];
-	my $page = $_[1];
-	my $aux;
-	if ($type eq 'n'){
-		$aux = $aux . $page->ul(
-						li($page->a({-href => 'home.xml'}, '<span xml:lang="en">Home</span>')),
-						li({-id => 'current_nav'}, $page->p('<span xml:lang="en">News</span>')),
-						li([
-						$page->a({-href => 'show.cgi?type=i'}, 'Interviste'),
-						$page->a({-href => 'show.cgi?type=r'}, 'Recensioni'),
-						$page->a({-href => 'show.cgi?type=e'}, 'Eventi')
-					])
-			);
-	} elsif ($type eq 'i'){
-		$aux = $aux . $page->ul(
-						li([$page->a({-href => 'home.xml'}, '<span xml:lang="en">Home</span>'),
-						$page->a({-href => 'show.cgi?type=n'}, '<span xml:lang="en">News</span>')]),
-						li({-id => 'current_nav'},$page->p('Interviste')),
-						li([
-						$page->a({-href => 'show.cgi?type=r'}, 'Recensioni'),
-						$page->a({-href => 'show.cgi?type=e'}, 'Eventi')])
-			);
-	} elsif ($type eq 'r'){
-		$aux = $aux . $page->ul(
-						li([$page->a({-href => 'home.xml'}, '<span xml:lang="en">Home</span>'),
-						$page->a({-href => 'show.cgi?type=n'}, '<span xml:lang="en">News</span>'),
-						$page->a({-href => 'show.cgi?type=i'}, 'Interviste')]),
-						li({-id => 'current_nav'}, $page->p('Recensioni')),
-						li($page->a({-href => 'show.cgi?type=e'}, 'Eventi'))
-			);
-	} elsif ($type eq 'e'){
-		$aux = $aux . $page->ul(
-						li([$page->a({-href => 'home.xml'}, '<span xml:lang="en">Home</span>'),
-						$page->a({-href => 'show.cgi?type=n'}, '<span xml:lang="en">News</span>'),
-						$page->a({-href => 'show.cgi?type=i'}, 'Interviste'),
-						$page->a({-href => 'show.cgi?type=r'}, 'Recensioni')]),
-						li({-id => 'current_nav'}, $page->p('Eventi'))
-			);
-	}
-	return $aux;
-}
-
-sub fenavpag{
-	my $pagina = $_[0]+1;
-	my $type = $_[1];
-	my $inizio = $_[2];
-	my $fine = $_[3];
-	my $page = $_[4];
-	my $aux;
-	if ($pagina > $inizio){
-		$aux = $aux . $page->a({-href => "show.cgi?type=".$type."pag=".1},"<<");
-		$aux = $aux . $page->a({-href => "show.cgi?type=".$type."pag=".$pagina-1},"<");
-	}
-	$aux = $aux . $page->a({-href => "show.cgi?type=".$type."pag=".$pagina},$pagina);
-	if ($pagina < $fine){
-		$aux = $aux . $page->a({-href => "show.cgi?type=".$type."pag=".$pagina+1},">");
-		$aux = $aux . $page->a({-href => "show.cgi?type=".$type."pag=".$fine},">>");
-	}
-	return $aux;
-}
 
 my $page = CGI->new();
 my $parser = XML::LibXML->new();
@@ -207,17 +105,17 @@ print $page->div(
 print $page->div(
 	{-id => 'nav'},
 	$page->a({-class => 'help', -href => '#contents'}, 'salta menù'),
-	fenav($type,$page)
+	CFUN::fenav($type)
 	);
 print $page->div(
 	{-id => 'contents'},
 	$page->h1(uc($title)),
 	$page->a({-class => 'help', -href => '#footer'}, 'salta il contenuto'),
-	feposts($dom,$page)
+	CFUN::feposts($dom)
 	);
 print $page->div(
 	{-id => 'nav_pagine'},
-	fenavpag($pag,$type,1,$end,$page)
+	CFUN::fenavpag($pag,$type,1,$end,$page)
 	);
 print $page->div(
 	{-id => 'footer'},

@@ -6,6 +6,7 @@ use XML::LibXSLT;
 use XML::LibXML;
 use CGI qw/:standard/;
 use CGI::Session;
+use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
 
 my $page = CGI->new();
 
