@@ -55,7 +55,7 @@ print $page->div(
 			$page->label({-for => 'username'}, '<span xml:lang="en">Username: </span>'),
 			$page->input({-type => 'text', -name => 'username' , -id => 'username'}),
 			$page->label({-for => 'password'}, '<span xml:lang="en">Password: </span>'),
-			$page->input({-type => 'text', -name => 'password' , -id => 'password'}),
+			$page->input({-type => 'password', -name => 'password' , -id => 'password'}),
 			$page->input({-type => 'submit', -value => 'Accedi'})
 		),
 	endform
