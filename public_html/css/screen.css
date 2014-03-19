@@ -37,6 +37,7 @@ a:visited{
 #logo img{
 	float: left;
 	width: 8%;
+	min-width: 80px;
 }
 /***** Dimensionamento e posizionamento titolo del sito *****/
 #title{
@@ -201,13 +202,17 @@ li#current_nav p{
 	text-align: center;
 	border-style: solid;
 	border-color: #000000;
-	padding-left: 0;
-	padding-right: 0;
+	padding: 5%;
+}
+#TopNews{
+	background-color: #7F775C;
 }
 #sidebar ol{
-	padding: 5% 1% 40% 4%;
+	padding-top: 3%;
+	padding-bottom: 1%;
 }
 #sidebar li{
+	list-style-type: none;
 	color: #FFFFFF;
 	padding-bottom: 5%;
 }
@@ -250,7 +255,6 @@ div.Intestazione .anno{
    background-color:black;
    padding:0.1em 0.8em;
    margin-bottom: 0.2em;
-
    border-bottom-style: solid;
    border-width: 5px;
    background: rgb(69,72,77); /* Old browsers */
@@ -316,8 +320,7 @@ div.Intestazione .anno{
     font-weight: bold;
     display: block;
 }
-.common_box input[type="text"], .common_box input[type="password"], .common_box input[type="file"], .common_box textarea
-{
+.common_box input[type="text"], .common_box input[type="password"], .common_box input[type="file"], .common_box textarea{
     margin: 3% auto;
     display: block;
     border:  2px solid;  
