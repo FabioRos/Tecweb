@@ -69,30 +69,6 @@ Questo file serve per mettere in relazione le gallerie con i post
             <cognome>Mangio</cognome>
         </editore>
     </editori>
-    
-    <!-- VALUTAZIONI -->
-    <valutazioni>
-        <valutazione>
-            <voto>5</voto>
-            <idPost>1</idPost>
-            <email>gianni.ippolito@gmail.com</email>
-        </valutazione>
-        <valutazione>
-            <voto>3</voto>
-            <idPost>2</idPost>
-            <email>gianni.ippolito@gmail.com</email>
-        </valutazione>
-        <valutazione>
-            <voto>4</voto>
-            <idPost>3</idPost>
-            <email>gianni.ippolito@gmail.com</email>
-        </valutazione>
-        <valutazione>
-            <voto>4</voto>
-            <idPost>1</idPost>
-            <email>ippo.potamo@gmail.com</email>
-        </valutazione>
-    </valutazioni>
 
     <posts>
     <!-- EVENTI -->
