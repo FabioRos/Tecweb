@@ -30,7 +30,6 @@ a:visited{
 /***** Impostazioni stile dell'header : logo del sito e titolo *****/
 #header{
 	background-color: #000000;
-	font-family: Georgia, serif;
 	color: #FFFFFF;
 }
 /***** Dimensionamento e posizionamento logo del sito *****/
@@ -59,80 +58,90 @@ a:visited{
 	padding-left: 10%;
 }
 #title h2{
+	font-family: Georgia, serif;
 	font-size: 1.0em;
 	padding-top: 1%;
-	padding-left: 25%
+	padding-left: 25%;
 }
 
 
 /***** Impostazioni menù di navigazione *****/
 #nav{	
 	display: inline-block;
-	position: relative;
-	background-color: #45484D;
 	width: 100%;
+	background-color: #45484D;
 	border-bottom-style: solid;
 	border-width: 5px;
 	border-color: #33CCFF;
 }
-#current_nav{
-	background-color: #33CCFF;
-	color: #000000;
-}
-li#current_nav p{
-	padding: 2% 10%;
-}
 #nav ul{
-	width: 60%;
 	float: left;
+	width: 60%;
 	list-style-type: none;
-	padding-left: 10%;
+	padding-left: 8%;
 }
 #nav ul li{
 	display: inline-block;
 	font-variant: small-caps;
 	text-align: center;
 	font-size: 1.4em;
-	padding: 0.5%;
+	padding: 0.5% 2%;
+}
+#current_nav{
+	background-color: #33CCFF;
+	color: #000000;
 }
 #nav ul li a{
 	color: #FFFFFF;
 	display: block;
-	padding: 0 10%;
-
 }
 #nav ul li a:hover{
 	color: #000000;
 	background-color: #FFFFFF;
 }
+
+/***** Impostazioni menù di navigazione mobile *****/
+@media only screen and (max-width: 959px){
+#nav{
+    width:100%;
+}
+#nav ul{
+    width:100%;
+    padding-left:0;
+}
+#nav ul li{
+    display: block;
+    width: 80%;
+    margin: 0.2em auto;
+}
+} /* Fine media query */
+
 /***** Impostaioni barra search *****/
-#search
-{
+#search{
 	float: right;
-	padding-top: 0.4%;
-	padding-right: 1%;
+	padding-top: 0.3%;
 }
 #text_field
 {
-	font-size: 1.3em;
+	width: 70%;
 	background-color: #FFFFFF;
+	font-size: 1.2em;
+	padding: 0.4%;
 }
 #button{
-	font-size: 1.3em;
-	padding: 0.2%;
+	font-size: 1.2em;
 }
 
 
 /***** Impostazioni visualizzazione contenuti *****/
-#contents, #contents_home{
-	float: left;
-}
 #contents_home{
+	float: left;
 	width: 80%;
 }
 #contents h1, #contents_home h1{
 	font-size: 1.0em;
 	text-align: center;
+	padding-top: 0.5%;
 }
 /***** Impostazioni di visualizzazione degli articoli *****/
 .article:nth-child(odd){
@@ -150,8 +159,8 @@ li#current_nav p{
 	background-color: #FFFFFF;
 	border-style: solid;
 	border-width: 1px;
-	padding: 1%;
 	box-shadow: 0px 0px 5px 3px;
+	padding: 1%;
 }
 .article h2 a{
 	color: #000000;
@@ -172,69 +181,80 @@ li#current_nav p{
 .tag_title{
 	font-weight: bold;
 }
-.nav_pagine{
+/***** Impostazioni scorrimento tra pagine *****/
+#nav_pagine{
 	clear: both;
 	text-align: center;
 	padding: 1% 0;
 }
 #nav_pagine a{
-	color: #FFCC00;
+	color: #0000FF;
 	padding-right: 0.3%;
 	padding-left: 0.3%;
 }
-
+/***** Impostazioni contenuto per mobile *****/
+@media only screen and (max-width: 959px){
+#contents_home{
+    width:100%;
+}
+.article{
+    float:none;
+    display: block;
+    width:90%;
+    margin: 1em auto;
+}
+} /* Fine media query */
 
 /***** Impostazioni di stile della sidebar laterale *****/
 #sidebar{
 	float: right;
 	width: 16%;
-	font-size: 0.9em;
-	border-radius:3px;
 	background: #1D1D1D; 
-	margin-top: -0.5%;
+	font-size: 0.9em;
+	border-radius: 3px;
 	padding: 1% 2%;
+	margin-top: -0.5%;
 }
 #sidebar h1{
 	color: #33CCFF;
 	font-size: 1.2em;
-	width: 100%;
 	text-align: center;
-	padding: 5%;
+	margin: 10% auto;
 }
 .box{
 	background-color: #1E1E1E;
 	padding-top: 3%;
 	padding-bottom: 1%;
-	margin-bottom: 20%;
+	margin-bottom: 20%; 
 }
 .effect{
-	position:relative;       
-    -webkit-box-shadow:0 1px 4px rgba(256, 256, 256, 0.3), 0 0 40px rgba(256, 256, 256, 0.1) inset;
-    -moz-box-shadow:0 1px 4px rgba(256, 256, 256, 0.3), 0 0 40px rgba(256, 256, 256, 0.1) inset;
-    box-shadow:0 1px 4px rgba(256, 256, 256, 0.3), 0 0 40px rgba(256, 256, 256, 0.1) inset;
+	position: relative;       
+    -webkit-box-shadow: 0 1px 4px rgba(256, 256, 256, 0.3), 0 0 40px rgba(256, 256, 256, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(256, 256, 256, 0.3), 0 0 40px rgba(256, 256, 256, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(256, 256, 256, 0.3), 0 0 40px rgba(256, 256, 256, 0.1) inset;
 }
 .effect:before, .effect:after{
-	content:"";
-    position:absolute; 
-    z-index:-1;
-    -webkit-box-shadow:0 0 20px rgba(256,256,256,0.8);
-    -moz-box-shadow:0 0 20px rgba(256,256,256,0.8);
-    box-shadow:0 0 20px rgba(256,256,256,0.8);
-    top:0;
-    bottom:0;
-    left:10px;
-    right:10px;
-    -moz-border-radius:100px / 10px;
-    border-radius:100px / 10px;
+	content: "";
+    position: absolute; 
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(256,256,256,0.8);
+    -moz-box-shadow: 0 0 20px rgba(256,256,256,0.8);
+    box-shadow: 0 0 20px rgba(256,256,256,0.8);
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
 }
 .effect:after{
-	right:10px; 
-    left:auto;
-    -webkit-transform:skew(8deg) rotate(3deg); 
-    -moz-transform:skew(8deg) rotate(3deg);     
-    -ms-transform:skew(8deg) rotate(3deg);     
-    -o-transform:skew(8deg) rotate(3deg); 
-    transform:skew(8deg) rotate(3deg);
+	right: 10px; 
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg); 
+    -moz-transform: skew(8deg) rotate(3deg);     
+    -ms-transform: skew(8deg) rotate(3deg);     
+    -o-transform: skew(8deg) rotate(3deg); 
+    transform: skew(8deg) rotate(3deg);
 }
 #sidebar li{
 	position: relative;
@@ -252,37 +272,77 @@ li#current_nav p{
 	font-weight: bold;
 	font-size: 1.1em;
 }
-
+/***** Impostazione sidebar per mobile *****/
+@media only screen and (max-width: 959px){
+#sidebar{ 
+    clear: both;
+    float: none;
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin: 1em auto;
+}
+#topNews{
+    padding: 0.5em;
+    margin-bottom: 0;
+}
+#sidebar ol{
+    list-style-type: none !important;
+    padding: 3%;
+}
+#sidebar li {
+    padding: 1%;
+}
+} /* Fine media query */
 
 /***** Impostazioni stile del contenuto eventi *****/
-div.Intestazione{
+.evento{
+	width: 90%;
+    list-style-type: none;
     text-align: center;
-    float:left;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0px 0px 5px 3px;
+    padding: 1%;
+    margin: 2% auto 4% auto;
+}
+.evento h2{
+	padding-bottom: 0.5%;
+}
+.evento h2 a{
+	color: #000000;
+	text-decoration: none;
+}
+.evento h2 a:hover{
+	text-decoration: underline;
+}
+.Intestazione{
+    float: left;
+    width: 5em;
+    text-align: center;
+    background-color: #550000;
+    color: #FFFFFF;
     margin-right: 0.5em;
-    width:5em;
-    background-color:#500;
-    color:#fff;
 }
-div.Intestazione .giorno{
-    font-size:3em;
-    display:block;
+.Intestazione .giorno{
+    display: block;
+    font-size: 3em;
     line-height: 0.9em;
 }
-div.Intestazione .mese{
-    font-size:1.2em;
+.Intestazione .mese{
     display:block;
+    font-size:1.2em;
     line-height: 0.9em;
 }
-div.Intestazione .anno{
-    font-size:1.2em;
+.Intestazione .anno{
     display:block;
+    font-size:1.2em;
     line-height: 1.8em;
 }
-.tags li
-{  display:inline-block;
-   background-color:black;
-   padding:0.1em 0.8em;
-   margin-bottom: 0.2em;
+.tags li{  
+   display: inline-block;
+   background-color: black;
    border-bottom-style: solid;
    border-width: 5px;
    background: rgb(69,72,77); /* Old browsers */
@@ -293,25 +353,26 @@ div.Intestazione .anno{
    background: -ms-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
    background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );  /* IE6-9 */
-
+   padding: 0.1em 0.8em;
+   margin-bottom: 0.2em;
 }
 .tags li a{
-    color:white;
+    color: #FFFFFF;
 }
 .tags li a:visited{
-    color:red;
+    color: #FF0000;
 }
 .tags li:hover{
-    background:white;
-    font-weight:bold;
+    background: #FF0000;
+    font-weight: bold;
     font-size: 1.3em;
 }
 .dettagli img.thumbnail{
-    width:90%; 
+    width: 90%; 
 }
 .dettagli div.imgcontainer{
     max-height: 200px;
-    overflow:hidden;
+    overflow: hidden;
     resize: none;
 }
 
@@ -320,9 +381,9 @@ div.Intestazione .anno{
 #footer{
 	clear: both;
 	background-color: #45484D;
-	padding: 1%;
 	text-align: center;
 	color: #FFFFFF;
+	padding: 1%;
 }
 #footer a{
 	color: #33CCFF;
@@ -332,53 +393,51 @@ div.Intestazione .anno{
 
 /********** Impostazioni stile CSS per Amministratore ***********************/
 
-.common_box
-{
-    margin: 5% auto;
+.common_box{
     width: 60%;
     text-align: center;
     background-color: #FFFFFF;
     border-style: solid;
     border-width: 1px;
-    padding: 1%;
     box-shadow: 0px 0px 5px 3px;
+    padding: 1%;
+    margin: 5% auto;
 }
 .common_box label{
+	display: block;
     font-size: 1.8em;
     font-weight: bold;
-    display: block;
 }
 .common_box input[type="text"], .common_box input[type="password"], .common_box input[type="file"], .common_box textarea{
-    margin: 3% auto;
     display: block;
-    border:  2px solid;  
+    width: 50%;
+    border: 2px solid;  
     box-shadow: 0px 0px 2px 2px;
     line-height: 1em;
     font-size: 2em;
     text-align: center;
-    width: 50%;
+    margin: 3% auto;
 }
 .common_box input[type="file"]{
     font-size: 1.3em;
 }
 .common_box input[type="submit"]{
-    margin: 10% auto;
     line-height: 1em;
     font-size: 1.5em;
     text-align: center;
     box-shadow: 0px 0px 2px 2px;
-    padding:0.3em 0.8em;
-
+    padding: 0.3em 0.8em;
+    margin: 10% auto;
 }
 .common_box p, .common_box a{
+    display: block;
     font-size: 1.8em;
     font-weight: bold;
-    display:block;
     text-decoration: none;
     margin: 2% auto;
 }
 .common_box fieldset{
-    border:0;
+    border: 0;
 }
 .common_box a{
     color: #00F;
