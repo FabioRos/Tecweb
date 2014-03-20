@@ -152,7 +152,8 @@ if ($type eq 'i'){
 	}	
 }
 if ($fail) {
-	CFUN::redir((CFUN::getcaller($type)).$msg);
+	my $pagina = CFUN::getcaller($type);
+	CFUN::redir($pagina.$msg);
 }else{
 	my $path = CFUN::getfolderpath($type);
 	CFUN::scrivifile($srcfoto,$filename,$path);
