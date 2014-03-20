@@ -41,18 +41,14 @@ my $filename;
 if($cgi->param('src') eq ""){
 	$fail=1;
 	$msg = $msg."msg1=nome%20del%20file%20vuoto&&";
-}else{
-	$filename=$cgi->param('src');
 }
-
+else{$filename=$cgi->param('src');}
 
 my $altfoto;
 if($cgi->param('alt') eq ""){
 	$fail=1;
 	$msg = $msg."msg3=descrizione%20della%20foto%20vuota&&";
 }else{$altfoto=$cgi->param('alt');}
-
-
 
 my $descrizione;
 if($cgi->param('excerpt') eq ""){
@@ -145,9 +141,9 @@ if ($type eq 'i'){
 	my @galnms = $cgi->param("fgallery");
 	my $galsize = scalar @gal;
 	for(my $var = 0; $var< $galsize; $var++){
-		if($gal[$var]){
-			$gallery[$var]=$gal[$var];
-			$gallerynames[$var]=$galnms[$var];
+		if(@gal[$var]){
+			@gallery[$var]=@gal[$var];
+			@gallerynames[$var]=@galnms[$var];
 		}
 	}	
 }
@@ -157,8 +153,9 @@ if ($fail) {
 }else{
 	my $path = CFUN::getfolderpath($type);
 	CFUN::scrivifile($srcfoto,$filename,$path);
-	for (my $var = 0; $var < scalar @gallery; $var++) {
-		CFUN::scrivifile($gallery[$var],$gallerynames[$var],"../public_html/img/interviste/gallery/");
+	my $size = scalar @gallery;
+	for (my $var = 0; $var < $size; $var++) {
+		CFUN::scrivifile(@gallery[$var],@gallerynames[$var],"../public_html/img/interviste/gallery/");
 	}
 }
 
