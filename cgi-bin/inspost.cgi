@@ -25,36 +25,54 @@ my $xslt = XML::LibXSLT->new();
 
 #my $utente=getSession;
 
-
+my $fail = 0;
+my $msg = "?";
 my $type = $cgi->param('tipo');
-my $titolo = CFUN::isdef('titolo');
-if($titolo eq ""){
-	CFUN::redir("../admin_interviste.html?msg=stringavuota");
-}
+my $titolo;
+if((!defined $cgi->param('titolo')) && $cgi->param('titolo') eq ""){
+	$fail=1;
+	$msg = $msg."msg1=stringavuota&&");
+}else{$titolo=$cgi->param('titolo');}
+
+#controllo della foto
 my $srcfoto = $cgi->upload('src');
-my $filename = CFUN::isdef('src');
-if($filename eq ""){
-	CFUN::redir("../admin_interviste.html?msg=nome%20del%20file%20vuoto");
-}
+my $filename;
 my $path = CFUN::getfolderpath($type);
-CFUN::checkfile($srcfoto);
-CFUN::scrivifile($srcfoto,$filename,$path);
-my $altfoto = CFUN::isdef('alt');
-if($altfoto eq ""){
-	CFUN::redir("../admin_interviste.html?msg=descrizione%20della%20foto%20vuota");
+if((!defined $cgi->param('src')) && $cgi->param('src') eq ""){
+	$fail=1;
+	$msg = $msg."msg1=nome%20del%20file%20vuoto&&";
+}else{
+	$src=$cgi->param('src');
 }
-my $descrizione = isdef('excerpt');
-if($descrizione eq ""){
-	CFUN::redir("../admin_interviste.html?msg=descrizione%20del%20post%20vuoto");
-}
-my $testo = isdef('descrizione');
-if($testo eq ""){
-	CFUN::redir("../admin_interviste.html?msg=testo%20del%20post%20vuoto");
-}
+
+
+my $altfoto;
+if((!defined $cgi->param('alt')) && $cgi->param('alt') eq ""){
+	$fail=1;
+	$msg = $msg."msg3=descrizione%20della%20foto%20vuota&&";
+}else{$altfoto=$cgi->param('alt');}
+
+
+
+my $descrizione;
+if((!defined $cgi->param('excerpt')) && $cgi->param('excerpt') eq ""){
+	$fail=1;
+	$msg = $msg."msg4=descrizione%20del%20post%20vuoto&&";
+}else{$descrizione=$cgi->param('excerpt');}
+
+
+my $testo;
+if((!defined $cgi->param('descrizione')) && $cgi->param('descrizione') eq ""){
+	$fail=1;
+	$msg=$msg."msg5=testo%20del%20post%20vuoto&&";
+}else{$testo=$cgi->param('descrizione');}
+
+
 my $tags = isdef('tags');
-if($tags eq ""){
-	CFUN::redir("../admin_interviste.html?msg=nessun%20tag%20inserito");
-}
+if((!defined $cgi->param('tags')) && $cgi->param('tags') eq ""){
+	$fail=1;
+	$msg=$msg."msg6=nessun%20tag%20inserito&&";
+}else{$tags=$cgi->param('tags');}
 
 
 my $data;
@@ -67,25 +85,62 @@ my $price;
 my $mail;
 my $phone;
 if($type eq 'e'){
-	$data = CFUN::isdef('dataEvento');
-	$numgiorni = CFUN::isdef('numGiorni');
-	$luogo = CFUN::isdef('luogo');
-	$oraInizio = CFUN::isdef('oraInizio');
-	$oraFine = CFUN::isdef('oraFine');
-	$indirizzo = CFUN::isdef('indirizzo');
-	$price = CFUN::isdef('prezzo');
-	$mail = CFUN::isdef('email');
-	$phone = CFUN::isdef('telefono');
+	if((!defined $cgi->param('dataEvento')) && $cgi->param('dataEvento') eq ""){
+		$fail=1;
+		$msg=$msg."msg7=data%20vuota&&";
+	}else{$data=$cgi->param('dataEvento');}
+
+	if((!defined $cgi->param('numGiorni')) && $cgi->param('numGiorni') eq ""){
+		$fail=1;
+		$msg=$msg."msg8=numero%20giorni%20vuoto&&";
+	}else{$numgiorni=$cgi->param('numGiorni');}
+
+	if((!defined $cgi->param('luogo')) && $cgi->param('luogo') eq ""){
+		$fail=1;
+		$msg=$msg."msg9=nessun%20luogo%20inserito&&";
+	}else{$luogo=$cgi->param('luogo');}
+
+	if((!defined $cgi->param('oraInizio')) && $cgi->param('oraInizio') eq ""){
+		$fail=1;
+		$msg=$msg."msg10=manca%20ora%20inizio&&";
+	}else{$oraInizio=$cgi->param('oraInizio');}
+
+	if((!defined $cgi->param('oraFine')) && $cgi->param('oraFine') eq ""){
+		$fail=1;
+		$msg=$msg."msg11=manca%20ora%20fine&&";
+	}else{$oraFine=$cgi->param('oraFine');}
+
+	if((!defined $cgi->param('indirizzo')) && $cgi->param('indirizzo') eq ""){
+		$fail=1;
+		$msg=$msg."msg12=manca%20ora%20fine&&";
+	}else{$indirizzo=$cgi->param('indirizzo');}
+
+	if((!defined $cgi->param('prezzo')) && $cgi->param('prezzo') eq ""){
+		$fail=1;
+		$msg=$msg."msg13=manca%20il%20prezzo&&";
+	}else{$price=$cgi->param('prezzo');}
+
+	if((!defined $cgi->param('mail')) && $cgi->param('mail') eq ""){
+		$fail=1;
+		$msg=$msg."msg14=manca%20la%20mail&&";
+	}else{$mail=$cgi->param('mail');}
+
+	if((!defined $cgi->param('telefono')) && $cgi->param('telefono') eq ""dataEvento){
+		$fail=1;
+		$msg=$msg."msg15=manca%20il%20telefono&&";
+	}else{$luogo=$cgi->param('telefono');}
 }
 
 my $intervistato;
 my @gallery;
 my @gallerynames;
 if ($type eq 'i'){
-	$intervistato = CFUN::isdef('intervistato');
-	if($intervistato eq ""){
-		CFUN::redir("../admin_interviste.html?msg=nome%20intervistatoe%20vuoto");
-	}
+
+	if((!defined $cgi->param('intervistato')) && $cgi->param('intervistato') eq ""dataEvento){
+		$fail=1;
+		$msg=$msg."msg7=manca%20il%20nome%20intervistato&&";
+	}else{$luogo=$cgi->param('intervistato');}
+
 	my @gal = $cgi->upload("fgallery");
 	my @galnms = $cgi->param("fgallery");
 	my $galsize = scalar @gal;
@@ -93,46 +148,15 @@ if ($type eq 'i'){
 		if(@gal[$var]){
 			@gallery[$var]=@gal[$var];
 			@gallerynames[$var]=@galnms[$var];
-			CFUN::scrivifile(@gallery[$var],@gallerynames[$var],"../public_html/img/interviste/gallery/");
 		}
 	}	
 }
+if ($fail) {
+	CFUN::redir(CFUN::getcaller($type.$msg));
+}else{
+	CFUN::scrivifile($srcfoto,$filename,$path);
+	for (my $var = 0; $var < scalar @gal; $var++) {
+		CFUN::scrivifile(@gallery[$var],@gallerynames[$var],"../public_html/img/interviste/gallery/");
+	}
+}
 
-print $cgi->header({-type=>'text/html', -charset=>'UTF-8'});
-print $cgi->start_html(
-	-title => "Admin - Music Break",
-	-dtd => ['-//W3C//DTD XHTML 1.0 Strict//EN','http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'],
-	-lang => 'it',
-	-meta => {
-		'author' => 'Fabio Ros, Valerio Burlin, Stefano Munari, Alberto Andeliero',
-		'language' => 'italian it',
-		'rating' => 'safe for kids',
-		'keywords' => 'login, area riservata',
-		'robots' => 'noindex,nofollow'
-	},
-	-style => [
-	{'media' => 'print','src' => '../css/print.css'},
-	{'media' => 'speech','src' => '../css/aural.css'},
-	{'media' => 'handheld, screen','src' => '../css/screen_login.css'}
-	],
-	-script =>[{'type' => 'text/javascript','src' => '../javascript/backend.js'}]
-	);
-print $cgi->div(
-	{-id => 'header'},
-	$cgi->a({-class => 'help' , -href => '#nav'}, 'salta intestazione'),
-	$cgi->span(
-		{-id => 'logo' , -class => 'notAural'}, 
-		$cgi->img({-src => './img/tazza-di-caffe.jpg', -alt => 'Tazza di caffè fumante in cui viene immersa  una pausa di semiminima'})
-		),
-	$cgi->h1('<span xml:lang="eng">Music Break</span>'),
-	$cgi->h2('Il portale di notizie dedicato alla musica')
-	);
-print $cgi->div(
-	{-id => 'nav'},
-	$cgi->a({-class => 'help', -href => '#contents'}, 'salta menù'),
-	CFUN::afenav($type)
-	);
-#proseguire
-
-
-print $cgi->end_html;

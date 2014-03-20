@@ -103,55 +103,6 @@ sub fenav{
 	return $aux;
 }
 
-sub afenav{
-	my $type = $_[0];
-	my $aux;
-	if ($type eq 'n'){
-		$aux = $aux . $cgi->ul(
-						li($cgi->a({-href => 'home.xml'}, '<span xml:lang="en">Home</span>')),
-						li({-id => 'current_nav'}, $cgi->p('<span xml:lang="en">News</span>')),
-						li([
-						$cgi->a({-href => 'show.cgi?type=i'}, 'Interviste'),
-						$cgi->a({-href => 'show.cgi?type=r'}, 'Recensioni'),
-						$cgi->a({-href => 'show.cgi?type=e'}, 'Eventi'),
-						$cgi->a({-href => 'logout.cgi'}, '<span xml:lang="en">Logout</span>')
-					])
-			);
-	} elsif ($type eq 'i'){
-		$aux = $aux . $cgi->ul(
-						li([$cgi->a({-href => 'home.xml'}, '<span xml:lang="en">Home</span>'),
-						$cgi->a({-href => 'show.cgi?type=n'}, '<span xml:lang="en">News</span>')]),
-						li({-id => 'current_nav'},$cgi->p('Interviste')),
-						li([
-						$cgi->a({-href => 'show.cgi?type=r'}, 'Recensioni'),
-						$cgi->a({-href => 'show.cgi?type=e'}, 'Eventi'),
-						$cgi->a({-href => 'logout.cgi'}, '<span xml:lang="en">Logout</span>')])
-			);
-	} elsif ($type eq 'r'){
-		$aux = $aux . $cgi->ul(
-						li([$cgi->a({-href => 'home.xml'}, '<span xml:lang="en">Home</span>'),
-						$cgi->a({-href => 'show.cgi?type=n'}, '<span xml:lang="en">News</span>'),
-						$cgi->a({-href => 'show.cgi?type=i'}, 'Interviste')]),
-						li({-id => 'current_nav'}, $cgi->p('Recensioni')),
-						li([
-							$cgi->a({-href => 'show.cgi?type=e'}, 'Eventi'),
-							$cgi->a({-href => 'logout.cgi'}, '<span xml:lang="en">Logout</span>')
-							])
-			);
-	} elsif ($type eq 'e'){
-		$aux = $aux . $cgi->ul(
-						li([
-							$cgi->a({-href => 'home.xml'}, '<span xml:lang="en">Home</span>'),
-							$cgi->a({-href => 'show.cgi?type=n'}, '<span xml:lang="en">News</span>'),
-							$cgi->a({-href => 'show.cgi?type=i'}, 'Interviste'),
-							$cgi->a({-href => 'show.cgi?type=r'}, 'Recensioni')
-							]),
-						li({-id => 'current_nav'}, $cgi->p('Eventi')),
-						li([$cgi->a({-href => 'logout.cgi'}, '<span xml:lang="en">Logout</span>')])
-			);
-	}
-	return $aux;
-}
 
 sub fetags{
 	my $ptrtags = $_[0]->findnodes("tag");
@@ -212,3 +163,17 @@ sub fenavpag{
 	return $aux;
 }
 
+sub getcaller{
+	my $type=$_[0];
+	my $aux;
+	if ($type eq 'n'){
+		$aux="../admin_news.html";
+	} elsif ($type eq 'i'){
+		$aux="../admin_interviste.html";
+	} elsif ($type eq 'r'){
+		$aux="../admin_recensioni.html";
+	} elsif ($type eq 'e'){
+		$aux="../admin_eventi.html";
+	}
+	return $aux;
+}
