@@ -9,6 +9,9 @@ use CGI::Session;
 use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
 use CFUN;
 
+my $cgi = CGI->new();
+my $xml = XML::LibXML->new();
+my $xslt = XML::LibXSLT->new();
 
 #sub getSession{
 #	my $session = CGI::Session->load() or die $!;
@@ -19,9 +22,6 @@ use CFUN;
 #	}
 #}
 
-my $cgi = CGI->new();
-my $xml = XML::LibXML->new();
-my $xslt = XML::LibXSLT->new();
 
 #my $utente=getSession;
 
@@ -31,7 +31,7 @@ my $type = $cgi->param('tipo');
 my $titolo;
 if((!defined $cgi->param('titolo')) && $cgi->param('titolo') eq ""){
 	$fail=1;
-	$msg = $msg."msg1=stringavuota&&");
+	$msg = $msg."msg1=stringavuota&&";
 }else{$titolo=$cgi->param('titolo');}
 
 #controllo della foto
@@ -42,7 +42,7 @@ if((!defined $cgi->param('src')) && $cgi->param('src') eq ""){
 	$fail=1;
 	$msg = $msg."msg1=nome%20del%20file%20vuoto&&";
 }else{
-	$src=$cgi->param('src');
+	$filename=$cgi->param('src');
 }
 
 
@@ -125,7 +125,7 @@ if($type eq 'e'){
 		$msg=$msg."msg14=manca%20la%20mail&&";
 	}else{$mail=$cgi->param('mail');}
 
-	if((!defined $cgi->param('telefono')) && $cgi->param('telefono') eq ""dataEvento){
+	if((!defined $cgi->param('telefono')) && $cgi->param('telefono') eq ""){
 		$fail=1;
 		$msg=$msg."msg15=manca%20il%20telefono&&";
 	}else{$luogo=$cgi->param('telefono');}
@@ -136,7 +136,7 @@ my @gallery;
 my @gallerynames;
 if ($type eq 'i'){
 
-	if((!defined $cgi->param('intervistato')) && $cgi->param('intervistato') eq ""dataEvento){
+	if((!defined $cgi->param('intervistato')) && $cgi->param('intervistato') eq ""){
 		$fail=1;
 		$msg=$msg."msg7=manca%20il%20nome%20intervistato&&";
 	}else{$luogo=$cgi->param('intervistato');}
@@ -145,9 +145,9 @@ if ($type eq 'i'){
 	my @galnms = $cgi->param("fgallery");
 	my $galsize = scalar @gal;
 	for(my $var = 0; $var< $galsize; $var++){
-		if(@gal[$var]){
-			@gallery[$var]=@gal[$var];
-			@gallerynames[$var]=@galnms[$var];
+		if($gal[$var]){
+			$gallery[$var]=$gal[$var];
+			$gallerynames[$var]=$galnms[$var];
 		}
 	}	
 }
@@ -155,8 +155,8 @@ if ($fail) {
 	CFUN::redir(CFUN::getcaller($type.$msg));
 }else{
 	CFUN::scrivifile($srcfoto,$filename,$path);
-	for (my $var = 0; $var < scalar @gal; $var++) {
-		CFUN::scrivifile(@gallery[$var],@gallerynames[$var],"../public_html/img/interviste/gallery/");
+	for (my $var = 0; $var < scalar @gallery; $var++) {
+		CFUN::scrivifile($gallery[$var],$gallerynames[$var],"../public_html/img/interviste/gallery/");
 	}
 }
 
