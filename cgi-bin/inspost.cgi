@@ -37,7 +37,7 @@ if((!defined $cgi->param('titolo')) && $cgi->param('titolo') eq ""){
 #controllo della foto
 my $srcfoto = $cgi->upload('src');
 my $filename;
-my $path = CFUN::getfolderpath($type);
+
 if((!defined $cgi->param('src')) && $cgi->param('src') eq ""){
 	$fail=1;
 	$msg = $msg."msg1=nome%20del%20file%20vuoto&&";
@@ -154,9 +154,33 @@ if ($type eq 'i'){
 if ($fail) {
 	CFUN::redir(CFUN::getcaller($type.$msg));
 }else{
+	my $path = CFUN::getfolderpath($type);
 	CFUN::scrivifile($srcfoto,$filename,$path);
 	for (my $var = 0; $var < scalar @gallery; $var++) {
 		CFUN::scrivifile($gallery[$var],$gallerynames[$var],"../public_html/img/interviste/gallery/");
 	}
 }
 
+print $page->header({-type=>'text/html', -charset=>'UTF-8'});
+print $cgi->start_html(
+	-title => "Admin - Music Break",
+	-dtd => ['-//W3C//DTD XHTML 1.0 Strict//EN','http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'],
+	-lang => 'it',
+	-meta => {
+		'author' => 'Fabio Ros, Valerio Burlin, Stefano Munari, Alberto Andeliero',
+		'language' => 'italian it',
+		'rating' => 'safe for kids',
+		'keywords' => 'login, area riservata',
+		'robots' => 'noindex,nofollow'
+	},
+	-style => [
+	{'media' => 'print','src' => '../css/print.css'},
+	{'media' => 'speech','src' => '../css/aural.css'},
+	{'media' => 'handheld, screen','src' => '../css/screen_login.css'}
+	],
+	-script =>[{'type' => 'text/javascript','src' => '../javascript/backend.js'}]
+	);
+print $cgi->h1("Funziona");
+
+
+print $cgi->end_html;
