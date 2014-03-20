@@ -29,7 +29,7 @@ my $fail = 0;
 my $msg = "?";
 my $type = $cgi->param('tipo');
 my $titolo;
-if((!defined $cgi->param('titolo')) && $cgi->param('titolo') eq ""){
+if($cgi->param('titolo') eq ""){
 	$fail=1;
 	$msg = $msg."msg1=stringavuota&&";
 }else{$titolo=$cgi->param('titolo');}
@@ -38,7 +38,7 @@ if((!defined $cgi->param('titolo')) && $cgi->param('titolo') eq ""){
 my $srcfoto = $cgi->upload('src');
 my $filename;
 
-if((!defined $cgi->param('src')) && $cgi->param('src') eq ""){
+if($cgi->param('src') eq ""){
 	$fail=1;
 	$msg = $msg."msg1=nome%20del%20file%20vuoto&&";
 }else{
@@ -47,7 +47,7 @@ if((!defined $cgi->param('src')) && $cgi->param('src') eq ""){
 
 
 my $altfoto;
-if((!defined $cgi->param('alt')) && $cgi->param('alt') eq ""){
+if($cgi->param('alt') eq ""){
 	$fail=1;
 	$msg = $msg."msg3=descrizione%20della%20foto%20vuota&&";
 }else{$altfoto=$cgi->param('alt');}
@@ -55,21 +55,21 @@ if((!defined $cgi->param('alt')) && $cgi->param('alt') eq ""){
 
 
 my $descrizione;
-if((!defined $cgi->param('excerpt')) && $cgi->param('excerpt') eq ""){
+if($cgi->param('excerpt') eq ""){
 	$fail=1;
 	$msg = $msg."msg4=descrizione%20del%20post%20vuoto&&";
 }else{$descrizione=$cgi->param('excerpt');}
 
 
 my $testo;
-if((!defined $cgi->param('descrizione')) && $cgi->param('descrizione') eq ""){
+if($cgi->param('descrizione') eq ""){
 	$fail=1;
 	$msg=$msg."msg5=testo%20del%20post%20vuoto&&";
 }else{$testo=$cgi->param('descrizione');}
 
 
-my $tags = isdef('tags');
-if((!defined $cgi->param('tags')) && $cgi->param('tags') eq ""){
+my $tags;
+if($cgi->param('tags') eq ""){
 	$fail=1;
 	$msg=$msg."msg6=nessun%20tag%20inserito&&";
 }else{$tags=$cgi->param('tags');}
@@ -161,7 +161,7 @@ if ($fail) {
 	}
 }
 
-print $page->header({-type=>'text/html', -charset=>'UTF-8'});
+print $cgi->header({-type=>'text/html', -charset=>'UTF-8'});
 print $cgi->start_html(
 	-title => "Admin - Music Break",
 	-dtd => ['-//W3C//DTD XHTML 1.0 Strict//EN','http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'],
@@ -172,13 +172,7 @@ print $cgi->start_html(
 		'rating' => 'safe for kids',
 		'keywords' => 'login, area riservata',
 		'robots' => 'noindex,nofollow'
-	},
-	-style => [
-	{'media' => 'print','src' => '../css/print.css'},
-	{'media' => 'speech','src' => '../css/aural.css'},
-	{'media' => 'handheld, screen','src' => '../css/screen_login.css'}
-	],
-	-script =>[{'type' => 'text/javascript','src' => '../javascript/backend.js'}]
+	}
 	);
 print $cgi->h1("Funziona");
 
