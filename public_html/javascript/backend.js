@@ -34,8 +34,9 @@ function removeBlankspace(n)
 }
 
 //FUNZIONI ONCLICK
-
 function Wbar(x){
+if(document.getElementById(x).parentNode.lastChild.className == "jsErr")
+	Bbar(x);
 if(checkSonNum(document.getElementById(x).parentNode))
 	insertHelp(x);
 if(document.getElementById(x).value == def[x])
@@ -55,10 +56,9 @@ function insertHelp(x){
 	node.appendChild(document.createTextNode(def[x]));
 	document.getElementById(x).parentNode.appendChild(node);
 }
-
 //FUNZIONI ONBLUR
 function Bbar(x){
-	document.getElementById(x).parentNode.removeChild(node);
+	document.getElementById(x).parentNode.removeChild(document.getElementById(x).parentNode.lastChild);
 }
 
 //FUNZIONI ONSUBMIT
@@ -70,14 +70,18 @@ function createErr(txt){
 }
 
 function checkSubmit(){
+var state=true;
 for(var i=0;i< check.length;++i)
 	{
 		var y="C"+check[i];
 		var txt=window[y]();
 		var parent=document.getElementById(check[i]).parentNode;
-		if(checkSonNum(parent) && txt)
+		if(checkSonNum(parent) && txt){
 			parent.appendChild(createErr(txt));
+			state=false;
+		}
 	}
+return state;
 }
 
 function Ctitolo(){
@@ -98,10 +102,13 @@ function Calt(){
 		return false;
 }
 
-function countWords(u){
+function countWords(u,Vtrim){
 var num = 0;
-u=u.replace(/\s/g,' ');
-u=u.split(' ');
+if(Vtrim == ' ')
+	u=u.replace(/\s/g,Vtrim);//se il divisore è uno spazio allora è un testo generico
+else
+	u=u.replace(/\s/g,'');//altrimenti è un testo specifico che devo controllare,che da contratto non permette di lasciare spazi ma usa un suo divisore per le parole
+u=u.split(Vtrim);
 for(var j=0;j<u.length;++j) {
 	if (u[j].length > 0) 
 		++num;
@@ -112,7 +119,7 @@ return num;
 function Cexcerpt(){
 	var t="excerpt";
 	var string=document.getElementById(t).value;
-	string=countWords(string);
+	string=countWords(string,' ');
 	if(string<5 || string>50)
 		return document.createTextNode("inserire un minimo di 5 e un massimo di 50 parole");
 	else
@@ -122,7 +129,7 @@ function Cexcerpt(){
 function Cdescrizione(){
 	var t="descrizione";
 	var string=document.getElementById(t).value;
-	string=countWords(string);
+	string=countWords(string,' ');
 	if(string<50 || string>500)
 		return document.createTextNode("inserire un minimo di 50 e un massimo di 500 parole");
 	else
@@ -132,9 +139,9 @@ function Cdescrizione(){
 function Ctags(){
 	var t="tags";
 	var string=document.getElementById(t).value;
-	string=countWords(string);
+	string=countWords(string,',');
 	if(string<1 || string>20)//non serve controllare la virgola perchè nel caso avessi tag composti(tipo "electronic music" non potrei distinguerli con RegExp)
-		return document.createTextNode("inserire un minimo di 1 e un massimo di 20 tag,se più di uno allora separarli usando la virgola");
+		return document.createTextNode("inserire un minimo di 1 e un massimo di 20 tag,se più di uno allora separarli usando la virgola.");
 	else
 		return false;
 }
@@ -143,7 +150,7 @@ function Ctags(){
 function Cintervistato(){
 	var t="intervistato";
 	var string=document.getElementById(t).value;
-	string=countWords(string);
+	string=countWords(string,' ');
 	if(string<1 || string>5)
 		return document.createTextNode("inserire un minimo di 1 e un massimo di 5 parole");
 	else
@@ -151,6 +158,16 @@ function Cintervistato(){
 }
 
 //SUBMIT DI EVENTI
+
+function CdataEvento(){
+	var t="dataEvento";
+	var string=document.getElementById(t).value;
+	if(/^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[012])\.(19|20)\d\d$/.test(string))
+		return false;
+	else
+		return document.createTextNode("inserire una data valida nel formato gg.mm.aaaa ");
+} 
+
 function CnumGiorni(){
 	var t="numGiorni";
 	var num=document.getElementById(t).value;
@@ -160,8 +177,13 @@ function CnumGiorni(){
 		return document.createTextNode("inserire un numero positivo <= 999");
 }
 
-function CoraFine(){
-	return CoraInizio("oraFine");
+function Cluogo(){
+	var t="luogo";
+	var string=document.getElementById(t).value;
+	if(string.length<1 || string.length>58)
+		return document.createTextNode("inserire un nome di città con al massimo 58 caratteri");
+	else
+		return false;
 }
 
 function CoraInizio(t){
@@ -174,10 +196,14 @@ function CoraInizio(t){
 		return document.createTextNode("inserire un ora compresa tra 1:00 e 12:59");
 }
 
+function CoraFine(){
+	return CoraInizio("oraFine");
+}
+
 function Cindirizzo(){
 	var t="indirizzo";
 	var string=document.getElementById(t).value;
-	string=countWords(string);
+	string=countWords(string,' ');
 	if(string<2 || string>15)
 		return document.createTextNode("inserire un minimo di 2 e un massimo di 15 parole");
 	else
@@ -193,41 +219,6 @@ function Cprezzo(){
 		return document.createTextNode("inserire un prezzo nel formato $$$.$$ oppure $$.$$ oppure $.$$");
 }
 
-function Ctelefono(){
-	var t="telefono";
-	var n=document.getElementById(t).value;
-	if(/^[0-9]{10,10}$/.test(n))
-		return false;
-	else
-		return document.createTextNode("inserire un numero telefonico composto da 10 cifre");
-}
-
-function Cmail(){
-	var t="mail";
-	var m=document.getElementById(t).value;
-	if(/^([\w\-\+\.]+)@([\w\-\+\.]+).([\w\-\+\.]+)$/.test(m))
-		return false;
-	else
-		return document.createTextNode("inserire un indirizzo mail valido");
-}
-
-function Cluogo(){
-	var t="luogo";
-	var string=document.getElementById(t).value;
-	if(string.length<1 || string.length>58)
-		return document.createTextNode("inserire un nome di città con al massimo 58 caratteri");
-	else
-		return false;
-}
-function CdataEvento(){
-	var t="dataEvento";
-	var string=document.getElementById(t).value;
-	if(/^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[012])\.(19|20)\d\d$/.test(string))
-		return false;
-	else
-		return document.createTextNode("inserire una data valida nel formato gg.mm.aaaa ");
-} 
-
 function Cemail(){
 	var t="email";
 	var string=document.getElementById(t).value;
@@ -235,4 +226,13 @@ function Cemail(){
 		return false;
 	else
 		return document.createTextNode("inserire una mail valida");
+}
+
+function Ctelefono(){
+	var t="telefono";
+	var n=document.getElementById(t).value;
+	if(/^[0-9]{10,10}$/.test(n))
+		return false;
+	else
+		return document.createTextNode("inserire un numero telefonico composto da 10 cifre");
 }
