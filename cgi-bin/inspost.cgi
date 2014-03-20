@@ -29,7 +29,11 @@ my $fail = 0;
 my $msg = "?";
 my $type = $cgi->param('tipo');
 my $titolo;
+<<<<<<< HEAD
 if((!defined $cgi->param('titolo')) && $cgi->param('titolo') eq ""){
+=======
+if($cgi->param('titolo') eq ""){
+>>>>>>> a89a364f4998e595ea7352427aba5b2c97b8de17
 	$fail=1;
 	$msg = $msg."msg1=stringavuota&&";
 }else{$titolo=$cgi->param('titolo');}
@@ -38,12 +42,17 @@ if((!defined $cgi->param('titolo')) && $cgi->param('titolo') eq ""){
 my $srcfoto = $cgi->upload('src');
 my $filename;
 
+<<<<<<< HEAD
 if((!defined $cgi->param('src')) && $cgi->param('src') eq ""){
+=======
+if($cgi->param('src') eq ""){
+>>>>>>> a89a364f4998e595ea7352427aba5b2c97b8de17
 	$fail=1;
 	$msg = $msg."msg1=nome%20del%20file%20vuoto&&";
 }else{
 	$filename=$cgi->param('src');
 }
+<<<<<<< HEAD
 
 
 my $altfoto;
@@ -70,6 +79,37 @@ if((!defined $cgi->param('descrizione')) && $cgi->param('descrizione') eq ""){
 
 my $tags = isdef('tags');
 if((!defined $cgi->param('tags')) && $cgi->param('tags') eq ""){
+	$fail=1;
+	$msg=$msg."msg6=nessun%20tag%20inserito&&";
+}else{$tags=$cgi->param('tags');}
+=======
+>>>>>>> a89a364f4998e595ea7352427aba5b2c97b8de17
+
+
+my $altfoto;
+if($cgi->param('alt') eq ""){
+	$fail=1;
+	$msg = $msg."msg3=descrizione%20della%20foto%20vuota&&";
+}else{$altfoto=$cgi->param('alt');}
+
+
+
+my $descrizione;
+if($cgi->param('excerpt') eq ""){
+	$fail=1;
+	$msg = $msg."msg4=descrizione%20del%20post%20vuoto&&";
+}else{$descrizione=$cgi->param('excerpt');}
+
+
+my $testo;
+if($cgi->param('descrizione') eq ""){
+	$fail=1;
+	$msg=$msg."msg5=testo%20del%20post%20vuoto&&";
+}else{$testo=$cgi->param('descrizione');}
+
+
+my $tags;
+if($cgi->param('tags') eq ""){
 	$fail=1;
 	$msg=$msg."msg6=nessun%20tag%20inserito&&";
 }else{$tags=$cgi->param('tags');}
@@ -172,6 +212,7 @@ print $cgi->start_html(
 		'rating' => 'safe for kids',
 		'keywords' => 'login, area riservata',
 		'robots' => 'noindex,nofollow'
+<<<<<<< HEAD
 	},
 	-style => [
 	{'media' => 'print','src' => '../css/print.css'},
@@ -179,6 +220,9 @@ print $cgi->start_html(
 	{'media' => 'handheld, screen','src' => '../css/screen_login.css'}
 	],
 	-script =>[{'type' => 'text/javascript','src' => '../javascript/backend.js'}]
+=======
+	}
+>>>>>>> a89a364f4998e595ea7352427aba5b2c97b8de17
 	);
 print $cgi->h1("Funziona");
 

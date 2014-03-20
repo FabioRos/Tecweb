@@ -20,14 +20,16 @@ sub redir{
 	-lang => 'it'
 	);
 	print $cgi->end_html;
-	exit;
+	exit 0;
 }
 
 sub isdef{
 	my $par = $_[0];
 	if(defined $cgi->param($par)){
 		return my $param = $cgi->param($par);
-	}else { redir("../admin_interviste.html?msg=$par"); }
+	}else{ 
+		return 0; 
+	}
 }
 
 sub checkfile{
