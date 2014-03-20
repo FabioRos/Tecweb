@@ -9,35 +9,58 @@
     <meta name="keywords" content="musica, news, news musicali, notizie, album"/>
     <meta name="keywords" content="music, magazine, news"/>
     <meta name="robots" content="all" />
-    <title>test galleria javascript</title>
+    <title>Interviste - Gallery - Music Break</title>
     <link rel="stylesheet" type="text/css" media="screen and (min-width:601px)" href="./css/gallery.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:601px)" href="./css/screen.css" />
     <script type="text/javascript" src="./javascript/screen.js"></script>
 </head>
 <body>
+     <div id="header">
+      <a class="help" href="#nav">salta intestazione</a>
+      <div id="title"><span id="logo" class="notAural"><img src="../img/tazza-di-caffe.jpg" alt="Tazza di caffè fumante in cui viene immersa  una pausa di semiminima"/></span>
+        <h1><span xml:lang="eng">Music Break</span></h1>
+        <h2>Il portale di notizie dedicato alla musica</h2>
+      </div>
+    </div>
+    <div id="nav">
+      <a class="help" href="#contents">salta menù</a>
+      <ul>
+        <li><a href="./deprecated/home.html"><p xml:lang="en">Home</p></a></li>
+        <li><a href="./deprecated/news.html" tabindex=""><span xml:lang="eng">News</span></a></li>
+        <li id="current_nav" tabindex="">Interviste</li>
+        <li><a href="./deprecated/recensioni.html" tabindex="">Recensioni</a></li>
+        <li><a href="./deprecated/eventi.html" tabindex="">Eventi</a></li>
+      </ul>
+      <div id="search">
+        <input type="text" id="text_field" value="" name="query" tabindex=""></input>
+        <input type="submit" id="button" alt="inserire una ricerca" value="Cerca" tabindex=""></input>
+        <input type="hidden" value="Home.html" name="sitesearch"></input>
+      </div> 
+    </div>
     <div id="gallery" >
         <ul>
-            <li id="img1" class="active"><img class="slide"  src="./img/noemi0.jpg" alt="" /></li>
-            <li id="img2" class="hidden"><img class="slide" src="./img/noemi1.jpg" alt="" /></li>
-            <li id="img3" class="hidden"><img  class="slide" src="./img/noemi2.jpg" alt="" /></li>
-            <li id="img4" class="hidden"><img  class="slide" src="./img/noemi3.jpg" alt="" /></li>
-            <li id="img5" class="hidden"><img  class="slide" src="./img/noemi4.jpg" alt="" /></li>
-            <li id="img6" class="hidden"><img  class="slide" src="./img/noemi6.jpg" alt="" /></li>
-            <li id="img7" class="hidden"><img  class="slide" src="./img/noemi7.jpg" alt="" /></li>
-            <li id="img8" class="hidden"><img  class="slide" src="./img/noemi8.jpg" alt="" /></li>
-            <li id="img9" class="hidden"><img  class="slide" src="./img/noemi9.jpg" alt="" /></li></ul>
+            <li id="img1" class="active"><img class="slide"  src="./img/interviste/gallery/noemi0.jpg" alt="" /></li>
+            <li id="img2" class="hidden"><img class="slide" src="./img/interviste/gallery/noemi1.jpg" alt="" /></li>
+            <li id="img3" class="hidden"><img  class="slide" src="./img/interviste/gallery/noemi2.jpg" alt="" /></li>
+            <li id="img4" class="hidden"><img  class="slide" src="./img/interviste/gallery/noemi3.jpg" alt="" /></li>
+            <li id="img5" class="hidden"><img  class="slide" src="./img/interviste/gallery/noemi4.jpg" alt="" /></li>
+            <li id="img6" class="hidden"><img  class="slide" src="./img/interviste/gallery/noemi6.jpg" alt="" /></li>
+            <li id="img7" class="hidden"><img  class="slide" src="./img/interviste/gallery/noemi7.jpg" alt="" /></li>
+            <li id="img8" class="hidden"><img  class="slide" src="./img/interviste/gallery/noemi8.jpg" alt="" /></li>
+            <li id="img9" class="hidden"><img  class="slide" src="./img/interviste/gallery/noemi9.jpg" alt="" /></li></ul>
 <div id="prev"><button class="galleryButton" title="Precedente" onclick="previous();" type="button">Precedente</button></div>
 <div id="next"><button class="galleryButton" title="Prossima" onclick="next();" type="button">Prossima</button></div>
 </div>
 <ol id="controlnav" >
-    <li id="img01" class="activenav"><img  class="tnail"  src="./img/noemi0.jpg" alt="" onclick="change(1)"/></li>
-    <li id="img02" class=""><img class="tnail" src="./img/noemi1.jpg" alt="" onclick="change(2)"/></li>
-    <li id="img03" class="" ><img class="tnail" src="./img/noemi2.jpg" alt="" onclick="change(3)"/></li>
-    <li id="img04" class="" ><img class="tnail" src="./img/noemi3.jpg" alt="" onclick="change(4)"/></li>
-    <li id="img05" class="" ><img class="tnail" src="./img/noemi4.jpg" alt="" onclick="change(5)"/></li>
-    <li id="img06" class=""><img class="tnail" src="./img/noemi6.jpg" alt="" onclick="change(6)"/></li>
-    <li id="img07" class=""><img class="tnail" src="./img/noemi7.jpg" alt="" onclick="change(7)"/></li>
-    <li id="img08" class=""><img class="tnail" src="./img/noemi8.jpg" alt="" onclick="change(8)"/></li>
-    <li id="img09" class=""><img class="tnail" src="./img/noemi9.jpg" alt="" onclick="change(9)"/></li>
+    <li id="img01" class="activenav"><img  class="tnail"  src="./img/interviste/gallery/noemi0.jpg" alt="" onclick="change(1)"/></li>
+    <li id="img02" class=""><img class="tnail" src="./img/interviste/gallery/noemi1.jpg" alt="" onclick="change(2)"/></li>
+    <li id="img03" class="" ><img class="tnail" src="./img/interviste/gallery/noemi2.jpg" alt="" onclick="change(3)"/></li>
+    <li id="img04" class="" ><img class="tnail" src="./img/interviste/gallery/noemi3.jpg" alt="" onclick="change(4)"/></li>
+    <li id="img05" class="" ><img class="tnail" src="./img/interviste/gallery/noemi4.jpg" alt="" onclick="change(5)"/></li>
+    <li id="img06" class=""><img class="tnail" src="./img/interviste/gallery/noemi6.jpg" alt="" onclick="change(6)"/></li>
+    <li id="img07" class=""><img class="tnail" src="./img/interviste/gallery/noemi7.jpg" alt="" onclick="change(7)"/></li>
+    <li id="img08" class=""><img class="tnail" src="./img/interviste/gallery/noemi8.jpg" alt="" onclick="change(8)"/></li>
+    <li id="img09" class=""><img class="tnail" src="./img/interviste/gallery/noemi9.jpg" alt="" onclick="change(9)"/></li>
 </ol>
 </body>
 </html>

@@ -222,10 +222,10 @@ function Cluogo(){
 function CdataEvento(){
 	var t="dataEvento";
 	var string=document.getElementById(t).value;
-	if(/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/.test(string))
+	if(/^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[012])\.(19|20)\d\d$/.test(string))
 		return false;
 	else
-		return document.createTextNode("inserire una data valida nel formato gg/mm/aaaa ");
+		return document.createTextNode("inserire una data valida nel formato gg.mm.aaaa ");
 } 
 
 function Cemail(){
