@@ -133,8 +133,8 @@ function Ctags(){
 	var t="tags";
 	var string=document.getElementById(t).value;
 	string=countWords(string);
-	if(string==0)//non serve controllare la virgola perchè nel caso avessi tag composti(tipo "electronic music" non potrei distinguerli con RegExp)
-		return document.createTextNode("inserire un minimo di 1 tag,se più di uno allora separarli usando la virgola");
+	if(string<1 || string>20)//non serve controllare la virgola perchè nel caso avessi tag composti(tipo "electronic music" non potrei distinguerli con RegExp)
+		return document.createTextNode("inserire un minimo di 1 e un massimo di 20 tag,se più di uno allora separarli usando la virgola");
 	else
 		return false;
 }
@@ -154,7 +154,7 @@ function Cintervistato(){
 function CnumGiorni(){
 	var t="numGiorni";
 	var num=document.getElementById(t).value;
-	if( /^[1-9][0-9]{0,2}$/.test(num) )
+	if( /^([0-9]|[1-9][0-9]|[1-9][0-9][0-9])$/.test(num) )
 		return false;
 	else
 		return document.createTextNode("inserire un numero positivo <= 999");
@@ -172,6 +172,16 @@ function CoraInizio(t){
 		return false;
 	else
 		return document.createTextNode("inserire un ora compresa tra 1:00 e 12:59");
+}
+
+function Cindirizzo(){
+	var t="indirizzo";
+	var string=document.getElementById(t).value;
+	string=countWords(string);
+	if(string<2 || string>15)
+		return document.createTextNode("inserire un minimo di 2 e un massimo di 15 parole");
+	else
+		return false;	
 }
 
 function Cprezzo(){
@@ -209,13 +219,20 @@ function Cluogo(){
 	else
 		return false;
 }
+function CdataEvento(){
+	var t="dataEvento";
+	var string=document.getElementById(t).value;
+	if(/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/.test(string))
+		return false;
+	else
+		return document.createTextNode("inserire una data valida nel formato gg/mm/aaaa ");
+} 
 
-// function Cdate(y) {
-// 	dat=document.getElementById(y).value;
-// 	if( /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/.test(dat))
-// 		alert("2");
-// 	else
-// 	{	document.getElementById(x).value= def;
-// 			string="";
-// 		}
-// }
+function Cemail(){
+	var t="email";
+	var string=document.getElementById(t).value;
+	if(/^([\w\-\+\.]+)@([\w\-\+\.]+).([\w\-\+\.]+)$/.test(string))
+		return false;
+	else
+		return document.createTextNode("inserire una mail valida");
+}
