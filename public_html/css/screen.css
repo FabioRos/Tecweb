@@ -448,7 +448,10 @@ ul.tags {
     line-height: 1.8em;
 }
 .dettagli img.thumbnail{
-    width: 90%; 
+    display: block;
+    width: 200px;
+    height: 63px; 
+    position: relative;
 }
 .info span{
     font-weight: bold;
