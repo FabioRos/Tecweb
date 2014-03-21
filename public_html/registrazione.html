@@ -15,17 +15,6 @@
     <link rel="stylesheet" type="text/css" media="speech" href="./css/aural.css"/>
     <script type="text/javascript" src="./javascript/backend.js"></script>
     <title>Registrazione - Music Break</title>
-<!--RICORDARSI DI CANCELLARE QUESTA PARTE UNA VOLTA INSERITA NEL CSS-->
-<style type="text/css">
-.jsErr{
-    color: red;
-    font-weight: bold;
-}
-.jsHelp{
-    color: green;
-    font-weight: bold;
-}
-</style>
   </head>
     
   <body onload="setArray();">
@@ -42,7 +31,7 @@
     </div>
 
     <div class="common_box">
-        <form action="./registrazione.html" method="post" onsubmit="return checkSubmit();">
+        <form action="./login.html" method="post" onsubmit="return checkSubmit();">
         <fieldset id="formfield"> 
            <label for="username"><span xml:lang="en">Username: </span></label>
            <div><input type="text" name="username" id="username" onclick="Wbar('username');" onblur="Bbar('username');" value="inserire username..."/></div>

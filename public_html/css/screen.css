@@ -537,8 +537,15 @@ ul.tags {
 .common_box a:hover{
     text-decoration: underline;
 }
-
-
+/***********Impostazione aiuti e messaggi d'errore javascript***********/
+.jsErr{
+    color: red;
+    font-weight: bold;
+}
+.jsHelp{
+    color: green;
+    font-weight: bold;
+}
 
 
 
