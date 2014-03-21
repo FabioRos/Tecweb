@@ -213,8 +213,8 @@ function CoraFine(){
 function Cindirizzo(){
 	var t="indirizzo";
 	var string=document.getElementById(t).value;
-	string=countWords(string,' ');
-	if(string<2 || string>15)
+	num=countWords(string,' ');
+	if(num<2 || num>15 || string==def[t])
 		return document.createTextNode("inserire un minimo di 2 e un massimo di 15 parole");
 	else
 		return false;	
