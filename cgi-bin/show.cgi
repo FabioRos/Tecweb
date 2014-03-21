@@ -44,7 +44,7 @@ if ($posttype eq "e") {
 
 my $dom = XML::LibXML::Document->new( "1.0", "UTF-8");
 my $ptrposts = $source->findnodes("/root/posts/".$vincolo);
-my $radice = $parser->parse_balanced_chunk("<posts></posts>");
+my $radice = $parser->parse_balanced_chunk("<posts></posts>","UTF-8");
 my $ptrradice = $radice->findnodes("posts")->get_node(1);
 $dom->setDocumentElement($ptrradice);
 my $ptrdompost =$dom->findnodes("/posts")->get_node(1);

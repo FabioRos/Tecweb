@@ -7,38 +7,23 @@ use XML::LibXML;
 use CGI qw/:standard/;
 use CGI::Session;
 use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
+use CFUN;
 
-my $page = CGI->new();
-my $parser = XML::LibXML->new();
+my $cgi = CGI->new();
+my $xml = XML::LibXML->new();
 my $xslt = XML::LibXSLT->new();
 
 my $DBpath = "../data/XML/DBsite.xml";
 
-my $idPost = $page->param('post');
+my $idPost = $cgi->param('post');
 my %in= ( 'post' => $idPost );
-
-
-
 
 
 my $source = XML::LibXML->load_xml(location => $DBpath);
 
-my $vincolo;
-my $style_path;
 my $posttype = substr($idPost, 0, 1);
-if ("$posttype" eq 'e') {
-	$style_path="../data/XSLT/Eventi.xsl";
-	$vincolo = "eventi/evento";
-}elsif ("$posttype" eq 'r') {
-	$style_path="../data/XSLT/Recensioni.xsl";
-	$vincolo = "recensioni/recensione";
-}elsif ("$posttype" eq 'i'){
-	$style_path="../data/XSLT/Interviste.xsl";
-	$vincolo = "interviste/intervista";
-}elsif ("$posttype" eq 'n'){
-	$style_path="../data/XSLT/News.xsl";
-	$vincolo = "news/item";
-}
+my $vincolo=CFUN::getvincpath($posttype);
+my $style_path=CFUN::getxslpath($posttype);
 
 
 #individuo il post
@@ -72,7 +57,7 @@ if ("$posttype" eq 'i'){
 }
 
 #stampo la pagina
-print $page->header({-type=>'text/html', -charset=>'UTF-8'});
+print $cgi->header({-type=>'text/html', -charset=>'UTF-8'});
 my $style_doc =XML::LibXML->load_xml(location=>$style_path);
 my $stylesheet = $xslt->parse_stylesheet($style_doc);
 my $results = $stylesheet->transform($ptrpost, %in);

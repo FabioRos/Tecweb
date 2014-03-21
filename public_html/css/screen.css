@@ -95,7 +95,7 @@ body{
 #nav ul li a{
 	display: block;
 	color: #FFFFFF;
-	padding: 4% 0;
+	padding: 3% 0;
 }
 #nav ul li a:hover{
 	background-color: #FFFFFF;
@@ -137,9 +137,10 @@ body{
 	background-size: 25px 25px;
 	background-repeat: no-repeat;
 	background-position: right center;
-	width: auto;
+	width: 60%;
 	background-color: #FFFFFF;
 	font-size: 1.3em;
+	padding-right: 9%;
 }
 #button{
 	width: auto;
@@ -187,7 +188,9 @@ body{
 	background-color: #FFFFFF;
 	border-style: solid;
 	border-width: 1px;
-	box-shadow: 0px 0px 5px 3px;
+	box-shadow: 0px 0px 5px 3px #303030;
+	-moz-box-shadow: 0px 0px 5px 3px #303030;
+	-webkit-box-shadow: 0px 0px 5px 3px #303030;
 	padding: 1%;
 }
 .article h2 a{
@@ -205,8 +208,13 @@ body{
 
 /***** Impostazioni visualizzazione tags *****/
 .tags{
+	display: block;
 	list-style: none;
 	margin: 1% auto;
+}
+
+ul.tags {
+	margin-top:0px;
 }
 .tags li, .tags a{
 	float: right;
@@ -441,11 +449,6 @@ body{
 }
 .dettagli img.thumbnail{
     width: 90%; 
-}
-.dettagli div.imgcontainer{
-    max-height: 200px;
-    overflow: hidden;
-    resize: none;
 }
 .info span{
     font-weight: bold;
