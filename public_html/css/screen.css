@@ -407,23 +407,16 @@ ul.tags {
     display: block;
     width: 90%;
     text-align: center;
-    margin: 1em auto;
-}
-#topNews{
-    padding: 0.5em;
-    margin-bottom: 0;
+    margin: 1% auto;
 }
 #sidebar h1{
-	margin: 5% auto;
-}
-#sidebar ol{
-    list-style-type: none;
-    padding: 3%;
+	margin: 2% auto;
 }
 #sidebar li {
-    padding: 1%;
+    padding: 1.5%;
 }
 .box{
+	padding-top: 1%;
 	margin-bottom: 5%;
 }
 } 
