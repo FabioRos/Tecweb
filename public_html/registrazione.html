@@ -28,7 +28,7 @@
 </style>
   </head>
     
-  <body onload="setArray(); readCookie();">
+  <body onload="setArray();">
     <div id="header">
       <a class="help" href="#nav">salta intestazione</a>
       <div id="title"><span id="logo" class="notAural"><img src="./img/tazza-di-caffe.jpg" alt="Tazza di caffè fumante in cui viene immersa una pausa di semiminima"/></span>
@@ -42,7 +42,7 @@
     </div>
 
     <div class="common_box">
-        <form action="./registrazione.html" method="post" onsubmit="return checkReg();">
+        <form action="./registrazione.html" method="post" onsubmit="return checkSubmit();">
         <fieldset id="formfield"> 
            <label for="username"><span xml:lang="en">Username: </span></label>
            <div><input type="text" name="username" id="username" onclick="Wbar('username');" onblur="Bbar('username');" value="inserire username..."/></div>
@@ -51,7 +51,7 @@
            <div><input type="password" name="password" id="password" value="inserire password..." onclick="Wbar('password');" onblur="Bbar('password');" /></div>
 
            <label for="confermaPass"><span xml:lang="en">Conferma Password: </span></label>
-           <div><input type="password" name="confermaPass" id="confermaPass" value="confermare la password..." onclick="Wbar('confermaPass');" onblur="Bbar('confermaPass');" /></div>
+           <div><input type="password" name="confermaPass" id="confermaPass" value="ridigitare la password..." onclick="Wbar('confermaPass');" onblur="Bbar('confermaPass');" /></div>
 
            <input type="submit" value="Registra" />
 

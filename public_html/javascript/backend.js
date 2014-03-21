@@ -62,7 +62,8 @@ function insertHelp(x){
 //FUNZIONI ONBLUR
 
 function Bbar(x){
-	if(document.getElementById(x).parentNode.lastChild)
+//controllo che siano diversi perchè altrimenti selezionando tutto il valore di default di un input(senza fare onclick) e poi facendo onblur l'utente può distruggere i campi input
+	if(document.getElementById(x).parentNode.lastChild != document.getElementById(x).parentNode.firstChild) 
 		document.getElementById(x).parentNode.removeChild(document.getElementById(x).parentNode.lastChild);
 }
 
@@ -288,17 +289,27 @@ function checkLogin(){
 function Cusername(){
 	var t="username";
 	var string=document.getElementById(t).value;
-	if(string.length<1 || string==def[t])
-		return document.createTextNode("inserire uno username valido");
+	if(string.length<1 || string.length>20 || string==def[t])
+		return document.createTextNode("inserire uno username valido di al massimo 20 caratteri");
 	else
 		return false;
 }
 
-function Cpassword(){
-	var t="password";
-	var string=document.getElementById(t).value;
-	if(string.length<7 || string==def[t])
-		return document.createTextNode("inserire una password di almeno 7 caratteri");
+function Cpassword(p){//se chiamata senza parametri-->p="undefined"
+	p= (typeof(p) === "undefined") ? "password" : p ;
+	var string=document.getElementById(p).value;
+	if(string.length<7 || string.length>20 || string==def[p])
+		return document.createTextNode("inserire una password di 7-20 caratteri");
 	else
 		return false;
+}
+
+//----REGISTRAZIONE---
+
+function CconfermaPass(){
+	if(!(Cpassword("confermaPass")) && (document.getElementById("confermaPass").value == document.getElementById("password").value))
+	//sicuramente password è valida,altrimenti l'uguaglianza tra i valori fallirebbe
+		return false;
+	else
+		return document.createTextNode("le password non corrispondono oppure la password non é valida");
 }
