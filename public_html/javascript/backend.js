@@ -1,6 +1,7 @@
-/* BACKEND */
-//def contiene il valore di default dato come help
-var def=new Array(),check=new Array();
+// BACKEND
+//-----FORM-----
+
+var def=new Array(),check=new Array();//def contiene il valore di default dato come help
 
 //FUNZIONI ONLOAD
 
@@ -61,7 +62,8 @@ function insertHelp(x){
 //FUNZIONI ONBLUR
 
 function Bbar(x){
-	document.getElementById(x).parentNode.removeChild(document.getElementById(x).parentNode.lastChild);
+	if(document.getElementById(x).parentNode.lastChild)
+		document.getElementById(x).parentNode.removeChild(document.getElementById(x).parentNode.lastChild);
 }
 
 //FUNZIONI ONSUBMIT
@@ -113,7 +115,7 @@ var num = 0;
 if(Vtrim == ' ')
 	u=u.replace(/\s/g,Vtrim);//se il divisore è uno spazio allora è un testo generico
 else
-	u=u.replace(/\s/g,'');//altrimenti è un testo specifico che devo controllare,che da contratto non permette di lasciare spazi ma usa un suo divisore per le parole
+	u=u.replace(/\s/g,'');//altrimenti è un testo particolare che utilizza un suo divisore specifico per le parole
 u=u.split(Vtrim);
 for(var j=0;j<u.length;++j) {
 	if (u[j].length > 0) 
@@ -243,4 +245,60 @@ function Ctelefono(){
 		return false;
 	else
 		return document.createTextNode("inserire un numero telefonico composto da 10 cifre");
+}
+
+//-----LOGIN-----
+function readCookie(){
+	for(var i=0; i<check.length; ++i)
+	{	var string=getCookie(check[i]);
+		if(string)
+			document.getElementById(check[i]).value=string;
+		}
+}
+
+function setCookie(cname,cvalue,exdays)
+{
+var d = new Date();
+d.setTime(d.getTime()+(exdays*24*60*60*1000));
+var expires = "expires="+d.toGMTString();
+document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+function getCookie(cname)
+{
+var name = cname + "=";
+var ca = document.cookie.split(';');
+for(var i=0; i<ca.length; i++) 
+  {
+  var c = ca[i].trim();
+  if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+  }
+return "";
+}
+
+function checkLogin(){
+	var bool=checkSubmit();
+	if(bool)
+	{	for(var i=0; i<check.length; ++i)
+			setCookie(check[i],document.getElementById(check[i]).value,365);
+		}
+	return bool;
+}
+
+function Cusername(){
+	var t="username";
+	var string=document.getElementById(t).value;
+	if(string.length<1 || string==def[t])
+		return document.createTextNode("inserire uno username valido");
+	else
+		return false;
+}
+
+function Cpassword(){
+	var t="password";
+	var string=document.getElementById(t).value;
+	if(string.length<7 || string==def[t])
+		return document.createTextNode("inserire una password di almeno 7 caratteri");
+	else
+		return false;
 }
