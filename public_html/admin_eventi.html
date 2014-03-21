@@ -51,7 +51,7 @@
     </div>
 
     <div class="common_box">
-    <form action="cgi-bin/inspost.cgi" method='post' onsubmit="checkSubmit();">
+    <form action="cgi-bin/inspost.cgi" enctype="multipart/form-data" method='post' onsubmit="return checkSubmit();">
                 <fieldset id="formfield">
                     <label for="titoloEvento">Titolo </label>
                     <div><input type="text" name="titolo" id="titolo" value="Inserire un titolo..." onclick="Wbar('titolo');" onblur="Bbar('titolo');" /></div>
@@ -66,7 +66,7 @@
                     <label for="tags">Elenco di tag, separati da virgola</label>
                     <div><textarea name="tags" id="tags" rows="2" value="Inserire dei tags separandoli con una virgola..." onclick="Wbar('tags');" onblur="Bbar('tags');">Inserire dei tags separandoli con una virgola...</textarea></div>
                     <label for="dataEvento">Data Evento </label>
-                    <div><input type="text" id="dataEvento" name="dataEvento" value="gg/mm/aaaa" onclick="Wbar('dataEvento');" onblur="Bbar('dataEvento');" /></div>
+                    <div><input type="text" id="dataEvento" name="dataEvento" value="mm/gg/aaaa" onclick="Wbar('dataEvento');" onblur="Bbar('dataEvento');" /></div>
                     <label for="numGiorni">Numero di giorni </label>
                     <div><input type="text" id="numGiorni" name="numGiorni" value="Inserire la durata dell'evento in giorni..." onclick="Wbar('numGiorni');" onblur="Bbar('numGiorni');"/></div>
                     <label for="luogo">Luogo </label>
