@@ -148,7 +148,6 @@ il sistema ed evitare inutili rallentamenti.
         <xsd:sequence>
             <xsd:element name="titolo" type="xsd:string" />
             <xsd:element name="foto" type="Tfoto" />
-            <xsd:element name="altfoto" type="xsd:string" />
             <xsd:element name="excerpt" type="Ttesto" />
             <xsd:element name="descrizione" type="Ttesto" />
             <xsd:element name="idautore" type="xsd:positiveInteger" />
@@ -200,7 +199,16 @@ il sistema ed evitare inutili rallentamenti.
         </xsd:restriction>
     </xsd:simpleType>
 
-    <xsd:simpleType name="Tfoto">
+    <xsd:complexType name="Tfoto">
+        <xsd:sequence>
+            <xsd:element name="src" type="Tsrc"/>
+            <xsd:element name="alt" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    
+    
+    <xsd:simpleType name="Tsrc">
         <xsd:restriction base="xsd:string">
             <xsd:pattern value=".*\.(jpg|jpeg|png|bmp|gif)"/>
         </xsd:restriction>

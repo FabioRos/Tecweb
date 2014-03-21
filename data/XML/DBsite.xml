@@ -138,8 +138,6 @@ Questo file serve per mettere in relazione le gallerie con i post
             <intervistato>Noemi</intervistato>
 			<galleria>1</galleria>
         </intervista>
-    </interviste>
-    <interviste>
         <intervista id="i2">
             <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
             <foto>
@@ -157,8 +155,6 @@ Questo file serve per mettere in relazione le gallerie con i post
             <intervistato>Noemi</intervistato>
             <galleria>1</galleria>
         </intervista>
-    </interviste>
-    <interviste>
         <intervista id="i3">
             <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
             <foto>
@@ -176,8 +172,6 @@ Questo file serve per mettere in relazione le gallerie con i post
             <intervistato>Noemi</intervistato>
             <galleria>1</galleria>
         </intervista>
-    </interviste>
-    <interviste>
         <intervista id="i4">
             <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
             <foto>
