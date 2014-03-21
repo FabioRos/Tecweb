@@ -129,24 +129,34 @@ body{
 #search{
 	float: right;
 	padding-top: 0.3%;
+	margin-right: 1%;
 }
 #text_field
 {
-	width: 70%;
+	background-image: url('../css/img/search.jpg');
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: right center;
+	width: auto;
 	background-color: #FFFFFF;
-	font-size: 1.2em;
-	padding: 0.4%;
+	font-size: 1.3em;
 }
 #button{
-	font-size: 1.2em;
-	padding: 0.5%;
+	width: auto;
+	font-size: 1.3em;
 }
 
 /***** Impostazioni barra search mobile *****/
 @media only screen and (max-width: 959px){
 #search{
-	vertical-align: middle;
-	margin: 1% 35%;
+	float: none;
+	width: 100%;
+	margin: 1% auto;
+	text-align: center;
+}
+#text_field, #button{
+	display: inline-block;
+	width: auto;
 }
 } /* Fine media query */ 
 
@@ -173,7 +183,6 @@ body{
 	margin: 1% 4% 2% 0;
 }
 .article{
-	height: 40%;
 	width: 40%;
 	background-color: #FFFFFF;
 	border-style: solid;
@@ -277,18 +286,18 @@ body{
 /***** Impostazioni contenuto per mobile *****/
 @media only screen and (max-width: 959px){
 #contents_home{
-    width:100%;
+    width: 100%;
 }
 .article{
     float: none;
     display: block;
     width: 90%;
-    margin: 1em auto;
+    margin: 2% auto;
 }
 } /* Fine media query */
 
 
-/***** Impostazioni di stile della sidebar laterale *****/
+/***** Impostazioni di stile della sidebar laterale della home *****/
 #sidebar{
 	float: right;
 	width: 16%;
@@ -340,7 +349,6 @@ body{
     transform: skew(8deg) rotate(3deg);
 }
 #sidebar li{
-	position: relative;
 	list-style-type: none;
 	text-align: center;
 	color: #FFFFFF;
@@ -356,7 +364,7 @@ body{
 	font-size: 1.1em;
 }
 
-/***** Impostazione sidebar per mobile *****/
+/***** Impostazione sidebar della home per mobile *****/
 @media only screen and (max-width: 959px){
 #sidebar{ 
     clear: both;
