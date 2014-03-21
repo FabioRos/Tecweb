@@ -12,18 +12,12 @@ use CFUN;
 my $cgi = CGI->new();
 my $xml = XML::LibXML->new();
 my $xslt = XML::LibXSLT->new();
-
-#sub getSession{
-#	my $session = CGI::Session->load() or die $!;
-#	if ($session->is_expired || $session->is_empty ) {
-#		redir('admin.cgi?err=eseguire20il20login');
-#	} else {
-#		return $session->param('username');
-#	}
-#}
+my $DBpath = "../data/XML/DBsite.xml";
 
 
-#my $utente=getSession;
+
+
+my $idutente=2;#getsession();
 
 my $fail = 0;
 my $msg = "?";
@@ -135,7 +129,7 @@ if ($type eq 'i'){
 	if((!defined $cgi->param('intervistato')) && $cgi->param('intervistato') eq ""){
 		$fail=1;
 		$msg=$msg."msg7=manca%20il%20nome%20intervistato&&";
-	}else{$luogo=$cgi->param('intervistato');}
+	}else{$intervistato=$cgi->param('intervistato');}
 
 	my @gal = $cgi->upload("fgallery");
 	my @galnms = $cgi->param("fgallery");
@@ -157,7 +151,26 @@ if ($fail) {
 	for (my $var = 0; $var < $size; $var++) {
 		CFUN::scrivifile(@gallery[$var],@gallerynames[$var],"../public_html/img/interviste/gallery/");
 	}
+	my $source = XML::LibXML->load_xml(location => $DBpath);
+	my $ptrposts = $source->findnodes("/root/posts/".$vincolo);
+	my $father = $ptrposts->get_node(1)->parentNode;
+	if ($type eq 'e') {
+		#$vincolo = "eventi/evento";
+	}elsif ($type eq 'r') {
+		#$vincolo = "recensioni/recensione";
+	}elsif ($type eq 'i'){
+		my $id = CFUN::getuniqueid(@ptrposts,$type);
+		my $fotopath = "/img/inteviste/$filename";
+		my @gallerie = $source->findnodes("/root/gallerie/galleria");
+		my $idgallery = scalar @gallerie;
+		my $tagnodes = CFUN::buildtagnodes($tags);
+		my $strpost="<intervista id='$id'><titolo>$titolo</titolo><foto><src>$fotopath</src><alt>$altfoto</alt></foto><excerpt>$descrizione</excerpt><descrizione>$testo</descrizione><idautore>$idutente</idautore><data>$data</data>$tags<intervistato>$intervistato</intervistato><galleria>$idgallery</galleria></intervista>";
+	}elsif ($type eq 'n'){
+		#$vincolo = "news/item";
+	}
 }
+
+
 
 print $cgi->header({-type=>'text/html', -charset=>'UTF-8'});
 print $cgi->start_html(
@@ -173,6 +186,4 @@ print $cgi->start_html(
 	}
 	);
 print $cgi->h1("Funziona");
-
-
 print $cgi->end_html;

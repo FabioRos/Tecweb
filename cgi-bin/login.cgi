@@ -42,9 +42,9 @@ my $rdr;
 if($found == 1){
 	my $pass = $ptruser->findnodes("password")->get_node(1)->textContent;
 	if($password eq $pass){
-		my $named = $ptruser->findnodes("username")->get_node(1)->textContent;
+		my @attruser = $ptruser->findnodes("username")->get_node(1)->attributes();
 		my $session = new CGI::Session();
-		$session->param('admin', $named);
+		$session->param('id',@attruser[0]);
 		$session->expire('+10m');
 		$rdr ="../admin_news.html";
 	}else{
