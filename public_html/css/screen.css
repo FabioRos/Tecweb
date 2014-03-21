@@ -329,17 +329,17 @@ ul.tags {
 }
 .effect{
 	position: relative;       
-    -webkit-box-shadow: 0 1px 4px rgba(256, 256, 256, 0.3), 0 0 40px rgba(256, 256, 256, 0.1) inset;
-    -moz-box-shadow: 0 1px 4px rgba(256, 256, 256, 0.3), 0 0 40px rgba(256, 256, 256, 0.1) inset;
-    box-shadow: 0 1px 4px rgba(256, 256, 256, 0.3), 0 0 40px rgba(256, 256, 256, 0.1) inset;
+    -webkit-box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
 }
 .effect:before, .effect:after{
 	content: "";
     position: absolute; 
     z-index: -1;
-    -webkit-box-shadow: 0 0 20px rgba(256,256,256,0.8);
-    -moz-box-shadow: 0 0 20px rgba(256,256,256,0.8);
-    box-shadow: 0 0 20px rgba(256,256,256,0.8);
+    -webkit-box-shadow: 0 0 20px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0 0 20px rgba(255,255,255,0.8);
+    box-shadow: 0 0 20px rgba(255,255,255,0.8);
     top: 0;
     bottom: 0;
     left: 10px;
@@ -562,6 +562,16 @@ ul.tags {
 
 
 
+/***** CSS per funzioni JavaScript *****/
+
+.jsErr{
+    color: red;
+    font-weight: bold;
+}
+.jsHelp{
+    color: green;
+    font-weight: bold;
+}
 
 
 
