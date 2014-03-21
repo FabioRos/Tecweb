@@ -4,7 +4,7 @@ function searchbar(){
  document.getElementById("text_field").value="";
 }
  function defsearch(){
- document.getElementById("text_field").value="cerca...";
+ document.getElementById("text_field").value="Cerca...";
 }
 
 /* GALLERY */
