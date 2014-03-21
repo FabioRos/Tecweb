@@ -9,6 +9,41 @@ use CGI::Session;
 use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
 
 my $cgi = CGI->new();
+my $xml = XML::LibXML->new();
+my $xslt = XML::LibXSLT->new();
+my $DBpath = "../data/XML/DBsite.xml";
+my $source = XML::LibXML->load_xml(location => $DBpath);
+
+sub getvincpath{
+	my $type = $_[0];
+	my $vincolo;
+	if ($type eq 'e') {
+		$vincolo = "eventi/evento";
+	}elsif ($type eq 'r') {
+		$vincolo = "recensioni/recensione";
+	}elsif ($type eq 'i'){
+		$vincolo = "interviste/intervista";
+	}elsif ($type eq 'n'){
+		$vincolo = "news/item";
+	}
+	return $vincolo;
+}
+
+
+sub getxslpath{
+	my $type = $_[0];
+	my $style_path;
+	if ($type eq 'e') {
+		$style_path="../data/XSLT/Eventi.xsl";
+	}elsif ($type eq 'r') {
+		$style_path="../data/XSLT/Recensioni.xsl";
+	}elsif ($type eq 'i'){
+		$style_path="../data/XSLT/Interviste.xsl";
+	}elsif ($type eq 'n'){
+		$style_path="../data/XSLT/News.xsl";
+	}
+	return $style_path;
+}
 
 sub redir{ 
 	my $rdr = $_[0];
@@ -178,4 +213,45 @@ sub getcaller{
 		$aux="../admin_eventi.html";
 	}
 	return $aux;
+}
+
+sub getSession{
+	my $session = CGI::Session->load() or die $!;
+	if ($session->is_expired || $session->is_empty ) {
+		redir('admin.cgi?err=eseguire20il20login');
+	} else {
+		return $session->param('id');
+	}
+}
+
+sub getuniqueid{
+	my $size = scalar $_[0];
+	my $type = $_[1];
+	return $type.$size;
+}
+
+sub createtag{
+	my $tag = $_[0];
+	my $roottags = $source->findnodes("/root/tags")->get_node(1);
+	my @tags = $roottags->findnodes("tag");
+	my $id = scalar @tags;
+	my $tagnode = "<tag id='$id'>$tag</tag>";
+	my $node = $xml->parse_balanced_chunk($tagnode,'UTF-8');
+	$roottags->addChild($node);
+	return $id;
+}
+
+sub buildtagnodes($tags){
+	my $strtags = $_[0];
+	my $node = "";
+	my @tags=split(',', $strtags);
+	foreach my $tag (@tags){
+		$tag=trim($tag);
+		my $idtag=searchidtag($tag);
+		if($idtag==0){
+			$id = createtag($tag);
+		}
+		$node = $node."<tag>$id</tag>";
+	}
+	return $node;
 }
