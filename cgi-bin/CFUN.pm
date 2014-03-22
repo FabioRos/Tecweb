@@ -143,41 +143,79 @@ sub fenav{
 
 sub fetags{
 	my $ptrtags = $_[0]->findnodes("tag");
-	my $aux = $cgi->div({-class => 'tag_title'}, 'Tag Articolo:');
+	my $aux = '<ul class="tags">';
 	foreach my $tag ($ptrtags->get_nodelist){	
-		$aux = $aux . $cgi->a(
-			{
-				-class =>'taglink',
-				-tag => 'tag',
-				-href => "searchtags.cgi?idtag=".$tag->findnodes("\@id")->get_node(1)->textContent
-				},
-				$tag->findnodes("node()")->get_node(1)->textContent
+		$aux = $aux . $cgi->li(
+			$cgi->a({-href => "searchtags.cgi?idtag=".$tag->findnodes("\@id")->get_node(1)->textContent},
+			$tag->findnodes("node()")->get_node(1)->textContent)
 			);
-		}
+	}
+	$aux = $aux.'</ul>';
 	return $aux;
 }
 
 sub feposts{
 	my $ptrpos = $_[0]->findnodes("/posts/post");
-	my $aux;
-	foreach my $post ($ptrpos->get_nodelist){
-		$aux = $aux . $cgi->div(
-				{-class => 'article'},
-				$cgi->h2( $cgi->a({-href => "posts.cgi?post=".$post->findnodes("\@id")->get_node(1)->textContent},$post->findnodes("titolo")->get_node(1)->textContent)),
-				$cgi->span(
-					{-class => 'author'}, 
-					"di ".$post->findnodes("editore/nome")->get_node(1)->textContent." ".$post->findnodes("editore/cognome")->get_node(1)->textContent." ".$post->findnodes("data")->get_node(1)->textContent
+	my $type= $_[1];
+	my $aux = '';
+	if($type eq 'e'){
+		$aux = $aux.'<ul class="eventi">';
+		foreach my $post ($ptrpos->get_nodelist){
+			my ($year,$mon,$day)=split('-',$post->findnodes("dataEvento")->get_node(1)->textContent);
+			$aux=$aux.$cgi->li(
+				{-class=>'evento'},
+				$cgi->div({-class=>'Intestazione'},
+					$cgi->span({-class=>'giorno'},$day),
+					$cgi->span({-class=>'mese'},$mon),
+					$cgi->span({-class=>'anno'},$year),
+					$cgi->span({-class=>'luogo'},$post->findnodes("luogo")->get_node(1)->textContent)
 					),
-				$cgi->img(
-					{-src => $post->findnodes("foto/src/node()")->get_node(1)->textContent, 
-					-alt => $post->findnodes("foto/alt/node()")->get_node(1)->textContent}),
-				$cgi->p($post->findnodes("excerpt")->get_node(1)->textContent),
-				$cgi->a(
-					{-class => 'continua' , -href => "posts.cgi?post=".$post->findnodes("\@id")->get_node(1)->textContent},
-					"continua →"
-					),
-				fetags($post)
-			);
+				$cgi->div({-class=>'dettagli'},
+						$cgi->div({-class=>'copertina'},
+							$cgi->h2(
+								$cgi->a(
+									{-href => "posts.cgi?post=".$post->findnodes("\@id")->get_node(1)->textContent},
+									$post->findnodes("titolo")->get_node(1)->textContent
+									)
+								),
+							$cgi->img({
+								-class => 'thumbnail', 
+								-src => $post->findnodes("foto/src/node()")->get_node(1)->textContent,
+								-alt => $post->findnodes("foto/alt/node()")->get_node(1)->textContent
+								})
+							),
+						$cgi->p({-class => 'description'},$post->findnodes("excerpt")->get_node(1)->textContent),
+						$cgi->p({-class => 'info'},
+								$cgi->span({-class => 'luogo_specifico'},$post->findnodes("luogo")->get_node(1)->textContent),
+								$cgi->span({-class => 'costo_biglietto'},$post->findnodes("prezzo")->get_node(1)->textContent),
+								$cgi->span({-class => 'email'},$post->findnodes("email")->get_node(1)->textContent),
+								$cgi->span({-class => 'telefono'},$post->findnodes("telefono")->get_node(1)->textContent)
+							),
+						fetags($post)
+					)
+				);
+		}
+		$aux = $aux.'</ul>';
+	}else{
+		foreach my $post ($ptrpos->get_nodelist){
+			$aux = $aux . $cgi->div(
+					{-class => 'article'},
+					$cgi->h2( $cgi->a({-href => "posts.cgi?post=".$post->findnodes("\@id")->get_node(1)->textContent},$post->findnodes("titolo")->get_node(1)->textContent)),
+					$cgi->span(
+						{-class => 'author'}, 
+						"di ".$post->findnodes("editore/nome")->get_node(1)->textContent." ".$post->findnodes("editore/cognome")->get_node(1)->textContent." ".$post->findnodes("data")->get_node(1)->textContent
+						),
+					$cgi->img(
+						{-src => $post->findnodes("foto/src/node()")->get_node(1)->textContent, 
+						-alt => $post->findnodes("foto/alt/node()")->get_node(1)->textContent}),
+					$cgi->p($post->findnodes("excerpt")->get_node(1)->textContent),
+					$cgi->a(
+						{-class => 'continua' , -href => "posts.cgi?post=".$post->findnodes("\@id")->get_node(1)->textContent},
+						"continua →"
+						),
+					fetags($post)
+				);
+		}
 	}
 	return $aux;
 }
@@ -192,7 +230,7 @@ sub fenavpag{
 		$aux = $aux . $cgi->a({-href => "show.cgi?type=".$type."pag=".1},"<<");
 		$aux = $aux . $cgi->a({-href => "show.cgi?type=".$type."pag=".$pagina-1},"<");
 	}
-	$aux = $aux . $cgi->a({-href => "show.cgi?type=".$type."pag=".$pagina},$pagina);
+	$aux = $aux . $cgi->span($pagina);
 	if ($pagina < $fine){
 		$aux = $aux . $cgi->a({-href => "show.cgi?type=".$type."pag=".$pagina+1},">");
 		$aux = $aux . $cgi->a({-href => "show.cgi?type=".$type."pag=".$fine},">>");
@@ -252,7 +290,7 @@ sub searchidtag{
 		my $txttag = $DBtag->textContent;
 		if($tag eq $txttag){
 			my @attr = $DBtag->attributes();
-			return @attr[0];
+			return $attr[0];
 		}
 	}
 	return -1;

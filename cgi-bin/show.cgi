@@ -10,20 +10,20 @@ use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
 use CFUN;
 
 
-my $page = CGI->new();
+my $cgi = CGI->new();
 my $parser = XML::LibXML->new();
 my $DBpath = "../data/XML/DBsite.xml";
+my $source = XML::LibXML->load_xml(location => $DBpath);
 
-
-my $type = $page->param('type');
+my $type = $cgi->param('type');
 my $pag = 1;
-if (defined $page->param('pag')){
-	$pag = $page->param('pag');
+if (defined $cgi->param('pag')){
+	$pag = $cgi->param('pag');
 }
 my %in= ( 'type' => $type);
 $pag=$pag-1;
 
-my $source = XML::LibXML->load_xml(location => $DBpath);
+
 
 my $posttype = substr($type, 0, 1);
 my $title;
@@ -46,11 +46,12 @@ my $dom = XML::LibXML::Document->new( "1.0", "UTF-8");
 my $ptrposts = $source->findnodes("/root/posts/".$vincolo);
 my $radice = $parser->parse_balanced_chunk("<posts></posts>","UTF-8");
 my $ptrradice = $radice->findnodes("posts")->get_node(1);
-$dom->setDocumentElement($ptrradice);
+$dom->setDocumentElement($ptrradice,'UTF-8');
 my $ptrdompost =$dom->findnodes("/posts")->get_node(1);
 
+#$ptrposts->size()-
 #estraggo 4 post a seconda della pagina
-for (my $var = $ptrposts->size()-(4*$pag); $var>$ptrposts->size()-(4*$pag)-4 && $ptrposts->size()> 1; $var--) {#nel caso che voglia vedere 4 articoli in una pagina
+for (my $var = 1; $var<5; $var++) {#nel caso che voglia vedere 4 articoli in una pagina
 	my $ptrpost = $ptrposts->get_node($var);
 	$ptrpost->setNodeName('post');
 	$ptrdompost->addChild($ptrpost);
@@ -77,8 +78,8 @@ foreach my $post ($posts->get_nodelist){
 
 
 #stampo la pagina
-print $page->header({-type=>'text/html', -charset=>'UTF-8'});
-print $page->start_html(
+print $cgi->header({-type=>'text/html', -charset=>'UTF-8'});
+print $cgi->start_html(
 	-title => "$title - Music Break",
 	-dtd => ['-//W3C//DTD XHTML 1.0 Strict//EN','http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'],
 	-lang => 'it',
@@ -90,36 +91,56 @@ print $page->start_html(
 		'robots' => 'noindex,nofollow'
 	},
 	-style => [
-	{'media' => 'print','src' => '../public_html/css/print.css'},
-	{'media' => 'speech','src' => '../public_html/css/aural.css'},
-	{'media' => 'handheld, screen','src' => '../public_html/css/screen_login.css'}
+	{'media' => 'print','src' => '/css/print.css'},
+	{'media' => 'speech','src' => '/css/aural.css'},
+	{'media' => 'handheld, screen','src' => '/css/screen.css'}
 	]
 	);
-print $page->div(
-	{-id => 'header'},
-	$page->a({-class => 'help' , -href => '#nav'}, 'salta intestazione'),
-	$page->h1('<span xml:lang="eng">Music Break</span>'),
-	$page->h2('Il portale di notizie dedicato alla musica')
+print $cgi->div(
+	{ -id => 'header'},
+	$cgi->a({-class => 'help' , -href => '#nav'}, 'salta intestazione'),
+	$cgi->div({-id => 'title'},
+		$cgi->span({-id => 'logo', -class => 'notAural'}, $cgi->img({-src => '/img/tazza-di-caffe.jpg', -alt => 'Tazza di caffè fumante in cui viene immersa  una pausa di semiminima'})),
+		$cgi->h1('<span xml:lang="en">Music Break</span>'),
+		$cgi->h2('Il portale di notizie dedicato alla musica')
+	)
 	);
 
-print $page->div(
+print $cgi->div(
 	{-id => 'nav'},
-	$page->a({-class => 'help', -href => '#contents'}, 'salta menù'),
-	CFUN::fenav($type)
+	$cgi->a({-class => 'help', -href => '#search'}, 'salta menù'),
+	CFUN::fenav($type),
+	$cgi->div(
+			{-id=>'search'},
+			$cgi->a({ -class => 'help' , -href => '#contents'}, 'salta barra di ricerca'),
+			$cgi->input({
+				-type => 'text', 
+				-id => 'text_field', 
+				-onclick => 'searchbar();', 
+				-onblur => 'defsearch();', 
+				-name => 'query'},
+				'Cerca...'),
+			$cgi->input({-type=>'submit', -id=>'button', -alt=>'inserire una ricerca', -value=>'Cerca'}),
+			$cgi->input({-type=>'hidden', -value=>'Home.html', -name=>'sitesearch'})
+		)
 	);
-print $page->div(
+print $cgi->div(
 	{-id => 'contents'},
-	$page->h1(uc($title)),
-	$page->a({-class => 'help', -href => '#footer'}, 'salta il contenuto'),
-	CFUN::feposts($dom)
+	$cgi->h1($title),
+	$cgi->a({-class => 'help', -href => '#nav_pagine'}, 'salta il contenuto'),
+	CFUN::feposts($dom,$type)
 	);
-print $page->div(
+print $cgi->div(
 	{-id => 'nav_pagine'},
-	CFUN::fenavpag($pag,$type,1,$end,$page)
+	CFUN::fenavpag($pag,$type,1,$end,$cgi)
 	);
-print $page->div(
+print $cgi->div(
 	{-id => 'footer'},
-	$page->a({-class => 'help', -href => '#header'},'salta testo a fine pagina'),
-	$page->p('&copy; 2014 Music Break All Right Reserved.')
+	$cgi->a({-class => 'help', -href => '#header'},'salta testo a fine pagina'),
+	$cgi->p('&#169; 2014 <span xml:lang="en">Music Break All Right Reserved</span>. | ',
+		$cgi->a({-href=>'/info.html'},'Chi siamo'),' | ',
+		$cgi->a({-href=>'/condizioni.html'},'Condizioni d\'uso'),' | ',
+		$cgi->a({-href=>'/contact.html'},'Contatti')
+		)
 	);
-print $page->end_html;
+print $cgi->end_html;

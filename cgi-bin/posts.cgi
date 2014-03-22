@@ -28,8 +28,6 @@ my $style_path=CFUN::getxslpath($posttype);
 
 #individuo il post
 my $ptrpost = $source->findnodes("/root/posts/".$vincolo."[\@id='$idPost']")->get_node(1);
-$ptrpost->setNodeName('post');
-
 
 #individio l'autore del post
 my $ptridautor = $ptrpost->findnodes("idautore")->get_node(1);
