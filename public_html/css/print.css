@@ -49,7 +49,7 @@ body{}
 
 /***** Impostazioni stile CSS per il contenuto delle pagine ****/
 #contents, #contents_home{
-	margin-top: 2em;
+	margin-top: 3em;
 }
 #contents h1, #contents_home h1{
 	font-variant: small-caps;
@@ -238,18 +238,19 @@ ul.tags {
 }
 /** Stile per contenuto pagine statiche **/
 #static_cont p{
+	margin-top: 1em;
 	font-size: 1.2em;
-	padding: 0.5% 1%;
+	padding: 0.5em 1em;
 }
 .static_list{
-	padding-top: 3%;
-	padding-bottom: 1%;
-	margin-bottom: 20%; 
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+	margin-bottom: 5em; 
 }
 .static_list ul{
 	font-size: 1.2em;
-	padding-top: 3%;
-	padding-left: 8%;
+	padding-top: 1em;
+	padding-left: 2em;
 }
  
 
@@ -328,9 +329,7 @@ ul.tags {
 /***** Impostazioni stile CSS per il piede *****/
 #footer{
 	clear: both;
-	background-color: #45484D;
 	text-align: center;
-	color: #FFFFFF;
 	padding: 1%;
 }
 #footer a{
