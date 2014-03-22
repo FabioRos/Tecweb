@@ -14,11 +14,8 @@ body{
 	background: linear-gradient(135deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
 }
 
-<<<<<<< HEAD
-=======
 
 /***** Impostazioni stile CSS per aiuto alla navigazione *****/
->>>>>>> ae0b229aef354c857c8cd861b6af3203f37ef244
 .help{
 	position:absolute;
 	height:0;
@@ -457,7 +454,7 @@ ul.tags {
     clear: both;
     float: none;
     display: block;
-    width: 90%;
+    width: 95%;
     text-align: center;
     margin: 1% auto;
 }
@@ -576,9 +573,13 @@ ul.tags {
 	float: left;
 	border: 0;
 	width: 5%;
-	height: 75%;
 }
-
+/** Stile per tablet e mobile **/
+@media only screen and (max-width: 959px){
+#footer img{
+	width: 9%;
+}
+}
 
 
 /***** Impostazioni stile CSS per visualizzazione della parte ADMIN *****/
@@ -634,8 +635,9 @@ ul.tags {
 .common_box a:hover{
     text-decoration: underline;
 }
-<<<<<<< HEAD
-/***********Impostazione aiuti e messaggi d'errore javascript***********/
+
+
+/***** Impostazioni stile CSS per aiuti e messaggi d'errore javascript *****/
 .jsErr{
     color: red;
     font-weight: bold;
@@ -644,101 +646,10 @@ ul.tags {
     color: green;
     font-weight: bold;
 }
-/*********Impostazioni Gallery***********/
-#gallery {
-	position: relative;
-	margin: 1% 3% 0 3%;
-	height: 35em;
-	overflow: hidden;
-	background-color: #E6E6E6;
-	border-bottom: 5px;
-	border-bottom-style: solid;
-	border-bottom-color: #33CCFF;
-}
-#gallery ul {
-	margin-top: 5em;
-	padding: 0;
-	list-style-type: none;
-}
-
-.active {
-    display: block;
-	text-align: center;
-=======
 
 
-/***** Impostazioni stile CSS per aiuti e messaggi d'errore javascript *****/
-.jsErr{
-    color: red;
-    font-weight: bold;
->>>>>>> ae0b229aef354c857c8cd861b6af3203f37ef244
-}
 
-.hidden {
-    display: none;
-}
 
-.slide {
-    z-index: -1;
-    width: 42em;
-}
-
-#prev {
-	position: absolute;/*assumo che non ci siano elementi con position!=static*/
-	top: 50%;
-	left: 0px;
-	width: 3.2em;
-	height: 3.2em;
-	background-image: url('../javascript/img/arrow-left.png');
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-	opacity: 0.6;
-}
-
-#next {
-	position: absolute;/*assumo che non ci siano elementi con position!=static*/
-	top: 50%;
-	right: 0px;
-	width: 3.2em;
-	height: 3.2em;
-	background-image: url('../javascript/img/arrow-right.png');
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-	opacity: 0.6;
-}
-
-#prev:hover, #next:hover {
-	opacity: 1;
-}
-
-.galleryButton {
-	opacity: 0;
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-}
-
-#controlnav {
-list-style-type: none;
-padding-left: 3%;
-}
-
-.activenav img{
-	border: 5px solid #33CCFF;
-	padding: 0;
-}
-
-.tnail {
-	float: left;
-	width: 10%;
-	max-height: 80px;
-	overflow:hidden;
-	padding: .3em .3em;
-	padding-top: 0;
-	cursor: pointer;
-}
 
 
 
