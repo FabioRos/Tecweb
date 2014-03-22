@@ -352,9 +352,8 @@ ul.tags {
 	background-color: black;
 	padding: 0.3em 2em;;
 }
-
 #galleryLink p:first-of-type:hover{
-	font-weight: 103%;
+	font-size: 103%;
 }
 #informazioni ul{
 	width: 80%;
@@ -569,6 +568,12 @@ ul.tags {
 }
 #footer a{
 	color: #33CCFF;
+}
+#footer img{
+	float: left;
+	border: 0;
+	width: 5%;
+	height: 75%;
 }
 
 
