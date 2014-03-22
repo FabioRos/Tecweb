@@ -156,7 +156,7 @@ body{
 	width: 80%;
 }
 #contents h1, #contents_home h1{
-	font-size: 1.0em;
+	font-size: 1.3em;
 	text-align: center;
 	padding-top: 0.5%;
 }
@@ -361,9 +361,20 @@ ul.tags {
 	text-align: left;
 	list-style-type: none;
 }
-/** Stile per contenuto condizioni **/
-#condizioni_cont p{
+/** Stile per contenuto pagine statiche **/
+#static_cont p{
+	font-size: 1.2em;
 	padding: 0.5% 1%;
+}
+.static_list{
+	padding-top: 3%;
+	padding-bottom: 1%;
+	margin-bottom: 20%; 
+}
+.static_list ul{
+	font-size: 1.2em;
+	padding-top: 3%;
+	padding-left: 8%;
 }
 /** Stile per tablet e mobile **/
 @media only screen and (max-width: 959px){
