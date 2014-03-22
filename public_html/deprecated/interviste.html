@@ -16,7 +16,7 @@
     <script type="text/javascript" src="./../javascript/screen.js"></script>
     <title>Interviste - Music Break</title>
 </head>
-<body>
+<body onload="displayH();">
   <div id="header">
     <a class="help" href="#nav">salta intestazione</a>
     <div id="title"><span id="logo" class="notAural"><a href="home.html"><img src="../img/tazza-di-caffe.jpg" alt="Tazza di caffè fumante in cui viene immersa  una pausa di semiminima"/></a></span>
@@ -95,7 +95,7 @@
           <li><a href="a">pippo</a></li>
       </ul>
     </div>
-    
+    <div id="hiddenLink" class="hidden"><a  href="../gallery.html" onclick="window.open(this.href,'_blank'); return false;" >visualizza galleria artista</a></div>
     <div id="nav_pagine">
       <a href="#" tabindex="150">&lt;&lt;</a>
       <a href="#" tabindex="155">&lt;</a>
@@ -105,7 +105,7 @@
     </div>
   </div>
   <div id="footer">
-    <a class="help" href="#header">salta testo a fine pagina</a>
+    <div><a class="help" href="#header">salta testo a fine pagina</a></div>
     <p>&copy; 2014 <span xml:lang="en">Music Break All Right Reserved.</span> | 
       <a href="info.html" tabindex="920"> Chi siamo</a> | 
       <a href="condizioni.html" tabindex="930">Condizioni d'uso</a> | 
