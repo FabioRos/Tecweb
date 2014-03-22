@@ -266,6 +266,16 @@ ul.tags {
 	width: 100%;
 	padding: 1% 0;
 }
+#nav_pagine{
+	clear: both;
+	text-align: center;
+	padding: 1% 0;
+}
+#nav_pagine a{
+	color: #0000FF;
+	padding-right: 0.3%;
+	padding-left: 0.3%;
+}
 /** Stile per scorrimento pagine **/
 #nav_pagine{
 	clear: both;
