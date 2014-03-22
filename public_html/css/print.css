@@ -4,22 +4,10 @@
 	padding: 0;
 	border: 0;
 }
-body{
-	background: #F5F6F6; 
-	background: -moz-linear-gradient(-45deg, #F5F6F6 0%, #DBDCE2 21%, #B8BAC6 49%, #DDDFE3 80%, #F5F6F6 100%); 
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#F5F6F6), color-stop(21%,#DBDCE2), color-stop(49%,#B8BAC6), color-stop(80%,#DDDFE3), color-stop(100%,#F5F6F6)); 
-	background: -webkit-linear-gradient(-45deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
-	background: -o-linear-gradient(-45deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
-	background: -ms-linear-gradient(-45deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
-	background: linear-gradient(135deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
-}
-a:visited{
-	color: #FF0066;
-}
-
+body{}
 
 /***** Impostazioni stile CSS per aiuto alla navigazione *****/
-.help{
+.help, .nav_help{
 	position:absolute;
 	height:0;
 	overflow:hidden;
@@ -99,27 +87,7 @@ a:visited{
 	background-color: #FFFFFF;
 	color: #000000;
 }
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#nav{
-	border-bottom-style: none;
-}	
-#nav ul{
-    width: 100%;
-    padding-left: 0;
-}
-#nav ul li{
-    display: block;
-    width: 80%;
-    margin: 1% auto;
-}
-#current_nav{
-	padding: 0.5% 0;
-}
-#nav ul li a{
-	padding: 0.6% 0;
-}
-}
+
 
 /***** Impostazioni stile CSS per barra di ricerca *****/
 #search{
@@ -142,19 +110,7 @@ a:visited{
 	width: auto;
 	font-size: 1.3em;
 }
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#search{
-	float: none;
-	width: 100%;
-	margin: 1% auto;
-	text-align: center;
-}
-#text_field, #button{
-	display: inline-block;
-	width: auto;
-}
-} 
+
 
 /***** Impostazioni stile CSS per il contenuto delle pagine ****/
 #contents_home{
@@ -387,26 +343,7 @@ ul.tags {
 	padding-top: 3%;
 	padding-left: 8%;
 }
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#contents_home{
-    width: 100%;
-}
-.article{
-    float: none;
-    display: block;
-    width: 90%;
-    margin: 2% auto;
-}
-#galleryLink{
-	background-image: none;
-	height: auto;
-}
-#galleryLink p:first-of-type{
-	display: block;
-	margin: 0 auto;
-}
-} 
+ 
 
 /***** Impostazioni di stile CSS per la sidebar nella homepage *****/
 #sidebar{
@@ -473,27 +410,6 @@ ul.tags {
 #sidebar a:hover{
 	font-weight: bold;
 	font-size: 1.1em;
-}
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#sidebar{ 
-    clear: both;
-    float: none;
-    display: block;
-    width: 95%;
-    text-align: center;
-    margin: 1% auto;
-}
-#sidebar h1{
-	margin: 2% auto;
-}
-#sidebar li {
-    padding: 1.5%;
-}
-.box{
-	padding-top: 1%;
-	margin-bottom: 5%;
-}
 }
 
 
@@ -570,19 +486,7 @@ ul.tags {
 .info span{
     font-weight: bold;
 }
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 1000px){
-.Intestazione{
-    float: none;
-    clear: both;
-    width: 90%;
-    margin: 0 auto 0.5%;
-}
-.evento p{
-    width: 90%;
-    margin: 2% auto;
-}
-}
+
 
 /***** Impostazioni stile CSS per il piede *****/
 #footer{
@@ -599,12 +503,6 @@ ul.tags {
 	float: left;
 	border: 0;
 	width: 5%;
-}
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#footer img{
-	width: 9%;
-}
 }
 
 
