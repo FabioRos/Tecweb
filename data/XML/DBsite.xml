@@ -96,6 +96,284 @@ Questo file serve per mettere in relazione le gallerie con i post
             <email>info@sixtyparty.com</email>
             <telefono>0039 333445566</telefono>
         </evento>
+        <evento id="e1">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+            <tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>
+        <evento id="e1">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+            <tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>
+        <evento id="e1">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+            <tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>
+        <evento id="e1">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+            <tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>
+        <evento id="e1">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+            <tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>
+        <evento id="e1">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+            <tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>
+        <evento id="e1">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+            <tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>
+        <evento id="e1">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+            <tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>
+        <evento id="e1">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+            <tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>
+        <evento id="e1">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+            <tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>
+        <evento id="e1">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+            <tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>
+        <evento id="e1">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+            <tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>
+        
+
 		
 		
 		
