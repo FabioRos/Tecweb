@@ -7,17 +7,21 @@ use XML::LibXML;
 use CGI qw/:standard/;
 use CGI::Session;
 use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
+use Time::localtime;
 use CFUN;
 
 my $cgi = CGI->new();
 my $xml = XML::LibXML->new();
 my $xslt = XML::LibXSLT->new();
 my $DBpath = "../data/XML/DBsite.xml";
+my $source = XML::LibXML->load_xml(location => $DBpath);
 
 
 
+my $idutente=2;#CFUN::getsession();
+my $tm = localtime;
+my ($day,$month,$year)=($tm->mday,$tm->mon+1,$tm->year+1900);
 
-my $idutente=2;#getsession();
 
 my $fail = 0;
 my $msg = "?";
@@ -31,7 +35,7 @@ if($cgi->param('titolo') eq ""){
 #controllo della foto
 my $srcfoto = $cgi->upload('src');
 my $filename;
-
+my $path = CFUN::getfolderpath($type);
 if($cgi->param('src') eq ""){
 	$fail=1;
 	$msg = $msg."msg1=nome%20del%20file%20vuoto&&";
@@ -65,7 +69,7 @@ if($cgi->param('tags') eq ""){
 }else{$tags=$cgi->param('tags');}
 
 
-my $data;
+my $dataEvento;
 my $numgiorni;
 my $luogo;
 my $oraInizio;
@@ -78,7 +82,7 @@ if($type eq 'e'){
 	if((!defined $cgi->param('dataEvento')) && $cgi->param('dataEvento') eq ""){
 		$fail=1;
 		$msg=$msg."msg7=data%20vuota&&";
-	}else{$data=$cgi->param('dataEvento');}
+	}else{$dataEvento=$cgi->param('dataEvento');}
 
 	if((!defined $cgi->param('numGiorni')) && $cgi->param('numGiorni') eq ""){
 		$fail=1;
@@ -118,7 +122,7 @@ if($type eq 'e'){
 	if((!defined $cgi->param('telefono')) && $cgi->param('telefono') eq ""){
 		$fail=1;
 		$msg=$msg."msg15=manca%20il%20telefono&&";
-	}else{$luogo=$cgi->param('telefono');}
+	}else{$phone=$cgi->param('telefono');}
 }
 
 my $intervistato;
@@ -145,45 +149,95 @@ if ($fail) {
 	my $pagina = CFUN::getcaller($type);
 	CFUN::redir($pagina.$msg);
 }else{
-	my $path = CFUN::getfolderpath($type);
 	CFUN::scrivifile($srcfoto,$filename,$path);
 	my $size = scalar @gallery;
 	for (my $var = 0; $var < $size; $var++) {
 		CFUN::scrivifile(@gallery[$var],@gallerynames[$var],"../public_html/img/interviste/gallery/");
 	}
-	my $source = XML::LibXML->load_xml(location => $DBpath);
-	my $ptrposts = $source->findnodes("/root/posts/".$vincolo);
+	my $vincolo = CFUN::getvincpath($type);
+	my $ptrposts = $source->findnodes("/root/posts/$vincolo");
 	my $father = $ptrposts->get_node(1)->parentNode;
+	my $id = CFUN::getuniqueid($ptrposts,$type);
+	my $tagnodes = CFUN::buildtagnodes($tags,$source);
 	if ($type eq 'e') {
-		#$vincolo = "eventi/evento";
+		my $fotopath = "/img/evento/$filename";
+		my $strpost="<item id='$id'>
+			<titolo>$titolo</titolo>
+			<foto>
+			<src>$fotopath</src>
+			<alt>$altfoto</alt>
+			</foto>
+			<excerpt>$descrizione</excerpt>
+			<descrizione>$testo</descrizione>
+			<idautore>$idutente</idautore>
+			<data>$year-$month-$day</data>
+			$tags
+			<dataEvento>$dataEvento</dataEvento>
+            <luogo>$luogo</luogo>
+            <oraInizio>$oraInizio</oraInizio>
+            <oraFine>$oraFine</oraFine>
+            <indirizzo>$indirizzo</indirizzo>
+            <prezzo>$price</prezzo>
+            <email>$mail</email>
+            <telefono>$phone</telefono></item>";
+		my $novopost = $xml->parse_balanced_chunk($strpost,'UTF-8');
+		$father->appendChild($novopost);
 	}elsif ($type eq 'r') {
-		#$vincolo = "recensioni/recensione";
+		my $fotopath = "/img/recensioni/$filename";
+		my $strpost="<recensione id='$id'>
+			<titolo>$titolo</titolo>
+			<foto>
+			<src>$fotopath</src>
+			<alt>$altfoto</alt>
+			</foto>
+			<excerpt>$descrizione</excerpt>
+			<descrizione>$testo</descrizione>
+			<idautore>$idutente</idautore>
+			<data>$year-$month-$day</data>
+			$tags
+			</recensione>";
+		my $novopost = $xml->parse_balanced_chunk($strpost,'UTF-8');
+		$father->appendChild($novopost);
 	}elsif ($type eq 'i'){
-		my $id = CFUN::getuniqueid(@ptrposts,$type);
 		my $fotopath = "/img/inteviste/$filename";
-		my @gallerie = $source->findnodes("/root/gallerie/galleria");
-		my $idgallery = scalar @gallerie;
-		my $tagnodes = CFUN::buildtagnodes($tags);
-		my $strpost="<intervista id='$id'><titolo>$titolo</titolo><foto><src>$fotopath</src><alt>$altfoto</alt></foto><excerpt>$descrizione</excerpt><descrizione>$testo</descrizione><idautore>$idutente</idautore><data>$data</data>$tags<intervistato>$intervistato</intervistato><galleria>$idgallery</galleria></intervista>";
+		my @gallerie = CFUN::creategallery($source,\@gallerynames);
+		my $idgallery = scalar @gallerie;#creare anche il nodo gallery
+		my $strpost="<intervista id='$id'>
+			<titolo>$titolo</titolo>
+			<foto>
+			<src>$fotopath</src>
+			<alt>$altfoto</alt>
+			</foto>
+			<excerpt>$descrizione</excerpt>
+			<descrizione>$testo</descrizione>
+			<idautore>$idutente</idautore>
+			<data>$year-$month-$day</data>
+			$tags
+			<intervistato>$intervistato</intervistato>
+			<galleria>$idgallery</galleria>
+			</intervista>";
+		my $novopost = $xml->parse_balanced_chunk($strpost,'UTF-8');
+		$father->appendChild($novopost);
 	}elsif ($type eq 'n'){
-		#$vincolo = "news/item";
+		my $fotopath = "/img/news/$filename";
+		my $strpost="<item id='$id'>
+			<titolo>$titolo</titolo>
+			<foto>
+			<src>$fotopath</src>
+			<alt>$altfoto</alt>
+			</foto>
+			<excerpt>$descrizione</excerpt>
+			<descrizione>$testo</descrizione>
+			<idautore>$idutente</idautore>
+			<data>$year-$month-$day</data>
+			$tags
+			</item>";
+		my $novopost = $xml->parse_balanced_chunk($strpost,'UTF-8');
+		$father->appendChild($novopost);
 	}
+	open(OUT,">$DBpath");
+	print OUT $source->toString;
+	close(OUT);
+	my $pagina = CFUN::getcaller($type);
+	CFUN::redir($pagina."?msg=post%20inserito%20con%20successo");
 }
-
-
-
-print $cgi->header({-type=>'text/html', -charset=>'UTF-8'});
-print $cgi->start_html(
-	-title => "Admin - Music Break",
-	-dtd => ['-//W3C//DTD XHTML 1.0 Strict//EN','http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'],
-	-lang => 'it',
-	-meta => {
-		'author' => 'Fabio Ros, Valerio Burlin, Stefano Munari, Alberto Andeliero',
-		'language' => 'italian it',
-		'rating' => 'safe for kids',
-		'keywords' => 'login, area riservata',
-		'robots' => 'noindex,nofollow'
-	}
-	);
-print $cgi->h1("Funziona");
-print $cgi->end_html;

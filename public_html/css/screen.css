@@ -1,3 +1,4 @@
+/***** Impostazioni stile CSS generali *****/
 *{
 	margin: 0;
 	padding: 0;
@@ -5,41 +6,44 @@
 }
 body{
 	background: #F5F6F6; 
-	background: -moz-linear-gradient(-45deg, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); 
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#f5f6f6), color-stop(21%,#dbdce2), color-stop(49%,#b8bac6), color-stop(80%,#dddfe3), color-stop(100%,#f5f6f6)); 
-	background: -webkit-linear-gradient(-45deg, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); 
-	background: -o-linear-gradient(-45deg, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); 
-	background: -ms-linear-gradient(-45deg, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); 
-	background: linear-gradient(135deg, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); 
+	background: -moz-linear-gradient(-45deg, #F5F6F6 0%, #DBDCE2 21%, #B8BAC6 49%, #DDDFE3 80%, #F5F6F6 100%); 
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#F5F6F6), color-stop(21%,#DBDCE2), color-stop(49%,#B8BAC6), color-stop(80%,#DDDFE3), color-stop(100%,#F5F6F6)); 
+	background: -webkit-linear-gradient(-45deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
+	background: -o-linear-gradient(-45deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
+	background: -ms-linear-gradient(-45deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
+	background: linear-gradient(135deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
 }
 
+<<<<<<< HEAD
+=======
+
+/***** Impostazioni stile CSS per aiuto alla navigazione *****/
+>>>>>>> ae0b229aef354c857c8cd861b6af3203f37ef244
 .help{
 	position:absolute;
 	height:0;
 	overflow:hidden;
 }
 
-
+/***** Impostazioni stile CSS dell'header *****/
 #header{
 	background-color: #000000;
 	color: #FFFFFF;
 }
-
+/** Stile logo del sito **/
 #logo img{
 	float: left;
 	width: 8%;
 	min-width: 80px;
 }
-
+/** Stile del titolo **/
 #title{
 	display: inline-block;
 }
-
 @font-face {
     font-family: "FontTitoloSito";
     src: url("../fonts/neonfont/NEON CLUB MUSIC.otf") format("opentype");
 }
-
 #title h1{
     font-family: "FontTitoloSito", Verdana, Tahoma;
 	font-size: 3em;
@@ -56,7 +60,7 @@ body{
 	padding-left: 25%;
 }
 
-
+/***** Impostazioni stile CSS del menù di navigazione *****/
 #nav{	
 	display: inline-block;
 	width: 100%;
@@ -92,7 +96,7 @@ body{
 	background-color: #FFFFFF;
 	color: #000000;
 }
-
+/** Stile per tablet e mobile **/
 @media only screen and (max-width: 959px){
 #nav{
 	border-bottom-style: none;
@@ -114,7 +118,7 @@ body{
 }
 }
 
-
+/***** Impostazioni stile CSS per barra di ricerca *****/
 #search{
 	float: right;
 	padding-top: 0.3%;
@@ -135,7 +139,7 @@ body{
 	width: auto;
 	font-size: 1.3em;
 }
-
+/** Stile per tablet e mobile **/
 @media only screen and (max-width: 959px){
 #search{
 	float: none;
@@ -149,7 +153,7 @@ body{
 }
 } 
 
-
+/***** Impostazioni stile CSS per il contenuto delle pagine ****/
 #contents_home{
 	float: left;
 	width: 80%;
@@ -159,7 +163,7 @@ body{
 	text-align: center;
 	padding-top: 0.5%;
 }
-
+/** Stile contenuto article **/
 .article:nth-child(odd){
 	float: left;
 	clear: left;
@@ -191,13 +195,12 @@ body{
 	font-size: 0.8em;
 	font-style: italic;
 }
-
+/** Stile visualizzazione dei tags **/
 .tags{
 	display: block;
 	list-style: none;
 	margin: 1% auto;
 }
-
 ul.tags {
 	margin-top:0px;
 }
@@ -257,12 +260,12 @@ ul.tags {
 .tags a:hover:before{
 	border-color:transparent #555555 transparent transparent;
 }
-
+/** Stile immagini degli article **/
 .article img{
 	width: 100%;
 	padding: 1% 0;
 }
-
+/** Stile per scorrimento pagine **/
 #nav_pagine{
 	clear: both;
 	text-align: center;
@@ -273,7 +276,7 @@ ul.tags {
 	padding-right: 0.3%;
 	padding-left: 0.3%;
 }
-
+/** Stile visualizzazione article intero **/
 .article_box{
 	width: 80%;
     text-align: center;
@@ -291,9 +294,8 @@ ul.tags {
     margin: -1.5%;
     padding: 0;
     background-repeat: no-repeat;
-    height: 70px;
+    height: 90px;
     width: 119px;
-    text-indent: -9999999px;
 }
 .eventRibbon{
     background-image: url('../public_html/css/img/ribbonsEventiMini.png');
@@ -312,13 +314,57 @@ ul.tags {
     margin-top: 5px;
 }
 .article_box h1:first-of-type{
+	text-align: left !important;
     font-size: 1.8em !important;
     font-weight: bold;
 }
 .article_box h2:first-of-type{
+	text-align: center !important;
     font-size: 0.9em !important;
+    color: #1C1C1C;
 }
-
+#descrizione{
+    width: 80%;
+    margin: 2em auto;
+}
+#title a{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#title a:hover{
+	text-decoration: underline;
+}
+#interlocutore{
+	margin-top: 1em;
+}
+#galleryLink{
+	display: block;
+	background-repeat: no-repeat;
+	height: 150px;
+	background-image: url('img/ios-camera-icon-reflected.png');
+	margin: 1em auto;
+	width: 20%;
+}
+#galleryLink p:first-of-type{
+	float: right;
+	margin: 1em auto;
+	font-weight: bold;
+	text-decoration: underline;
+	color: white;
+	font-variant: small-caps;
+	background-color: black;
+	padding: 0.3em 2em;;
+}
+#galleryLink p:first-of-type:hover{
+	font-size: 103%;
+}
+#informazioni ul{
+	width: 80%;
+	margin: 1em auto;
+	text-align: left;
+	list-style-type: none;
+}
+/** Stile per tablet e mobile **/
 @media only screen and (max-width: 959px){
 #contents_home{
     width: 100%;
@@ -329,9 +375,17 @@ ul.tags {
     width: 90%;
     margin: 2% auto;
 }
+#galleryLink{
+	background-image: none;
+	height: auto;
+}
+#galleryLink p:first-of-type{
+	display: block;
+	margin: 0 auto;
+}
 } 
 
-
+/***** Impostazioni di stile CSS per la sidebar nella homepage *****/
 #sidebar{
 	float: right;
 	width: 16%;
@@ -397,7 +451,7 @@ ul.tags {
 	font-weight: bold;
 	font-size: 1.1em;
 }
-
+/** Stile per tablet e mobile **/
 @media only screen and (max-width: 959px){
 #sidebar{ 
     clear: both;
@@ -417,9 +471,10 @@ ul.tags {
 	padding-top: 1%;
 	margin-bottom: 5%;
 }
-} 
+}
 
 
+/***** Impostazioni stile CSS per la visualizzazione del contenuto evento *****/
 .evento{
 	width: 90%;
     list-style-type: none;
@@ -492,7 +547,7 @@ ul.tags {
 .info span{
     font-weight: bold;
 }
-
+/** Stile per tablet e mobile **/
 @media only screen and (max-width: 1000px){
 .Intestazione{
     float: none;
@@ -506,7 +561,7 @@ ul.tags {
 }
 }
 
-
+/***** Impostazioni stile CSS per il piede *****/
 #footer{
 	clear: both;
 	background-color: #45484D;
@@ -517,10 +572,16 @@ ul.tags {
 #footer a{
 	color: #33CCFF;
 }
+#footer img{
+	float: left;
+	border: 0;
+	width: 5%;
+	height: 75%;
+}
 
 
 
-
+/***** Impostazioni stile CSS per visualizzazione della parte ADMIN *****/
 .common_box{
     width: 60%;
     text-align: center;
@@ -573,6 +634,7 @@ ul.tags {
 .common_box a:hover{
     text-decoration: underline;
 }
+<<<<<<< HEAD
 /***********Impostazione aiuti e messaggi d'errore javascript***********/
 .jsErr{
     color: red;
@@ -602,6 +664,14 @@ ul.tags {
 .active {
     display: block;
 	text-align: center;
+=======
+
+
+/***** Impostazioni stile CSS per aiuti e messaggi d'errore javascript *****/
+.jsErr{
+    color: red;
+    font-weight: bold;
+>>>>>>> ae0b229aef354c857c8cd861b6af3203f37ef244
 }
 
 .hidden {
@@ -669,6 +739,7 @@ padding-left: 3%;
 	padding-top: 0;
 	cursor: pointer;
 }
+
 
 
 
