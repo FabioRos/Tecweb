@@ -7,121 +7,54 @@
 body{}
 
 /***** Impostazioni stile CSS per aiuto alla navigazione *****/
-.help, .nav_help{
+.help{
 	position:absolute;
 	height:0;
 	overflow:hidden;
 }
 
 /***** Impostazioni stile CSS dell'header *****/
-#header{
-	background-color: #000000;
-	color: #FFFFFF;
-}
 /** Stile logo del sito **/
 #logo img{
-	float: left;
-	width: 8%;
-	min-width: 80px;
+	display: none;
 }
 /** Stile del titolo **/
-#title{
-	display: inline-block;
-}
 @font-face {
     font-family: "FontTitoloSito";
     src: url("../fonts/neonfont/NEON CLUB MUSIC.otf") format("opentype");
 }
 #title h1{
     font-family: "FontTitoloSito", Verdana, Tahoma;
-	font-size: 3em;
+    color: #000000;
+	font-size: 32pt;
 	font-weight: bold;
 	font-variant: small-caps;
 	font-style: oblique;
-	padding-top: 1%;
-	padding-left: 10%;
-}
-#title h1 a:hover{
-	text-decoration: none;
+	margin-left: 0.5em; 
+	margin-top: 0.5em;
 }
 #title h2{
 	font-family: Georgia, serif;
-	font-size: 1.0em;
-	padding-top: 1%;
-	padding-left: 25%;
-}
-
-/***** Impostazioni stile CSS del menù di navigazione *****/
-#nav{	
-	display: inline-block;
-	width: 100%;
-	background-color: #45484D;
-	border-bottom-style: solid;
-	border-width: 5px;
-	border-color: #33CCFF;
-}
-#nav ul{
-	float: left;
-	width: 60%;
-	list-style-type: none;
-	padding-left: 8%;
-}
-#nav ul li{
-	display: inline-block;
-	font-variant: small-caps;
-	text-align: center;
-	font-size: 1.4em;
-	margin: 0 1%;
-}
-#current_nav{
-	background-color: #33CCFF;
-	color: #000000;
-	padding: 0.5%;
-}
-#nav ul li a{
-	display: block;
-	color: #FFFFFF;
-	padding: 3% 0;
-}
-#nav ul li a:hover{
-	background-color: #FFFFFF;
-	color: #000000;
+	font-size: 14pt;
+	margin-top: 0.5em;
+	margin-left: 2.7em;
 }
 
 
-/***** Impostazioni stile CSS per barra di ricerca *****/
-#search{
-	float: right;
-	padding-top: 0.3%;
-	margin-right: 1%;
-}
-#text_field
-{
-	background-image: url('../css/img/search.jpg');
-	background-size: 25px 25px;
-	background-repeat: no-repeat;
-	background-position: right center;
-	width: 60%;
-	background-color: #FFFFFF;
-	font-size: 1.3em;
-	padding-right: 9%;
-}
-#button{
-	width: auto;
-	font-size: 1.3em;
+/***** Impostazioni stile CSS per elementi non utili ai fini della stampa *****/
+#nav, #search, #nav_pagine, #nav_help, #sidebar{	
+	display: none;
 }
 
 
 /***** Impostazioni stile CSS per il contenuto delle pagine ****/
-#contents_home{
-	float: left;
-	width: 80%;
+#contents, #contents_home{
+	margin-top: 2em;
 }
 #contents h1, #contents_home h1{
 	font-variant: small-caps;
 	font-size: 1.3em;
 	text-align: center;
-	padding-top: 0.5%;
 }
 /** Stile contenuto article **/
 .article:nth-child(odd){
@@ -145,9 +78,6 @@ body{}
 .article h2 a{
 	color: #000000;
 	text-decoration: none;
-}
-.article h2 a:hover{
-	text-decoration: underline;
 }
 .author{
 	float: right;
@@ -224,22 +154,6 @@ ul.tags {
 	width: 100%;
 	padding: 1% 0;
 }
-/** Stile per scorrimento pagine **/
-#nav_pagine{
-	clear: both;
-	text-align: center;
-	padding: 1% 0;
-}
-#nav_pagine a{
-	color: #0000FF;
-	padding-right: 0.3%;
-	padding-left: 0.3%;
-}
-.nav_help{
-	clear: both;
-	width: 100%;
-	text-align: center;
-}
 /** Stile visualizzazione article intero **/
 .article_box{
 	width: 80%;
@@ -295,9 +209,6 @@ ul.tags {
 	color: #FFFFFF;
 	text-decoration: none;
 }
-#title a:hover{
-	text-decoration: underline;
-}
 #interlocutore{
 	margin-top: 1em;
 }
@@ -318,9 +229,6 @@ ul.tags {
 	font-variant: small-caps;
 	background-color: black;
 	padding: 0.3em 2em;;
-}
-#galleryLink p:first-of-type:hover{
-	font-size: 103%;
 }
 #informazioni ul{
 	width: 80%;
@@ -344,74 +252,6 @@ ul.tags {
 	padding-left: 8%;
 }
  
-
-/***** Impostazioni di stile CSS per la sidebar nella homepage *****/
-#sidebar{
-	float: right;
-	width: 16%;
-	background: #1D1D1D; 
-	font-size: 0.9em;
-	border-radius: 3px;
-	padding: 1% 2%;
-	margin-top: -0.5%;
-}
-#sidebar h1{
-	color: #33CCFF;
-	font-size: 1.2em;
-	text-align: center;
-	margin: 10% auto;
-}
-.box{
-	background-color: #1E1E1E;
-	padding-top: 3%;
-	padding-bottom: 1%;
-	margin-bottom: 20%; 
-}
-.effect{
-	position: relative;       
-    -webkit-box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
-    -moz-box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
-    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
-}
-.effect:before, .effect:after{
-	content: "";
-    position: absolute; 
-    z-index: -1;
-    -webkit-box-shadow: 0 0 20px rgba(255,255,255,0.8);
-    -moz-box-shadow: 0 0 20px rgba(255,255,255,0.8);
-    box-shadow: 0 0 20px rgba(255,255,255,0.8);
-    top: 0;
-    bottom: 0;
-    left: 10px;
-    right: 10px;
-    -moz-border-radius: 100px / 10px;
-    border-radius: 100px / 10px;
-}
-.effect:after{
-	right: 10px; 
-    left: auto;
-    -webkit-transform: skew(8deg) rotate(3deg); 
-    -moz-transform: skew(8deg) rotate(3deg);     
-    -ms-transform: skew(8deg) rotate(3deg);     
-    -o-transform: skew(8deg) rotate(3deg); 
-    transform: skew(8deg) rotate(3deg);
-}
-#sidebar li{
-	list-style-type: none;
-	text-align: center;
-	color: #FFFFFF;
-	padding-top: 2%;
-	padding-bottom: 5%;
-}
-#sidebar a{
-	color: #FFFFFF;
-	font-style: italic;
-}
-#sidebar a:hover{
-	font-weight: bold;
-	font-size: 1.1em;
-}
-
 
 /***** Impostazioni stile CSS per la visualizzazione del contenuto evento *****/
 .evento{
@@ -476,9 +316,6 @@ ul.tags {
 .copertina h2 a{
 	color: #FFFFFF;
 	text-decoration: none;
-}
-.copertina h2 a:hover{
-	text-decoration: underline;
 }
 .dettagli p.description{
 	margin-top: 0.5%;
@@ -561,16 +398,6 @@ ul.tags {
 }
 
 
-/***** Impostazioni stile CSS per aiuti e messaggi d'errore javascript *****/
-.jsErr{
-    color: red;
-    font-weight: bold;
-}
-.jsHelp{
-    color: green;
-    font-weight: bold;
-}
-
 /***** Impostazioni stile CSS per galleria immagini *****/
 #gallery{
 	position: relative;
@@ -621,9 +448,6 @@ ul.tags {
 	background-size: contain;
 	background-repeat: no-repeat;
 	opacity: 0.6;
-}
-#prev:hover, #next:hover{
-	opacity: 1;
 }
 .galleryButton{
 	opacity: 0;
