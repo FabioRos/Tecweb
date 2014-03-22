@@ -224,34 +224,69 @@ sub getSession{
 	}
 }
 
+
+
 sub getuniqueid{
-	my $size = scalar $_[0];
+	my $size = $_[0]->size();
 	my $type = $_[1];
 	return $type.$size;
 }
 
 sub createtag{
 	my $tag = $_[0];
-	my $roottags = $source->findnodes("/root/tags")->get_node(1);
-	my @tags = $roottags->findnodes("tag");
-	my $id = scalar @tags;
+	my $src = $_[1];
+	my $roottags = $src->findnodes("/root/tags")->get_node(1);
+	my $tags = $roottags->findnodes("tag");
+	my $id = $tags->size();
 	my $tagnode = "<tag id='$id'>$tag</tag>";
 	my $node = $xml->parse_balanced_chunk($tagnode,'UTF-8');
-	$roottags->addChild($node);
+	$roottags->appendChild($node);
 	return $id;
 }
 
-sub buildtagnodes($tags){
+sub searchidtag{
+	my $tag = $_[0];
+	my $src = $_[1];
+	my $DBtags = $src->findnodes("/root/tags/tag");
+	foreach my $DBtag ($DBtags->get_nodelist){
+		my $txttag = $DBtag->textContent;
+		if($tag eq $txttag){
+			my @attr = $DBtag->attributes();
+			return @attr[0];
+		}
+	}
+	return -1;
+}
+
+sub buildtagnodes{
 	my $strtags = $_[0];
+	my $src = $_[1];
 	my $node = "";
 	my @tags=split(',', $strtags);
 	foreach my $tag (@tags){
-		$tag=trim($tag);
-		my $idtag=searchidtag($tag);
-		if($idtag==0){
-			$id = createtag($tag);
+		#$tag=trim($tag);
+		my $idtag=searchidtag($tag,$src);
+		if($idtag==-1){
+			$idtag = createtag($tag,$src);
 		}
-		$node = $node."<tag>$id</tag>";
+		$node = $node."<tag>$idtag</tag>";
 	}
 	return $node;
+}
+
+
+sub creategallery{
+	my $src = $_[0];
+	my @gallerynms = @{$_[1]};
+	my $rtgal = $src->findnodes("/root/gallerie")->get_node(1);
+	my $id = $rtgal->findnodes("galleria")->size();
+	my $node = "<galleria id='$id'>";
+	my $size = scalar @gallerynms;
+	foreach my $gnms (@gallerynms){
+		$node =$node . "<foto><titolo>nome della foto $gnms</titolo><srcPath>/img/interviste/gallery/$gnms</srcPath></foto>";
+	}
+	$node = $node."</galleria>";
+	my $aux = $xml->parse_balanced_chunk($node,'UTF-8');
+	$rtgal->appendChild($aux);
+	return $id;
 }
