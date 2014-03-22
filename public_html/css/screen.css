@@ -361,6 +361,10 @@ ul.tags {
 	text-align: left;
 	list-style-type: none;
 }
+/** Stile per contenuto condizioni **/
+#condizioni_cont p{
+	padding: 0.5% 1%;
+}
 /** Stile per tablet e mobile **/
 @media only screen and (max-width: 959px){
 #contents_home{
