@@ -13,6 +13,9 @@ body{
 	background: -ms-linear-gradient(-45deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
 	background: linear-gradient(135deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
 }
+a:visited{
+	color: #FF0066;
+}
 
 
 /***** Impostazioni stile CSS per aiuto alla navigazione *****/
@@ -49,6 +52,9 @@ body{
 	font-style: oblique;
 	padding-top: 1%;
 	padding-left: 10%;
+}
+#title h1 a:hover{
+	text-decoration: none;
 }
 #title h2{
 	font-family: Georgia, serif;
@@ -156,10 +162,7 @@ body{
 	width: 80%;
 }
 #contents h1, #contents_home h1{
-<<<<<<< HEAD
-=======
 	font-variant: small-caps;
->>>>>>> 884041a785d85d5f4e98a9fb59583214d36462f9
 	font-size: 1.3em;
 	text-align: center;
 	padding-top: 0.5%;
@@ -167,7 +170,6 @@ body{
 /** Stile contenuto article **/
 .article:nth-child(odd){
 	float: left;
-	clear: left;
 	margin: 1% 0 2% 4%;
 }
 .article:nth-child(even){
@@ -266,16 +268,6 @@ ul.tags {
 	width: 100%;
 	padding: 1% 0;
 }
-#nav_pagine{
-	clear: both;
-	text-align: center;
-	padding: 1% 0;
-}
-#nav_pagine a{
-	color: #0000FF;
-	padding-right: 0.3%;
-	padding-left: 0.3%;
-}
 /** Stile per scorrimento pagine **/
 #nav_pagine{
 	clear: both;
@@ -286,6 +278,11 @@ ul.tags {
 	color: #0000FF;
 	padding-right: 0.3%;
 	padding-left: 0.3%;
+}
+.nav_help{
+	clear: both;
+	width: 100%;
+	text-align: center;
 }
 /** Stile visualizzazione article intero **/
 .article_box{
