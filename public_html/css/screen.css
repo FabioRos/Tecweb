@@ -374,21 +374,19 @@ ul.tags {
 }
 /** Stile per contenuto pagine statiche **/
 #static_cont p{
-	font-size: 1.2em;
-	padding: 0.5% 1%;
+	font-size: 1.3em;
+	padding: 1%;
 }
-.static_list{
-	padding-top: 3%;
-	padding-bottom: 1%;
-	margin-bottom: 20%; 
+#static_list{
+	padding-top: 4%; 
 }
-.static_list ul{
-	list-style-type: none;
-	font-size: 1.2em;
-	padding-top: 3%;
+#static_list ul{
+	font-size: 1.1em;
+	padding-top: 1%;
 	padding-left: 2%;
 }
-.static_list li{
+#static_list li{
+	list-style-type: none;
 	padding-bottom: 2%;
 }
 /** Stile per tablet e mobile **/
