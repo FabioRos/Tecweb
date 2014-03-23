@@ -14,7 +14,7 @@ body{
 	background: linear-gradient(135deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
 }
 a:visited{
-	color: #FF0066;
+	color: #FF00FF !important;
 }
 
 
@@ -55,6 +55,9 @@ a:visited{
 }
 #title h1 a:hover{
 	text-decoration: none;
+}
+#title h1 a:visited{
+	color: #FFFFFF !important;
 }
 #title h2{
 	font-family: Georgia, serif;
