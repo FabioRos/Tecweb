@@ -383,9 +383,13 @@ ul.tags {
 	margin-bottom: 20%; 
 }
 .static_list ul{
+	list-style-type: none;
 	font-size: 1.2em;
 	padding-top: 3%;
-	padding-left: 8%;
+	padding-left: 2%;
+}
+.static_list li{
+	padding-bottom: 2%;
 }
 /** Stile per tablet e mobile **/
 @media only screen and (max-width: 959px){
