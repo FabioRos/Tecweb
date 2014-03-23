@@ -49,9 +49,9 @@ my $ptrradice = $radice->findnodes("posts")->get_node(1);
 $dom->setDocumentElement($ptrradice,'UTF-8');
 my $ptrdompost =$dom->findnodes("/posts")->get_node(1);
 
-#$ptrposts->size()-
+
 #estraggo 4 post a seconda della pagina
-for (my $var = 1; $var<5; $var++) {#nel caso che voglia vedere 4 articoli in una pagina
+for (my $var = $ptrposts->size()-($pag*4); $var>0 && $var>($ptrposts->size()-(($pag+1)*4)); $var--) {#nel caso che voglia vedere 4 articoli in una pagina
 	my $ptrpost = $ptrposts->get_node($var);
 	$ptrpost->setNodeName('post');
 	$ptrdompost->addChild($ptrpost);
@@ -125,14 +125,14 @@ print $cgi->div(
 		)
 	);
 print $cgi->div(
-	{-id => 'contents'},
-	$cgi->h1($title),
+	{ -id => 'contents'},
+	$cgi->h1("$title"),
 	$cgi->a({-class => 'help', -href => '#nav_pagine'}, 'salta il contenuto'),
 	CFUN::feposts($dom,$type)
 	);
 print $cgi->div(
 	{-id => 'nav_pagine'},
-	CFUN::fenavpag($pag,$type,1,$end,$cgi)
+	CFUN::fenavpag($pag,$type,1,$end);
 	);
 print $cgi->div(
 	{-id => 'footer'},

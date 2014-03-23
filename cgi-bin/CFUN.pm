@@ -159,7 +159,7 @@ sub feposts{
 	my $type= $_[1];
 	my $aux = '';
 	if($type eq 'e'){
-		$aux = $aux.'<ul class="eventi">';
+		$aux = $aux."<ul class='eventi'>";
 		foreach my $post ($ptrpos->get_nodelist){
 			my ($year,$mon,$day)=split('-',$post->findnodes("dataEvento")->get_node(1)->textContent);
 			$aux=$aux.$cgi->li(
@@ -238,6 +238,19 @@ sub fenavpag{
 	return $aux;
 }
 
+sub printfooter{
+	my $aux = $cgi->div(
+	{-id => 'footer'},
+	$cgi->a({-class => 'help', -href => '#header'},'salta testo a fine pagina'),
+	$cgi->p('&#169; 2014 <span xml:lang="en">Music Break All Right Reserved</span>. | ',
+		$cgi->a({-href=>'/info.html'},'Chi siamo'),' | ',
+		$cgi->a({-href=>'/condizioni.html'},'Condizioni d\'uso'),' | ',
+		$cgi->a({-href=>'/contact.html'},'Contatti')
+		)
+	);
+	return $aux;
+}
+
 sub getcaller{
 	my $type=$_[0];
 	my $aux;
@@ -289,8 +302,7 @@ sub searchidtag{
 	foreach my $DBtag ($DBtags->get_nodelist){
 		my $txttag = $DBtag->textContent;
 		if($tag eq $txttag){
-			my @attr = $DBtag->attributes();
-			return $attr[0];
+			return $DBtag->findnodes("\@id")->get_node(1)->textContent;
 		}
 	}
 	return -1;
@@ -327,4 +339,14 @@ sub creategallery{
 	my $aux = $xml->parse_balanced_chunk($node,'UTF-8');
 	$rtgal->appendChild($aux);
 	return $id;
+}
+
+sub deletepost {
+	my $idPost = $_[0];
+	my $src = $_[1];
+	my $posttype = substr($idPost, 0, 1);
+	my $vincolo=getvincpath($posttype);
+	my $node = $src->findnodes("/root/posts/".$vincolo."[\@id='$idPost']")->get_node(1);
+	my $father = $node->findnodes("..")->get_node(1);
+	$father->removeChild($node);
 }
