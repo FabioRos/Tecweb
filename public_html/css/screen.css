@@ -654,6 +654,18 @@ ul.tags {
 .common_box a:hover{
     text-decoration: underline;
 }
+#elencoArticoliCancellazione li{
+    list-style-type: none;
+}
+
+#elencoArticoliCancellazione li a{
+    font-weight: bold;
+    background-image: url('./img/delete.png');
+    color:#000;
+    padding-left:5%;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
 
 
 /***** Impostazioni stile CSS per aiuti e messaggi d'errore javascript *****/
