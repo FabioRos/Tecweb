@@ -13,7 +13,7 @@
     <script type="text/javascript" src="./javascript/screen.js"></script>
     <title>Galleria - Intervista - Interviste - Music Break</title>
 </head>
-<body>
+<body onload="defsearch();">
      <div id="header">
       <a class="help" href="#nav">salta intestazione</a>
       <div id="title"><span id="logo" class="notAural"><a href="home.html"><img src="./img/tazza-di-caffe.jpg" alt="Tazza di caffè fumante in cui viene immersa  una pausa di semiminima"/></a></span>
@@ -32,7 +32,7 @@
       </ul>
       <div id="search">
         <a class="help" href="#sidebar">salta barra di ricerca</a>
-        <input type="text" id="text_field" value="Cerca..." onclick="searchbar();" onblur="defsearch();" name="query" tabindex=""></input>
+        <input type="text" id="text_field" value="" onclick="searchbar();" onblur="defsearch();" name="query" tabindex=""></input>
         <input type="submit" id="button" alt="inserire una ricerca" value="Cerca" tabindex=""></input>
         <input type="hidden" value="Home.html" name="sitesearch"></input>
       </div> 

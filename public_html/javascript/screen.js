@@ -12,11 +12,7 @@ function searchbar(){
 var index=1,last,last0;
 var li= document.getElementsByClassName("slide");// .length inizia a contare da 1
 
-/*apertura pagina tramite link*/
-// function popUp(winURL){
-//     window.open(winURL,"popup","width=320,height=480");
-// }
-function displayH(){
+function displayH(){//funzione che visualizza il link alla galleria SOLO nel caso sia attivo JS
     document.getElementById("hiddenLink").setAttribute("class","active");
 }
 
