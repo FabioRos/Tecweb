@@ -10,23 +10,20 @@ function searchbar(){
 /* GALLERY */
 
 var index=1,last,last0;
-var li= document.getElementsByClassName("slide");// .length inizia a contare da 1
-
-function displayH(){//funzione che visualizza il link alla galleria SOLO nel caso sia attivo JS
+var li= document.getElementsByClassName("slide");
+function displayH(){//funzione che visualizza il link alla galleria nel caso sia attivo JS
     document.getElementById("hiddenLink").setAttribute("class","active");
 }
 
 function next() {
     document.getElementById("img"+index).setAttribute("class", "hidden");
     document.getElementById("t"+index).setAttribute("class","");
-    if( index == li.length)
+    if( index == li.length)// .length inizia a contare da 1
         index=1;
     else
         index++;
-    last=document.getElementById("img"+index);
-    last0=document.getElementById("t"+index);
-    last.setAttribute("class", "active");
-    last0.setAttribute("class","activenav");
+    document.getElementById("img"+index).setAttribute("class", "active");
+    document.getElementById("t"+index).setAttribute("class","activenav");
     return true;
 }
 
@@ -37,19 +34,15 @@ function previous() {
         index= li.length;
     else
         index--;
-   last=document.getElementById("img"+index);
-   last0=document.getElementById("t"+index);
-   last.setAttribute("class", "active");
-   last0.setAttribute("class","activenav");
+   document.getElementById("img"+index).setAttribute("class", "active");
+   document.getElementById("t"+index).setAttribute("class","activenav");
     return true;
 }
 function change(i){
     document.getElementById("img"+index).setAttribute("class","hidden");
     document.getElementById("t"+index).setAttribute("class","");
     index= i;
-    last=document.getElementById("img"+index);
-    last0=document.getElementById("t"+index);
-    last.setAttribute("class","active");
-    last0.setAttribute("class","activenav");
+    document.getElementById("img"+index).setAttribute("class", "active");
+    document.getElementById("t"+index).setAttribute("class","activenav");
     return true;
 }

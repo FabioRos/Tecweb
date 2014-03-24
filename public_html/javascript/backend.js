@@ -1,8 +1,7 @@
 // BACKEND
 //-----FORM-----
 
-var def=new Array(),check=new Array();//def contiene il valore di default dato come help
-
+var def=new Array(),check=new Array();//def conterrà il valore di default dato come help,check contiene gli id degli elementi della form
 //FUNZIONI ONLOAD
 
 function setArray(){//def è un array associativo del tipo def[id]="valore di default del placeholder"
@@ -15,18 +14,18 @@ for(var i=0;i<a.length;++i)
 	def[a[i].firstChild.id]=a[i].firstChild.value;
 }
 }
-
+//funzione di utilità per setArray()
 function removeBlankspace(n)
 {
   for (var i=0; i< n.childNodes.length; i++)
   {
     var child = n.childNodes[i];
-    if(child.nodeType == 3 && !/\S/.test(child.nodeValue))
+    if(child.nodeType == 3 && !/\S/.test(child.nodeValue))//nodeType==3 significa se è un nodo che ha un contenuto di tipo testuale,controllo che non contenga spazi
     {
-      n.removeChild(child);
+      n.removeChild(child);//riduco in questo modo childNodes.length
       i--;
     }
-    if(child.nodeType == 1)
+    if(child.nodeType == 1)//document
     {
       removeBlankspace(child);
     }
@@ -53,7 +52,7 @@ function checkSonNum(u){
 }
 
 function insertHelp(x){
-	node=document.createElement("span");//node globale,lo creo qui per la prima volta
+	var node=document.createElement("span");//node globale,lo creo qui per la prima volta
 	node.className="jsHelp";
 	node.appendChild(document.createTextNode(def[x]));
 	document.getElementById(x).parentNode.appendChild(node);
@@ -70,18 +69,18 @@ function Bbar(x){
 //FUNZIONI ONSUBMIT
 
 function createErr(txt){
-	node=document.createElement("span");
+	var node=document.createElement("span");
 	node.className="jsErr";
 	node.appendChild(txt);
 	return node;
 }
-
+//funzione che richiama i controlli sui singoli campi della form all'interno del ciclo for
 function checkSubmit(){
 var state=true;
 for(var i=0;i< check.length;++i)
 	{
 		var y="C"+check[i];
-		var txt=window[y]();
+		var txt=window[y]();//trasformo la stringa in una chiamata a funzione e il valore ritornato lo salvo in txt
 		var parent=document.getElementById(check[i]).parentNode;
 		if(checkSonNum(parent)&&txt){
 			parent.appendChild(createErr(txt));
@@ -287,7 +286,7 @@ function checkLogin(){
 		}
 	return bool;
 }
-
+//funzioni invocate da checksubmit()
 function Cusername(){
 	var t="username";
 	var string=document.getElementById(t).value;
@@ -310,7 +309,7 @@ function Cpassword(p){//se chiamata senza parametri-->p="undefined"
 
 function CconfermaPass(){
 	if(!(Cpassword("confermaPass")) && (document.getElementById("confermaPass").value == document.getElementById("password").value))
-	//sicuramente password è valida,altrimenti l'uguaglianza tra i valori fallirebbe
+	//sicuramente password è valida,altrimenti l'uguaglianza tra i valori di confermaPass e password fallirebbe
 		return false;
 	else
 		return document.createTextNode("le password non corrispondono oppure la password non é valida");
