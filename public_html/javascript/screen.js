@@ -11,9 +11,6 @@ function searchbar(){
 
 var index=1,last,last0;
 var li= document.getElementsByClassName("slide");
-function displayH(){//funzione che visualizza il link alla galleria nel caso sia attivo JS
-    document.getElementById("hiddenLink").setAttribute("class","active");
-}
 
 function next() {
     document.getElementById("img"+index).setAttribute("class", "hidden");
