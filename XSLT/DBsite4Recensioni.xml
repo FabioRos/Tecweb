@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Recensioni.xsl" ?>
+<root><!-- xmlns="http://www.musicbreak.com" 
+      xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+      xs:schemaLocation="http://www.musicbreak.com/data/XML/XMLS DBsite.xsd">-->
+    
+    
+    <!-- sezione tags -->
+    <tags>
+        <tag id="1">Pop</tag>
+        <tag id="2">Dance</tag>
+        <tag id="3">Rock</tag>
+        <tag id="4">Reaggae</tag>
+        <tag id="5">Classica</tag>
+        <tag id="6">Rap/Hip hop</tag>
+        <tag id="7">Digital Audio</tag>
+    </tags>
+
+    <!-- GALLERIE -->
+    
+    <gallerie>
+        <galleria id="1">
+            <foto>
+                <titolo>noemiuno</titolo>
+                <srcPath>../public_html/img/Pausini1.jpg</srcPath>
+            </foto>
+            <foto>
+                <titolo>noemidue</titolo>
+                <srcPath>../public_html/img/Pausini2.jpg</srcPath>
+            </foto>
+            <foto>
+                <titolo>noemitre</titolo>
+                <srcPath>../public_html/img/Pausini3.jpg</srcPath>
+            </foto>
+            <foto>
+                <titolo>noemiquattro</titolo>
+                <srcPath>../public_html/img/Pausini4.jpg</srcPath>
+            </foto>
+        </galleria>
+    </gallerie>
+    
+    <!-- EDITORI -->
+    <editori>
+        <editore id="1">
+            <nome>Mario</nome>
+            <cognome>Rossi</cognome>
+        </editore>
+        <editore id="2">
+            <nome>Fabio</nome>
+            <cognome>Ros</cognome>
+        </editore>
+        <editore id="3">
+            <nome>Luca</nome>
+            <cognome>Bonaldo</cognome>
+        </editore>
+        <editore id="4">
+            <nome>Antonio</nome>
+            <cognome>Banderas</cognome>
+        </editore>
+        <editore id="5">
+            <nome>Gianni</nome>
+            <cognome>Ottimista</cognome>
+        </editore>
+        <editore id="6">
+            <nome>Alessandro</nome>
+            <cognome>Mangio</cognome>
+        </editore>
+    </editori>
+
+    <posts>
+    <!-- EVENTI -->
+    <eventi>
+        <evento id="e1">
+            <titolo>Sixty party</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Lorem ipsum dolor sit amet, consectetur <span lang="en">adipiscing elit</span>. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>1</idautore>
+            <data>2014-02-04</data>
+			<tag>1</tag>
+            
+            <dataEvento>2014-04-08</dataEvento>
+            <luogo>Roma</luogo>
+            <oraInizio>22:00</oraInizio>
+            <oraFine>02:00</oraFine>
+            <indirizzo>via IV Novembre, 4 00100 Roma</indirizzo>
+            <prezzo>€11.00</prezzo>
+            <email>info@sixtyparty.com</email>
+            <telefono>0039 333445566</telefono>
+        </evento>
+		
+		
+		
+    </eventi>
+    <!-- RECENSIONI -->
+    <recensioni>
+        <recensione id="r1">
+            <titolo>Bonobo : Late Night Tales</titolo>
+            <foto>
+                <src>../public_html/img/eventi/sixtyparty.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt> Come un’amore a distanza che, coltivato a lungo e bramato all’inverosimile, finalmente sfocia nel tanto agognato incontro definitivo, la trentatreesima uscita della collana LateNightTales rappresenta la congiunzione perfetta tra due entità fatte praticamente l’una per l’altra e che, sommandosi, scrivono un finale annunciato sin da quando Simon Green ha iniziato ad ottenere il successo che gli spetta.</excerpt>            
+            <descrizione>
+                Come un’amore a distanza che, coltivato a lungo e bramato all’inverosimile, finalmente sfocia nel tanto agognato incontro definitivo, la trentatreesima uscita della collana LateNightTales rappresenta la congiunzione perfetta tra due entità fatte praticamente l’una per l’altra e che, sommandosi, scrivono un finale annunciato sin da quando Simon Green ha iniziato ad ottenere il successo che gli spetta.Come un’amore a distanza che, coltivato a lungo e bramato all’inverosimile, finalmente sfocia nel tanto agognato incontro definitivo, la trentatreesima uscita della collana LateNightTales rappresenta la congiunzione perfetta tra due entità fatte praticamente l’una per l’altra e che, sommandosi, scrivono un finale annunciato sin da quando Simon Green ha iniziato ad ottenere il successo che gli spetta.Come un’amore a distanza che, coltivato a lungo e bramato all’inverosimile, finalmente sfocia nel tanto agognato incontro definitivo, la trentatreesima uscita della collana LateNightTales rappresenta la congiunzione perfetta tra due entità fatte praticamente l’una per l’altra e che, sommandosi, scrivono un finale annunciato sin da quando Simon Green ha iniziato ad ottenere il successo che gli spetta.
+            </descrizione>
+            <idautore>2</idautore>
+            <data>2013-12-04</data>
+			<tag>2</tag>
+        </recensione>
+        
+    </recensioni>
+    
+    <!-- INTERVISTE -->
+    <interviste>
+        <intervista id="i1">
+            <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
+            <foto>
+                <src>../public_html/img/noemi2.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.</excerpt>
+            <descrizione>
+                Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.
+            </descrizione>
+            <idautore>3</idautore>
+            <data>2013-12-04</data>
+			<tag>1</tag>
+			<tag>2</tag>		
+            <intervistato>Noemi</intervistato>
+			<galleria>1</galleria>
+        </intervista>
+    </interviste>
+    <interviste>
+        <intervista id="i2">
+            <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
+            <foto>
+                <src>../public_html/img/noemi2.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.</excerpt>
+            <descrizione>
+                Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.
+            </descrizione>
+            <idautore>4</idautore>
+            <data>2013-12-04</data>
+            <tag>1</tag>
+            <tag>2</tag>        
+            <intervistato>Noemi</intervistato>
+            <galleria>1</galleria>
+        </intervista>
+    </interviste>
+    <interviste>
+        <intervista id="i3">
+            <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
+            <foto>
+                <src>../public_html/img/noemi2.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.</excerpt>
+            <descrizione>
+                Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.
+            </descrizione>
+            <idautore>6</idautore>
+            <data>2013-12-04</data>
+            <tag>1</tag>
+            <tag>2</tag>        
+            <intervistato>Noemi</intervistato>
+            <galleria>1</galleria>
+        </intervista>
+    </interviste>
+    <interviste>
+        <intervista id="i4">
+            <titolo>Noemi: "Sanremo, The Voice e un nuovo disco. Dopo Londra, sono pronta per rimettermi in gioco"</titolo>
+            <foto>
+                <src>../public_html/img/noemi2.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.</excerpt>
+            <descrizione>
+                Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.Sanremo, The Voice e il nuovo disco. Un anno intenso per la rossa Noemi, che in attesa di salire sul palco dell'Ariston ci parla di sé e dei suoi mille impegni. Made in London, che uscirà il prossimo 20 febbraio, è il nuovo album di Noemi.
+            </descrizione>
+            <idautore>5</idautore>
+            <data>2013-12-04</data>
+            <tag>1</tag>
+            <tag>2</tag>        
+            <intervistato>Noemi</intervistato>
+            <galleria>1</galleria>
+        </intervista>
+    </interviste>
+    
+    <!-- NEWS -->
+ 
+    <news>
+        <item id="n1">
+            <titolo>Richard Benson uno Svitato!</titolo>
+            <foto>
+                <src>../public_html/img/news/richardbenson.jpg</src>
+                <alt>descrizione della foto</alt>
+            </foto>
+            <excerpt>Per tastare il polso alla giovane scena rock ravennate abbiamo fatto una chiacchierata con due componenti del quartetto ravennate Actionmen, Matteo Pozzi e Diego Pasini, rispettivamente chitarra/voce e basso di una band completata da Ram Das Libero Foschi (chitarra e voce) e Mattia “Pinna” De Paoli (batteria).Per chi non li conoscesse, gli Actionmen sono un gruppo che suona principalmente pezzi punk-rock e sono conosciuti anche all'estero. Il loro debutto – l'album The Game (2005) pubblicato da Unicorn Records – gli ha dato l'opportunità di emergere e farsi conoscere da un pubblico eterogeneo.</excerpt>
+            <descrizione>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus tempor, semper elit sit amet, congue massa. Nullam luctus sit amet nibh eget dapibus. Nullam massa magna, vestibulum vel bibendum sodales, facilisis sed dui. Duis suscipit velit vestibulum diam eleifend pretium. Aliquam iaculis orci vitae purus gravida, at suscipit ante adipiscing. Nulla sit amet gravida massa. Aenean pharetra diam orci, in dapibus tortor elementum eu. Aenean quam tortor, venenatis ac lacinia ac, aliquam vel turpis. Sed libero quam, tempus sed orci sed, feugiat egestas lacus. Integer aliquam quam mi, ut aliquam felis rutrum ut. Donec accumsan viverra tortor, et gravida felis dictum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque ante justo, sollicitudin ac nunc at, lacinia sagittis mi. Etiam adipiscing dolor id nisl dictum, sit amet facilisis nisi congue. Quisque eget massa ut augue suscipit rhoncus at vitae odio.
+            </descrizione>
+            <idautore>4</idautore>
+            <data>2014-01-20</data>
+			<tag>1</tag>
+        </item>
+    </news>   
+    </posts>
+
+      
+</root>
