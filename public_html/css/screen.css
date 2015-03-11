@@ -1,296 +1,335 @@
-/***** Impostazioni stile CSS generali per la visualizzazione sul web *****/
+/****** IMPOSTAZIONI STILE CSS PER VISUALIZZAZIONE SUL WEB ******/
 *{
-	margin: 0;
-	padding: 0;
-	border: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
-body{
-	background: #F5F6F6; 
-	background: -moz-linear-gradient(-45deg, #F5F6F6 0%, #DBDCE2 21%, #B8BAC6 49%, #DDDFE3 80%, #F5F6F6 100%); 
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#F5F6F6), color-stop(21%,#DBDCE2), color-stop(49%,#B8BAC6), color-stop(80%,#DDDFE3), color-stop(100%,#F5F6F6)); 
-	background: -webkit-linear-gradient(-45deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
-	background: -o-linear-gradient(-45deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
-	background: -ms-linear-gradient(-45deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
-	background: linear-gradient(135deg, #F5F6F6 0%,#DBDCE2 21%,#B8BAC6 49%,#DDDFE3 80%,#F5F6F6 100%); 
-}
-a:visited{
-	color: #FF00FF !important;
+
+
+html,body{
+    background: #CCCCCC; 
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
 /***** Impostazioni stile CSS per aiuto alla navigazione *****/
 .help{
-	position:absolute;
-	height:0;
-	overflow:hidden;
+   position: absolute;
+   height: 0;
+   overflow: hidden;
 }
+
+
+#container{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -1.5em; 
+    padding-bottom: 1%;
+}
+
 
 /***** Impostazioni stile CSS dell'header *****/
 #header{
-	background-color: #000000;
-	color: #FFFFFF;
+   background-color: #000000;
+   color: #FFFFFF;
 }
 /** Stile logo del sito **/
 #logo img{
-	float: left;
-	width: 8%;
-	min-width: 80px;
+   float: left;
+   width: 8%;
+   min-width: 60px;
 }
 /** Stile del titolo **/
 #title{
-	display: inline-block;
+   display: inline-block;
 }
 @font-face {
-    font-family: "FontTitoloSito";
-    src: url("../fonts/neonfont/NEON CLUB MUSIC.otf") format("opentype");
+   font-family: "FontTitoloSito";
+   src: url("../fonts/neonfont/NEON CLUB MUSIC.otf") format("opentype");
 }
 #title h1{
-    font-family: "FontTitoloSito", Verdana, Tahoma;
-	font-size: 3em;
-	font-weight: bold;
-	font-variant: small-caps;
-	font-style: oblique;
-	padding-top: 1%;
-	padding-left: 10%;
-}
-#title h1 a:hover{
-	text-decoration: none;
-}
-#title h1 a:visited{
-	color: #FFFFFF !important;
+   font-family: "FontTitoloSito", Verdana, Tahoma;
+   font-size: 3em;
+   font-weight: bold;
+   font-variant: small-caps;
+   font-style: oblique;
+   padding-top: 1%;
 }
 #title h2{
-	font-family: Georgia, serif;
-	font-size: 1.0em;
-	padding-top: 1%;
-	padding-left: 25%;
+   font-family: Georgia, serif;
+   font-size: 1.0em;
+   padding-top: 1%;
+   padding-left: 15%;
 }
-
+#title a{
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+}
+#title a:hover{
+    text-decoration: underline;
+}
 /***** Impostazioni stile CSS del menù di navigazione *****/
 #nav{	
-	display: inline-block;
-	width: 100%;
-	background-color: #45484D;
-	border-bottom-style: solid;
-	border-width: 5px;
-	border-color: #33CCFF;
+   display: inline-block;
+   width: 100%;
+   background-color: #45484D;
+   border-bottom-style: solid;
+   border-width: 5px;
+   border-color: #33CCFF;
 }
 #nav ul{
-	float: left;
-	width: 60%;
-	list-style-type: none;
-	padding-left: 8%;
+   float: left;
+   width: 65%;
+   list-style-type: none;
+   padding-left: 4%;
 }
 #nav ul li{
-	display: inline-block;
-	font-variant: small-caps;
-	text-align: center;
-	font-size: 1.4em;
-	margin: 0 1%;
+   display: inline-block;
+   font-variant: small-caps;
+   text-align: center;
+   font-size: 1.4em;
+   margin: 0 1%;
 }
 #current_nav{
-	background-color: #33CCFF;
-	color: #000000;
-	padding: 0.5%;
+   background-color: #33CCFF;
+   color: #000000;
+   padding: 0.5%;
 }
 #nav ul li a{
-	display: block;
-	color: #FFFFFF;
-	padding: 3% 0;
+   display: block;
+   color: #FFFFFF;
+   padding: 3% 0;
 }
 #nav ul li a:hover{
-	background-color: #FFFFFF;
-	color: #000000;
+   background-color: #FFFFFF;
+   color: #000000;
 }
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#nav{
-	border-bottom-style: none;
-}	
-#nav ul{
-    width: 100%;
-    padding-left: 0;
+#nav ul li a:visited{
+   color: #FF66FF;
 }
-#nav ul li{
-    display: block;
-    width: 80%;
-    margin: 1% auto;
-}
-#current_nav{
-	padding: 0.5% 0;
-}
-#nav ul li a{
-	padding: 0.6% 0;
-}
-}
+
 
 /***** Impostazioni stile CSS per barra di ricerca *****/
-#search{
-	float: right;
-	padding-top: 0.3%;
-	margin-right: 1%;
+.hidelegend{
+   display: none;
 }
-#text_field
-{
-	background-image: url('../css/img/search.jpg');
-	background-size: 25px 25px;
-	background-repeat: no-repeat;
-	background-position: right center;
-	width: 60%;
-	background-color: #FFFFFF;
-	font-size: 1.3em;
-	padding-right: 9%;
+#search{
+   float: right;
+   padding-top: 0.4%;
+   width: 30%;
+}
+#text_field{
+   background-image: url('../css/img/search.jpg');
+   background-size: 25px 25px;
+   background-repeat: no-repeat;
+   background-position: right center;
+   background-color: #FFFFFF;
+   width: 60%;
+   font-size: 1.3em;
+   padding-right: 9%;
 }
 #button{
-	width: auto;
-	font-size: 1.3em;
+   width: auto;
+   padding: 0.05%;
+   font-size: 1.3em;
 }
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#search{
-	float: none;
-	width: 100%;
-	margin: 1% auto;
-	text-align: center;
+#button:hover{
+   opacity: 0.4;
+   cursor: pointer;
 }
-#text_field, #button{
-	display: inline-block;
-	width: auto;
-}
-} 
 
-/***** Impostazioni stile CSS per il contenuto delle pagine ****/
-#contents_home{
-	float: left;
-	width: 80%;
+
+/***** Impostazioni di stile per breadcrumb *****/
+#breadcrumb {
+   width: 80%;
+   margin: 0.5% auto;
 }
-#contents h1, #contents_home h1{
-	font-variant: small-caps;
-	font-size: 1.8em;
-	text-align: center;
-	padding-top: 0.5%;
+#breadcrumb ul{
+   font-weight: bold;
+   line-height: 1em;
+   font-size: 1.4em;
+}
+#breadcrumb li{
+   display: inline-block; 
+   font-variant: small-caps;
+   list-style-type: none;
+   padding: 0.3em;
+}
+#breadcrumb a:visited{
+   color: #990099;
+}
+
+
+/***** Impostazioni stile CSS per il contenuto delle pagine *****/
+#contents_home{
+   float: left;
+   width: 80%;
 }
 /** Stile contenuto article **/
 .article:nth-child(odd){
-	float: left;
-	margin: 1% 0 2% 4%;
+   float: right;
+   clear: right;
+   margin: 0.5% 5% 2% 0;
 }
 .article:nth-child(even){
-	float: right;
-	margin: 1% 4% 2% 0;
+   float: left;
+   clear: left;
+   margin: 0.5% 0 2% 5%; 
 }
 .article{
-	width: 40%;
-	background-color: #FFFFFF;
-	border-style: solid;
-	border-width: 1px;
-	box-shadow: 0px 0px 5px 3px #303030;
-	-moz-box-shadow: 0px 0px 5px 3px #303030;
-	-webkit-box-shadow: 0px 0px 5px 3px #303030;
-	padding: 1%;
+   width: 40%;
+   background-color: #FFFFFF;
+   border-style: solid;
+   border-width: 1px;
+   box-shadow: 0px 0px 5px 3px #303030;
+   -moz-box-shadow: 0px 0px 5px 3px #303030;
+   -webkit-box-shadow: 0px 0px 5px 3px #303030;
+   padding: 1%;
+   overflow: hidden;
 }
-.article h2 a{
-	color: #000000;
-	text-decoration: none;
+.article h1 a{
+   float: left;
+   width: 100%;
+   font-size: 0.9em;
+   color: #000000;
+   text-decoration: none;
 }
-.article h2 a:hover{
-	text-decoration: underline;
+.article h1 a:hover{
+   text-decoration: underline;
+}
+.article a:visited{
+   color: #990099;
 }
 .author{
-	float: right;
-	font-size: 0.8em;
-	font-style: italic;
+   float: right;
+   font-size: 0.8em;
+   font-style: italic;
+}
+.article p{
+   float: left;
+}
+.continua{
+   clear: both;
+   float: left;
 }
 /** Stile visualizzazione dei tags **/
 .tags{
-	display: block;
-	list-style: none;
-	margin: 1% auto;
-}
-ul.tags {
-	margin-top:0px;
+   display: block;
+   clear: both;
+   list-style: none;
+   margin: 1em auto;
 }
 .tags li, .tags a{
-	float: right;
-	position: relative;
-	height: 24px;
-	line-height:24px;
-	font-size: 0.9em;
+   float: right;
+   position: relative;
+   height: 24px;
+   line-height:24px;
+   font-size: 0.9em;
+   margin-bottom: 2px;
 }
 .tags a{
-	margin-left: 24px;
-	padding: 0 10px 0 12px;
-	background: #33CCFF;
-	color: #000000;
-	font-variant: small-caps;
-	text-decoration: underline;
-	-moz-border-radius-bottomright: 4px; 
-	-webkit-border-bottom-right-radius: 4px;	
-	border-bottom-right-radius: 4px;
-	-moz-border-radius-topright: 4px;
-	-webkit-border-top-right-radius: 4px;	
-	border-top-right-radius: 4px;	
+   margin-left: 24px;
+   padding: 0 10px 0 12px;
+   background: #33CCFF;
+   color: #000000;
+   font-variant: small-caps;
+   text-decoration: underline;
+   -moz-border-radius-bottomright: 4px; 
+   -webkit-border-bottom-right-radius: 4px;	
+   border-bottom-right-radius: 4px;
+   -moz-border-radius-topright: 4px;
+   -webkit-border-top-right-radius: 4px;	
+   border-top-right-radius: 4px;	
 }
 .tags a:before{
-	content: "";
-	float: left;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	width: 0;
-	height: 0;
-	border-color: transparent #33CCFF transparent transparent;
-	border-style: solid;
-	border-width: 12px 12px 12px 0;		
+   content: "";
+   float: left;
+   position: absolute;
+   top: 0;
+   left: -12px;
+   width: 0;
+   height: 0;
+   border-color: transparent #33CCFF transparent transparent;
+   border-style: solid;
+   border-width: 12px 12px 12px 0;		
 }
 .tags a:after{
-	content: "";
-	position: absolute;
-	top: 10px;
-	left: 0;
-	float: left;
-	width: 4px;
-	height: 4px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
-	background: #FFFFFF;
-	-moz-box-shadow: -1px -1px 2px #004977;
-	-webkit-box-shadow: -1px -1px 2px #004977;
-	box-shadow: -1px -1px 2px #004977;
+   content: "";
+   position: absolute;
+   top: 10px;
+   left: 0;
+   float: left;
+   width: 4px;
+   height: 4px;
+   -moz-border-radius: 2px;
+   -webkit-border-radius: 2px;
+   border-radius: 2px;
+   background: #FFFFFF;
+   -moz-box-shadow: -1px -1px 2px #004977;
+   -webkit-box-shadow: -1px -1px 2px #004977;
+   box-shadow: -1px -1px 2px #004977;
 }
 .tags a:hover{
-	background: #555555;
-	color: #FFFFFF;
-}	
-.tags a:hover:before{
-	border-color:transparent #555555 transparent transparent;
+   background: #333333;
+   color: #FFFFFF;
 }
+.tags a:hover:before{
+   border-color:transparent #333333 transparent transparent;
+}
+.tags a:visited{
+   background: #333333;
+   color: #FF66FF;
+}
+.tags a:visited:before{
+   border-color:transparent #333333 transparent transparent;
+}
+
 /** Stile immagini degli article **/
 .article img{
-	width: 100%;
-	padding: 1% 0;
+   width: 100%;
+   max-height: 30em;
 }
+
 /** Stile per scorrimento pagine **/
 #nav_pagine{
-	clear: both;
-	text-align: center;
-	padding: 1% 0;
+   clear: both;
+   float: left;
+   width: 100%;
+   text-align: center;
+   padding-bottom: 2%;
 }
 #nav_pagine a{
-	color: #0000FF;
-	padding-right: 0.3%;
-	padding-left: 0.3%;
+   color: #0000FF;
+   padding: 0 1%;
 }
 .nav_help{
-	clear: both;
-	width: 100%;
-	text-align: center;
+   clear: both;
+   width: 50%;
+   display: block;
+   background-image: url('../css/img/tornaSu.png');
+   background-size: 30px 30px;
+   background-repeat: no-repeat;
+   background-position: top center;
+   text-align: center;
+   margin: 0 auto;
 }
+.nav_help a{
+   padding: 1.5em;
+   display: block;
+}
+.nav_help a:visited{
+   color: #990099;
+}
+.article .nav_help{
+   display: none;
+}
+
 /** Stile visualizzazione article intero **/
 .article_box{
-	width: 80%;
-    text-align: center;
+    width: 80%;
     background-color: #FFFFFF;
     border-style: solid;
     border-width: 1px;
@@ -298,150 +337,150 @@ ul.tags {
     -moz-box-shadow: 0px 0px 5px 3px;
     -webkit-box-shadow: 0px 0px 5px 3px;
     padding: 1%;
-    margin: 5% auto;
+    margin: 2% auto;
+    overflow: hidden;
+}
+.article .ribbon{ 
+    margin: -3%;
 }
 .ribbon{
     float: left;
     margin: -1.5%;
-    padding: 0;
     background-repeat: no-repeat;
-    height: 90px;
-    width: 119px;
+    height: 85px;
+    width: 125px;
+    text-indent:-999999px;
 }
 .eventRibbon{
-    background-image: url('../public_html/css/img/ribbonsEventiMini.png');
+    background-image: url('../css/img/ribbonsEventiMini.png');
 }
 .newsRibbon{
-    background-image: url('../public_html/css/img/ribbonsNewsMini.png');
+    background-image: url('../css/img/ribbonsNewsMini.png');
 } 
 .intervisteRibbon{
-    background-image: url('../public_html/css/img/ribbonsIntervisteMini.png');
+    background-image: url('../css/img/ribbonsIntervisteMini.png');
 }
 .RecensioniRibbon{
-    background-image: url('../public_html/css/img/ribbonsRecensioniMini.png');
+    background-image: url('../css/img/ribbonsRecensioniMini.png');
 }
 .article_img{
-    width: 100%;
-    margin-top: 5px;
+    float: left;
+    max-width: 40%;
+    max-height: 20em;
+    margin: 1% 30%;
 }
-.article_box h1:first-of-type{
-	text-align: left !important;
-    font-size: 1.8em !important;
+.article_box h1{    
+    display: block;
+    float: left;
+    font-size: 1.8em; 
     font-weight: bold;
 }
-.article_box h2:first-of-type{
-	text-align: center !important;
-    font-size: 0.9em !important;
+.article_box h2{   
+    float: right;
+    font-size: 0.9em;
     color: #1C1C1C;
 }
-#descrizione{
-    width: 80%;
-    margin: 2em auto;
+.article_box h3{
+    clear: both;
+    font-size: 0.9em;
 }
-#title a{
-	color: #FFFFFF;
-	text-decoration: none;
+.article_box p{
+    float: left;
 }
-#title a:hover{
-	text-decoration: underline;
+.article_box .tags{
+    clear: both; 
 }
-#interlocutore{
-	margin-top: 1em;
+.article_box .nav_help{
+    display: none;
 }
 
 #galleryLink p:first-of-type:hover{
     font-size: 103%;
 }
 #informazioni ul{
-    width: 80%;
-    margin: 1em auto;
+    clear: both;
+    margin: 1% auto;
     text-align: left;
     list-style-type: none;
 }
 #Titologallery{
-    padding: 0.5em 0;
-    width:20%;
-    background-color: #000;
-    color:#FFF;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    font-variant:small-caps;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    margin: 2% 0;
+    padding: 1% 0;
 }
-/** Stile per contenuto pagine statiche **/
+/***** Stile per contenuto pagine statiche *****/
 #static_cont p{
-	font-size: 1.3em;
-	padding: 1%;
+    font-size: 1.3em;
+    padding: 1%;
 }
 #static_list{
-	padding-top: 4%; 
+    padding-top: 4%; 
 }
 #static_list ul{
-	font-size: 1.1em;
-	padding-top: 1%;
-	padding-left: 2%;
+    font-size: 1.1em;
+    padding-top: 1%;
+    padding-left: 2%;
 }
 #static_list li{
-	list-style-type: none;
-	padding-bottom: 2%;
+    clear: both;
+    padding: 2%;
+    margin-left: 10%;
 }
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#contents_home{
-    width: 100%;
+#static_list li p{
+    float: right;
 }
-.article{
-    float: none;
-    display: block;
-    width: 90%;
-    margin: 2% auto;
-}
-} 
+
 
 /***** Impostazioni di stile CSS per la sidebar nella homepage *****/
 #sidebar{
-	float: right;
-	width: 16%;
-	background: #1D1D1D; 
-	font-size: 0.9em;
-	border-radius: 3px;
-	padding: 1% 2%;
-	margin-top: -0.5%;
+   float: right;
+   width: 16%;
+   background: #1D1D1D; 
+   font-size: 0.9em;
+   border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   padding: 1% 2%;
+   margin-top: -0.5%;
 }
 #sidebar h1{
-	color: #33CCFF;
-	font-size: 1.2em;
-	text-align: center;
-	margin: 10% auto;
+   color: #33CCFF;
+   font-size: 1.2em;
+   text-align: center;
+   margin: 10% auto;
 }
 .box{
-	background-color: #1E1E1E;
-	padding-top: 3%;
-	padding-bottom: 1%;
-	margin-bottom: 20%; 
+   background-color: #1E1E1E;
+   padding-top: 3%;
+   padding-bottom: 1%;
+   margin-bottom: 20%; 
 }
 .effect{
-	position: relative;       
-    -webkit-box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
-    -moz-box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
-    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
+   position: relative;       
+   -webkit-box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
+   -moz-box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
+   box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
 }
 .effect:before, .effect:after{
-	content: "";
-    position: absolute; 
-    z-index: -1;
-    -webkit-box-shadow: 0 0 20px rgba(255,255,255,0.8);
-    -moz-box-shadow: 0 0 20px rgba(255,255,255,0.8);
-    box-shadow: 0 0 20px rgba(255,255,255,0.8);
-    top: 0;
-    bottom: 0;
-    left: 10px;
-    right: 10px;
-    -moz-border-radius: 100px / 10px;
-    border-radius: 100px / 10px;
+   content: "";
+   position: absolute; 
+   z-index: -1;
+   -webkit-box-shadow: 0 0 20px rgba(255,255,255,0.8);
+   -moz-box-shadow: 0 0 20px rgba(255,255,255,0.8);
+   box-shadow: 0 0 20px rgba(255,255,255,0.8);
+   top: 0;
+   bottom: 0;
+   left: 10px;
+   right: 10px;
+   -moz-border-radius: 100px / 10px;
+   -webkit-border-radius: 100px / 10px;
+   border-radius: 100px / 10px;
 }
 .effect:after{
-	right: 10px; 
+    right: 10px; 
     left: auto;
     -webkit-transform: skew(8deg) rotate(3deg); 
     -moz-transform: skew(8deg) rotate(3deg);     
@@ -450,60 +489,44 @@ ul.tags {
     transform: skew(8deg) rotate(3deg);
 }
 #sidebar li{
-	list-style-type: none;
-	text-align: center;
-	color: #FFFFFF;
-	padding-top: 2%;
-	padding-bottom: 5%;
+   list-style-type: none;
+   text-align: center;
+   color: #FFFFFF;
+   padding-top: 2%;
+   padding-bottom: 5%;
 }
 #sidebar a{
-	color: #FFFFFF;
-	font-style: italic;
+   color: #FFFFFF;
+   font-style: italic;
 }
 #sidebar a:hover{
-	font-weight: bold;
-	font-size: 1.1em;
+   font-weight: bold;
+   font-size: 1.1em;
 }
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#sidebar{ 
-    clear: both;
-    float: none;
-    display: block;
-    width: 95%;
-    text-align: center;
-    margin: 1% auto;
-}
-#sidebar h1{
-	margin: 2% auto;
-}
-#sidebar li {
-    padding: 1.5%;
-}
-.box{
-	padding-top: 1%;
-	margin-bottom: 5%;
-}
+#sidebar a:visited{
+   color: #FF66FF;
 }
 
 
 /***** Impostazioni stile CSS per la visualizzazione del contenuto evento *****/
 .evento{
-	width: 90%;
+    width: 90%;
     list-style-type: none;
     background-color: #FFFFFF;
     border-style: solid;
     border-width: 1px;
     box-shadow: 0px 0px 5px 3px #303030;
-	-moz-box-shadow: 0px 0px 5px 3px #303030;
-	-webkit-box-shadow: 0px 0px 5px 3px #303030;
+    -moz-box-shadow: 0px 0px 5px 3px #303030;
+    -webkit-box-shadow: 0px 0px 5px 3px #303030;
     padding: 1%;
-    margin: 2% auto 4% auto;
+    margin: 1% auto 2%;
+    overflow: hidden;
 }
 .Intestazione{
     float: left;
     width: 8%;
     text-align: center;
+    font-variant: small-caps;
     background-color: #550000;
     color: #FFFFFF;
     margin-right: 0.4%;
@@ -524,77 +547,68 @@ ul.tags {
     line-height: 1.8em;
 }
 .copertina{
-	width: 90%;
-  	height: 300px;
-  	overflow: hidden;
+    width: 90%;
+    height: 30em;
+    overflow: hidden;
 }
 .copertina img{
     width: 100%;
     height: auto; 
 }
-.copertina h2{
-	position: relative;
-	display: inline;
-	top: 65%;
-	left: 10%;
-	width: auto;
-	font-size: 2.0em;
-	font-variant: small-caps;
-	background-color: #000000;
-	border: 1px solid #45484D; 
+.copertina h1{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: 2.0em;
+    font-variant: small-caps;
+    text-align: center;
+    background-color: #000000;
+    border: 1px solid #45484D; 
     -webkit-box-sizing: border-box;  
     -moz-box-sizing: border-box;     
     box-sizing: border-box;         
     padding: 1% 3%;
 }
-.copertina h2 a{
-	color: #FFFFFF;
-	text-decoration: none;
+.copertina h1 a{
+   color: #FFFFFF;
 }
-.copertina h2 a:hover{
-	text-decoration: underline;
+.copertina h1 a:visited{
+   color: #FF66FF;
 }
-.dettagli p.description{
-	margin-top: 0.5%;
+.dettagli p.description, .dettagli p.info{
+   margin-top: 1.5%;
 }
 .info span{
-    font-weight: bold;
-}
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 1000px){
-.Intestazione{
-    float: none;
-    clear: both;
-    width: 90%;
-    margin: 0 auto 0.5%;
-}
-.evento p{
-    width: 90%;
-    margin: 2% auto;
-}
+   font-weight: bold;
 }
 
+
 /***** Impostazioni stile CSS per il piede *****/
+#footer, #push{
+    height: 1.5em;
+    clear: both;	
+}
 #footer{
-	clear: both;
-	background-color: #45484D;
-	text-align: center;
-	color: #FFFFFF;
-	padding: 1%;
+   width: 100%;
+   background-color: #45484D;
+   color: #FFFFFF;
+   background-image: url('../css/img/valid_wcag_aa.gif') , url('../css/img/valid_xhtml_10.gif');
+   background-size: 5% , 5%;
+   background-repeat: no-repeat , no-repeat;
+   background-position: 89% 50% , 96% 50%;
+   padding: 1%;
+}
+#footer p{
+   width: 80%;
+   text-align: center;
 }
 #footer a{
-	color: #33CCFF;
+   color: #33CCFF;
 }
 #footer img{
-	float: left;
-	border: 0;
-	width: 5%;
-}
-/** Stile per tablet e mobile **/
-@media only screen and (max-width: 959px){
-#footer img{
-	width: 9%;
-}
+   float: left;
+   border: 0;
+   width: 5%;
 }
 
 
@@ -610,9 +624,13 @@ ul.tags {
     -webkti-box-shadow: 0px 0px 5px 3px;
     padding: 1%;
     margin: 5% auto;
+    overflow: hidden;
+}
+.common_box h1 {
+    font-variant: small-caps;
 }
 .common_box label{
-	display: block;
+    display: block;
     font-size: 1.8em;
     font-weight: bold;
 }
@@ -639,7 +657,11 @@ ul.tags {
     -moz-box-shadow: 0px 0px 5px 3px;
     -webkit-box-shadow: 0px 0px 5px 3px;
     padding: 0.3em 0.8em;
-    margin: 10% auto;
+    margin: 3% auto;
+}
+input[type="submit"]:hover{
+    opacity: 0.4;
+    cursor: pointer;
 }
 .common_box p, .common_box a{
     display: block;
@@ -652,22 +674,113 @@ ul.tags {
     border: 0;
 }
 .common_box a{
-    color: #00F;
+    color: #0000FF;
 }
 .common_box a:hover{
     text-decoration: underline;
 }
+#inserisci:hover{
+    opacity: 0.4;
+    cursor: pointer;
+}
+.tradLink{
+    background-color: #FFFFFF;
+    color: #0000FF;
+    text-decoration: underline;
+    margin: 0 0.5%;
+}
+.tradLink:hover{
+    cursor: pointer;
+}
 #elencoArticoliCancellazione li{
     list-style-type: none;
 }
-
 #elencoArticoliCancellazione li a{
     font-weight: bold;
     background-image: url('./img/delete.png');
-    color:#000;
-    padding-left:5%;
-    background-size:contain;
+    color: #000000;
+    padding-left: 5%;
+    background-size: contain;
     background-repeat: no-repeat;
+}
+.error{
+    font-size: 0.8em !important;
+    color: #FF0000;
+}
+
+
+/***** Impostazioni stile CSS per galleria immagini *****/
+#gallery{
+    margin: 1em auto;
+    text-align: center;
+}
+#gallery ul{
+    margin-top: 2em;
+    padding: 0;
+    list-style-type: none;
+}
+.active{
+    display: block;
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
+.slide{
+    max-width:80%;
+    height:500px;
+}
+#prev, #next{
+    width: 10%;
+    height: 3.2em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+#prev{
+    margin-left: 30%;
+    display: inline-block;
+    background-image: url('../javascript/img/arrow-left.png');
+}
+#next{
+    margin-right: 30%;
+    display: inline-block;
+    background-image: url('../javascript/img/arrow-right.png');
+}
+#prev:hover, #next:hover{
+    opacity: 1;
+}
+.galleryButton{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+#controlnav{
+    border-top: #33CCFF 5px solid;
+    height: 7em;
+    width: 80%;
+    background-color: #999966;
+    list-style-type: none;
+    padding-left: 0.5%;
+    margin: 0 auto;
+}
+.activenav img{
+    border: 3px solid #33CCFF;
+    padding: 0;
+}
+.tnail{
+    float: left;
+    width: 8%;
+    max-height: 150px;
+    overflow: hidden;
+    padding: 0.3em 0.3em;
+    padding-top: 0;
+    cursor: pointer;
+}
+.tnail:hover{
+    opacity: 0.5;
 }
 
 
@@ -680,80 +793,225 @@ ul.tags {
     color: green;
     font-weight: bold;
 }
-
-/***** Impostazioni stile CSS per galleria immagini *****/
-#gallery{
-    margin: 1em auto;
-}
-#gallery ul{
-    margin-top: 2em;
-    padding: 0;
-    list-style-type: none;
-}
-.active{
+#submitErr{
     display: block;
-	text-align: center;
 }
-.hidden{
+
+
+/***** Impostazioni stile tabella *****/
+#tabella{
+    margin-left: auto;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    margin-right: auto;
+}
+tr{
+    margin: 0;
+    padding: 0;
+}
+tr:nth-child(even){
+    background-color: #CACAB1;
+}
+td, th{
+    border: 1px solid #000000;
+    padding: 0.3em;
+}
+.theader{
+    margin: 0px;
+    padding: 0.3em;
+    border: 1px solid #000000;
+    background-color: #33CCFF;
+    color: #000000;
+}
+.name{
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/********* IMPOSTAZIONI STILE PER TABLET *********/
+@media only screen and (max-width: 1024px){
+/***** Impostazioni stile CSS del menù di navigazione *****/
+#nav{
+   border-bottom-style: none;
+   width: 100%;
+   margin: 0 auto;
+} 	
+#nav ul{
+   width: 100%;
+   padding-left: 0;
+}
+#nav ul li{
+   display: block;
+   width: 80%;
+   margin: 1% auto;
+}
+#current_nav{
+   padding: 0.5% 0;
+}
+#current_nav p{
+   font-size: 1.3em;
+}
+#nav ul li a{
+   font-size: 1.3em;
+   padding: 0.6% 0;
+}
+/***** Impostazioni stile CSS per barra di ricerca *****/
+#search{
+   width: 100%;
+   margin: 1% auto;
+   text-align: center;
+}
+#text_field, #button{
+   display: inline-block;
+}
+/***** Impostazioni stile CSS per il contenuto delle pagine *****/
+#contents_home{
+    width: 100%;
+}
+.article:nth-child(even) , .article:nth-child(odd){
+    float: none;
+    display: block;
+    width: 90%;
+    margin: 2% auto;
+} 
+.nav_help{
     display: none;
 }
+.article .nav_help, .article_box .nav_help, .evento .nav_help{
+    display: block;
+}
+.nav_help{
+    background-size: 20px 20px;
+}
+.nav_help a{
+    font-size: 0.7em;
+}
+li.article .ribbon{ 
+    margin: -0.6em;
+}
+.article_box h3{
+    font-size: 0.8em;
+}
+/***** Impostazioni di stile CSS per la sidebar nella homepage *****/
+#sidebar{ 
+    clear: both;
+    float: none;
+    display: block;
+    width: 95%;
+    text-align: center;
+    margin: 1% auto;
+}
+#sidebar h1{
+    margin: 2% auto;
+}
+#sidebar li {
+    padding: 1.5%;
+}
+.box{
+    padding-top: 1%;
+    margin-bottom: 5%;
+}
+/***** Impostazioni stile CSS per la visualizzazione del contenuto evento *****/
+.Intestazione{
+    float: none;
+    clear: both;
+    width: 90%;
+    margin: 0 auto;
+}
+.dettagli{
+    width: 90%;
+    margin: 0 auto;
+}
+.copertina{
+    width: 100%;
+    height: auto;
+}
+.copertina h1{
+    font-size: 1.4em;
+}
+/***** Impostazioni stile CSS per il piede *****/
+#footer{
+   font-size: 0.6em;
+   height: auto;
+   margin-top: 2%;
+}
+/***** Impostazioni stile CSS per visualizzazione della parte ADMIN *****/
+.common_box{
+    width: 90%;
+}
+/***** Impostazioni stile CSS per galleria immagini *****/
 .slide{
-    max-width:80%;
-    max-height:500px;
+   max-width: 80%;
+   height: auto;
 }
-#prev{
-	margin-left:30%;
-    width: 10%;
-    height: 3.2em;
-    background-image: url('../javascript/img/arrow-left.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.6;
-}
-#next{
-	margin-right:30%;
-    width: 10%;
-    height: 3.2em;
-    background-image: url('../javascript/img/arrow-right.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.6;
-}
-#prev:hover, #next:hover{
-	opacity: 1;
-}
-.galleryButton{
-	opacity: 0;
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
+#next, #prev{
+   padding: 0 5%;
 }
 #controlnav{
-    padding-left: 0.5%;
-    border-top: #33CCFF 5px solid;
-    height:160px;
-    background-color:#000;
-    list-style-type: none;
-    width:80%;
-    margin:0 auto;
+   height: 2em;
 }
-.activenav img{
-    border: 3px solid #fff;
-    padding: 0;
+/***** Impostazioni stile tabella *****/
+#static_tabella{
+    overflow-x: scroll;
 }
-.tnail{
-    float:left;
-    width: 8%;
-    max-height: 150px;
-    overflow:hidden;
-    padding: .3em .3em;
-    padding-top: 0;
-    cursor: pointer;
 }
 
 
+/********** IMPOSTAZIONI STILE SMARTPHONE **********/
+@media only screen and (max-width: 1024px) and (orientation: portrait){
+/***** Impostazioni stile CSS del menù di navigazione *****/
+#current_nav p , #nav ul li a{
+   font-size: 2em;
+}
+/***** Impostazioni stile CSS per barra di ricerca *****/
+#text_field , #button {
+   font-size: 2em;
+}
+/***** Impostazioni di stile per breadcamp *****/
+#breadcrumb{
+   font-size: 1.3em;
+}
+/***** Impostazioni stile CSS per il contenuto delle pagine *****/
+.article h1 a{
+   font-size: 1.3em;
+}
+.author{
+   font-size: 1em;
+}
+.article p , .article_box p {
+   font-size: 1.2em;
+}
+.nav_help{
+   background-size: 30px 30px;
+}
+.nav_help a{
+   font-size: 1em;
+}
+#nav_pagine a{
+   padding: 0 3%;
+}
+.article_box h3{
+    font-size: 0.6em;
+}
+/***** Impostazioni stile CSS per la visualizzazione del contenuto evento *****/
+.copertina h1{
+   font-size: 2.5em;
+}
+.dettagli p.description, .dettagli p.info, #descrizione{
+   font-size: 0.8em;
+}
+/***** Impostazioni stile CSS per il piede *****/
+#footer{
+   background-position: 89% 90% , 96% 90%;
+   background-size: 7% , 7%;
+}
+#footer img{
+   width: 7%;
+}
+}
 
+
+	
 
 
